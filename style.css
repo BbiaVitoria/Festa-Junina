@@ -90,7 +90,6 @@ a:hover {
     font-family: 'Luckiest Guy', cursive;
     font-size: 2em;
     margin-bottom: 15px;
-    text-shadow: 5px 5px 8px rgba(0, 0, 0, 0.8);
     color: var(--color-secondary);
     letter-spacing: 2px;
 }
@@ -99,7 +98,6 @@ a:hover {
     font-family: 'Luckiest Guy', cursive;
     font-size: 1em;
     margin-bottom: 30px;
-    text-shadow: 4px 4px 6px rgba(0, 0, 0, 0.7);
     color: var(--color-primary);
 }
 
