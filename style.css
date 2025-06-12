@@ -5,13 +5,13 @@
 :root {
     --color-primary: #f7a567; /* Laranja vibrante (Milho/Fogueira) */
     --color-secondary: #f8e265; /* Amarelo ouro (Milho/Sol) */
-    --color-accent: #326832; /* Verde bandeira (Natureza/Roça) */
-    --color-red: #D32F2F; /* Vermelho escuro (Fogueira/Paixão) */
+    --color-accent: #487548; /* Verde bandeira (Natureza/Roça) */
+    --color-red: #b83535; /* Vermelho escuro (Fogueira/Paixão) */
     --color-dark: #333; /* Texto escuro */
     --color-light: #f7f1dc; /* Creme claro / Cor de palha */
     --color-white: #FFFFFF;
     --color-fogueira: #fa7d4f; /* Laranja avermelhado */
-    --color-xadrez: #a1683f; /* Marrom para detalhes (madeira/xadrez) */
+    --color-xadrez: #d8a179; /* Marrom para detalhes (madeira/xadrez) */
     --color-chita-bg: #ec9494; /* Caqui claro para fundos sutis */
 }
 
