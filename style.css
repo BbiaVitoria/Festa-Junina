@@ -81,7 +81,7 @@ a:hover {
     position: relative;
     z-index: 1; /* Garante que o conteúdo fique acima das bandeirinhas */
     padding: 20px;
-    background-color: rgba(0, 0, 0, 0.3); /* Fundo semi-transparente para o texto */
+    background-color: rgba(#d81010); /* Fundo semi-transparente para o texto */
     border-radius: 15px;
     display: inline-block; /* Para o background-color se ajustar ao conteúdo */
 }
