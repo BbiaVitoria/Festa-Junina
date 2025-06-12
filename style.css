@@ -46,7 +46,7 @@ a:hover {
 
 /* Cabeçalho (Hero Section) */
 .hero {
-    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://via.placeholder.com/1920x900/FF8C00/FFFFFF?text=Fundo+de+Fogueira+e+Bandeirinhas'); /* Substitua por uma imagem de fogueira, milho, bandeirinhas, noite */
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(196, 9, 9, 0.884)), url('https://via.placeholder.com/1920x900/FF8C00/FFFFFF?text=Fundo+de+Fogueira+e+Bandeirinhas'); /* Substitua por uma imagem de fogueira, milho, bandeirinhas, noite */
     background-size: cover;
     background-position: center;
     color: var(--color-white);
