@@ -3,15 +3,15 @@
 
 /* Variáveis de Cores (para facilitar a manutenção) */
 :root {
-    --color-primary: #FF6F00; /* Laranja vibrante (Milho/Fogueira) */
-    --color-secondary: #FFD700; /* Amarelo ouro (Milho/Sol) */
-    --color-accent: #008000; /* Verde bandeira (Natureza/Roça) */
+    --color-primary: #f7a567; /* Laranja vibrante (Milho/Fogueira) */
+    --color-secondary: #f8e265; /* Amarelo ouro (Milho/Sol) */
+    --color-accent: #326832; /* Verde bandeira (Natureza/Roça) */
     --color-red: #D32F2F; /* Vermelho escuro (Fogueira/Paixão) */
     --color-dark: #333; /* Texto escuro */
-    --color-light: #FFF8DC; /* Creme claro / Cor de palha */
+    --color-light: #f7f1dc; /* Creme claro / Cor de palha */
     --color-white: #FFFFFF;
-    --color-fogueira: #FF4500; /* Laranja avermelhado */
-    --color-xadrez: #8B4513; /* Marrom para detalhes (madeira/xadrez) */
+    --color-fogueira: #fa7d4f; /* Laranja avermelhado */
+    --color-xadrez: #a1683f; /* Marrom para detalhes (madeira/xadrez) */
     --color-chita-bg: #F0E68C; /* Caqui claro para fundos sutis */
 }
 
@@ -81,7 +81,7 @@ a:hover {
     position: relative;
     z-index: 1; /* Garante que o conteúdo fique acima das bandeirinhas */
     padding: 20px;
-    background-color: rgba(#d81010); /* Fundo semi-transparente para o texto */
+    background-color: rgba(#c04040); /* Fundo semi-transparente para o texto */
     border-radius: 15px;
     display: inline-block; /* Para o background-color se ajustar ao conteúdo */
 }
@@ -486,7 +486,7 @@ a:hover {
 }
 
 .faq-question:hover {
-    background-color: #fdd835; /* Um amarelo um pouco mais escuro */
+    background-color: #fcd5a2; /* Um amarelo um pouco mais escuro */
 }
 
 .faq-question::after {
