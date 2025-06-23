@@ -146,7 +146,7 @@ a:hover {
 .btn-scroll:hover {
  background-color: var(--color-primary);
  transform: translateY(-8px) scale(1.05);
- box-shadow: 0 12px 30px rgba(0, 0, 0, 0.5);
+ box-shadow: 0 12px 30px rgba(101, 56, 56, 0.5);
 }
 
 /* Seções Gerais */
@@ -162,7 +162,7 @@ a:hover {
  font-size: 3.8em;
  color: var(--color-primary);
  margin-bottom: 60px;
- text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.2);
+ text-shadow: 3px 3px 5px rgba(95, 88, 88, 0.2);
  position: relative;
  display: inline-block;
  padding: 0 20px;
