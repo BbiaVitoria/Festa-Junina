@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Festa Junina no Nordeste: Tradição e Sabor!</title>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(to bottom, #FFD700, #FFA500, #FF6347); /* Dourado, Laranja, Vermelho - Cores vibrantes */
+            color: #4A2B00; /* Marrom escuro para o texto */
+            line-height: 1.6;
+            overflow-x: hidden; /* Evita scroll horizontal */
+        }
+
+        header {
+            background-color: #8B4513; /* Marrom de madeira */
+            color: #FFFFFF;
+            padding: 40px 20px;
+            text-align: center;
+            border-bottom: 5px dashed #DAA520; /* Borda tracejada amarela */
+            position: relative;
+            z-index: 1;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        header h1 {
+            font-family: 'Dancing Script', cursive;
+            font-size: 3.5em;
+            margin: 0;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+            position: relative;
+            z-index: 2;
+        }
+
+        header::before {
+            content: '🌽🔥💃'; /* Ícones no cabeçalho */
+            position: absolute;
+            top: 10px;
+            left: 20px;
+            font-size: 3em;
+            opacity: 0.7;
+            transform: rotate(-10deg);
+        }
+
+        header::after {
+            content: '🎶🌵🎉';
+            position: absolute;
+            bottom: 10px;
+            right: 20px;
+            font-size: 3em;
+            opacity: 0.7;
+            transform: rotate(10deg);
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 40px auto;
+            padding: 30px;
+            background-color: #FFF8DC; /* Creme claro, tipo palha */
+            border-radius: 15px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+            position: relative;
+            z-index: 1;
+            border: 3px solid #DAA520; /* Borda amarela sólida */
+        }
+
+        .container::before, .container::after {
+            content: '';
+            position: absolute;
+            width: 100px;
+            height: 100px;
+            background-size: contain;
+            background-repeat: no-repeat;
+            opacity: 0.3;
+            z-index: -1;
+        }
+
+        .container::before {
+            top: -30px;
+            left: -30px;
+            background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/c/c5/Bandeirinhas_de_s%C3%A3o_jo%C3%A3o.svg/1200px-Bandeirinhas_de_s%C3%A3o_jo%C3%A3o.svg.png'); /* Exemplo de bandeirinhas, use uma imagem local se preferir */
+            transform: rotate(-15deg);
+        }
+
+        .container::after {
+            bottom: -30px;
+            right: -30px;
+            background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/a/a2/Cacto_no_semi%C3%A1rido_nordestino.jpg/800px-Cacto_no_semi%C3%A1rido_nordestino.jpg'); /* Exemplo de cacto, use uma imagem local se preferir */
+            transform: rotate(15deg);
+        }
+
+        h2 {
+            font-family: 'Dancing Script', cursive;
+            color: #A0522D; /* Marrom avermelhado */
+            font-size: 2.2em;
+            border-bottom: 2px dashed #DAA520;
+            padding-bottom: 10px;
+            margin-top: 30px;
+            text-align: center;
+        }
+
+        p {
+            margin-bottom: 15px;
+            text-align: justify;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        ul li {
+            background-color: #F8E4B9; /* Cor de milho */
+            margin-bottom: 10px;
+            padding: 10px 15px;
+            border-left: 5px solid #FFD700;
+            border-radius: 8px;
+            box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        strong {
+            color: #A0522D;
+        }
+
+        .image-gallery {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 30px;
+        }
+
+        .image-gallery img {
+            width: 100%;
+            max-width: 250px;
+            height: 180px;
+            object-fit: cover;
+            border-radius: 10px;
+            border: 3px solid #8B4513;
+            box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.3);
+            transition: transform 0.3s ease;
+        }
+
+        .image-gallery img:hover {
+            transform: scale(1.05);
+        }
+
+        .button-back {
+            display: block;
+            width: fit-content;
+            margin: 40px auto 20px auto;
+            padding: 15px 30px;
+            background: linear-gradient(to right, #DAA520, #FFD700);
+            color: #8B4513;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 50px;
+            box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
+            transition: background 0.3s ease, transform 0.3s ease;
+            text-align: center;
+        }
+
+        .button-back:hover {
+            background: linear-gradient(to right, #FFD700, #DAA520);
+            transform: translateY(-2px);
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            margin-top: 40px;
+            background-color: #8B4513;
+            color: #FFF;
+            font-size: 0.9em;
+            border-top: 5px dashed #DAA520;
+        }
+
+        /* Responsividade básica */
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2.5em;
+            }
+            .container {
+                margin: 20px auto;
+                padding: 20px;
+            }
+            header::before, header::after {
+                font-size: 2em;
+            }
+        }
+
+        @media (max-width: 480px) {
+            header h1 {
+                font-size: 2em;
+            }
+            header::before, header::after {
+                font-size: 1.5em;
+            }
+            .image-gallery img {
+                max-width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>A Magia da Festa Junina no Nordeste!</h1>
+    </header>
+
+    <div class="container">
+        <p>Bem-vindos ao coração da <strong>Festa Junina</strong>, onde a tradição pulsa mais forte e a alegria contamina a todos: o <strong>Nordeste brasileiro</strong>! Mais do que uma simples celebração, a festa junina nordestina é um verdadeiro espetáculo cultural, um período em que cidades inteiras se transformam em arraiais vibrantes, e a vida ganha um ritmo de forró contagiante.</p>
+
+        ---
+
+        <h2>O Que Torna a Festa Junina Nordestina Única?</h2>
+        <p>Enquanto o Brasil inteiro celebra São João, no Nordeste, a festa atinge proporções épicas. Aqui, ela é reverenciada com uma intensidade e paixão inigualáveis, marcando o calendário como um dos eventos mais esperados do ano. As diferenças são notáveis:</p>
+        <ul>
+            <li><strong>Duração e Intensidade:</strong> Não é só um fim de semana! As festas juninas no Nordeste podem durar o mês inteiro de junho, com programações diárias em muitas cidades. O fervor é contínuo, com shows, quadrilhas e eventos por todos os cantos.</li>
+            <li><strong>Grandiosidade:</strong> Cidades como Campina Grande (PB) e Caruaru (PE) competem pelo título de "Maior São João do Mundo", com estruturas gigantescas, palcos imponentes e milhões de visitantes.</li>
+            <li><strong>Cultura Viva:</strong> A festa é uma expressão viva da cultura nordestina, integrando elementos religiosos, agrários e artísticos de forma orgânica.</li>
+        </ul>
+
+        ---
+
+        <h2>Costumes e Tradições que Encantam</h2>
+        <p>Os costumes são a alma da festa, e no Nordeste eles são especialmente ricos:</p>
+        <ul>
+            <li><strong>Quadrilhas Juninas:</strong> Prepare-se para se encantar com as <strong>quadrilhas juninas</strong>, que vão muito além da dança tradicional. São verdadeiros espetáculos teatrais, com enredos elaborados, figurinos deslumbrantes e coreografias complexas. Cada grupo treina o ano inteiro para apresentar o melhor show e emocionar a plateia.</li>
+            <li><strong>Fogueiras:</strong> A fogueira é o símbolo central, representando a proteção e a purificação. Ao redor dela, famílias e amigos se reúnem para contar "causos", cantar e comer.</li>
+            <li><strong>Casamento na Roça:</strong> Uma encenação divertida e cheia de humor do casamento caipira, com o noivo fujão, a noiva brava e o padre caricato, que sempre arranca gargalhadas.</li>
+            <li><strong>Simpatias:</strong> Para os mais românticos ou curiosos, as simpatias de São João são uma tradição à parte, buscando desvendar o futuro no amor ou na vida.</li>
+        </ul>
+
+        ---
+
+        <h2>A Trilha Sonora da Alegria: Músicas Juninas</h2>
+        <p>O ritmo do <strong>forró</strong> é o coração musical da Festa Junina nordestina. Artistas lendários como <strong>Luiz Gonzaga</strong>, o "Rei do Baião", são reverenciados e suas músicas são hinos para a época. Prepare-se para dançar ao som de:</p>
+        <ul>
+            <li><strong>Forró Pé de Serra:</strong> A raiz do forró, com sanfona, zabumba e triângulo. É a essência da festa!</li>
+            <li><strong>Xote e Baião:</strong> Ritmos contagiantes que convidam a dançar agarradinho.</li>
+            <li><strong>Clássicos Atemporais:</strong> Músicas como "Olha pro Céu" (Luiz Gonzaga), "Capim Novo" (Assisão), "Isso Aqui Tá Bom Demais" (Dominguinhos) e muitos outros sucessos que embalam gerações.</li>
+            <li><strong>Bandas de Forró Moderno:</strong> Além dos clássicos, há espaço para o forró eletrônico e bandas que trazem novas roupagens para o ritmo, atraindo um público diversificado.</li>
+        </ul>
+
+        ---
+
+        <h2>O Banquete Nordestino: Comidas Juninas Inesquecíveis</h2>
+        <p>Ah, a <strong>comida junina</strong>! No Nordeste, a culinária da época é um capítulo à parte, com o <strong>milho</strong> como rei absoluto. Ele é a base para uma infinidade de pratos deliciosos:</p>
+        <div class="image-gallery">
+            <img src="https://via.placeholder.com/250x180?text=Pamonha" alt="Pamonha Junina">
+            <img src="https://via.placeholder.com/250x180?text=Curau" alt="Curau de Milho">
+            <img src="https://via.placeholder.com/250x180?text=Bolo+de+Milho" alt="Bolo de Milho Fofinho">
+            <img src="https://via.placeholder.com/250x180?text=Cuscuz" alt="Cuscuz Nordestino">
+            <img src="https://via.placeholder.com/250x180?text=Mungunzá" alt="Mungunzá Doce">
+            <img src="https://via.placeholder.com/250x180?text=Milho+Cozido" alt="Milho Cozido">
+        </div>
+        <ul>
+            <li><strong>Pamonha:</strong> Cremosa, doce ou salgada, envolvida na própria palha do milho.</li>
+            <li><strong>Curau (ou Canjica em algumas regiões):</strong> Um creme de milho verde com canela, puro aconchego.</li>
+            <li><strong>Bolo de Milho:</strong> Fofinho e saboroso, perfeito para o café da tarde.</li>
+            <li><strong>Milho Cozido e Assado:</strong> A simplicidade que encanta, direto da panela ou da brasa.</li>
+            <li><strong>Cuscuz:</strong> De milho, acompanhado de manteiga, carne seca ou ovo. Um clássico do café da manhã nordestino, presente também nas festas.</li>
+            <li><strong>Mungunzá (ou Canjica em outras regiões):</strong> Um doce feito com grãos de milho branco, leite de coco, cravo e canela.</li>
+            <li><strong>Pé de Moleque e Paçoca:</strong> Doces feitos de amendoim, crocantes e irresistíveis.</li>
+            <li><strong>Bolo de Macaxeira (Mandioca):</strong> Um bolo úmido e denso, com sabor marcante.</li>
+            <li><strong>Quebra-Queixo:</strong> Doce de coco caramelizado, para os amantes de doces bem açucarados.</li>
+        </ul>
+
+        <a href="pagina_principal_festa_junina.html" class="button-back">Voltar para a Página Principal da Festa Junina</a>
+    </div>
+
+    <footer>
+        <p>&copy; 2025. Todos os direitos reservados. Viva São João!</p>
+    </footer>
+</body>
+</html>
