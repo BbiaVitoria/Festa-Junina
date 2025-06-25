@@ -2,33 +2,32 @@
 @import url('https://fonts.googleapis.com/css2?family=Luckiest+Guy&family=Open+Sans:wght@400;700&display=swap');
 
 /* Variáveis de Cores (para facilitar a manutenção) */
-:root {
- --color-primary: #be7836; /* Laranja vibrante (Milho/Fogueira) */
- --color-secondary: #f8e265; /* Amarelo ouro (Milho/Sol) */
- --color-accent: #4c804c; /* Verde bandeira (Natureza/Roça) */
- --color-red: #c23939; /* Vermelho escuro (Fogueira/Paixão) */
- --color-dark: #242320; /* Texto escuro */
- --color-light: #f7f1dc; /* Creme claro / Cor de palha */
- --color-white: #FFFFFF;
- --color-fogueira: #fa7d4f; /* Laranja avermelhado */
- --color-xadrez: #d8a179; /* Marrom para detalhes (madeira/xadrez) */
- --color-chita-bg: #f7d6ab; /* Caqui claro para fundos sutis */
+:root { --color-primary: #be7836; /* Laranja vibrante (Milho/Fogueira) */
+ --color-secondary: #f8e265; /* Amarelo ouro (Milho/Sol) */
+ --color-accent: #4c804c; /* Verde bandeira (Natureza/Roça) */
+ --color-red: #c23939; /* Vermelho escuro (Fogueira/Paixão) */
+ --color-dark: #242320; /* Texto escuro */
+ --color-light: #f7f1dc; /* Creme claro / Cor de palha */
+ --color-white: #FFFFFF;
+ --color-fogueira: #fa7d4f; /* Laranja avermelhado */
+ --color-xadrez: #d8a179; /* Marrom para detalhes (madeira/xadrez) */
+ --color-chita-bg: #f7d6ab; /* Caqui claro para fundos sutis */
 }
 
 /* Reset Básico e Estilos Gerais */
 * {
- margin: 0;
- padding: 0;
- box-sizing: border-box;
+ margin: 0;
+ padding: 0;
+ box-sizing: border-box;
 }
 
 body {
- font-family: 'Open Sans', sans-serif;
- line-height: 1.7; /* Mais espaço entre linhas */
- color: var(--color-dark);
- background-color: var(--color-light);
- /* Fundo com textura de chita ou palha */
- background-image: url('http://googleusercontent.com/image_generation_content/pW3-T7S8K0vSgE30oA1-N9u2qA'); /* Substitua por uma textura real de chita ou palha */
+ font-family: 'Open Sans', sans-serif;
+ line-height: 1.7; /* Mais espaço entre linhas */
+ color: var(--color-dark);
+ background-color: var(--color-light);
+ /* Fundo com textura de chita ou palha */
+ background-image: url('http://googleusercontent.com/image_generation_content/pW3-T7S8K0vSgE30oA1-N9u2qA'); /* Substitua por uma textura real de chita ou palha */
  background-size: 200px;
  background-attachment: fixed;
 }
