@@ -722,17 +722,7 @@ footer {
     z-index: 1; /* Garante que o conteúdo e o overlay fiquem acima do background */
 }
 
-/* Overlay para escurecer a imagem e destacar o texto */
-.banner-principal::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.4); /* Preto com 40% de opacidade */
-    z-index: -1; /* Fica abaixo do conteúdo, mas acima da imagem de fundo */
-}
+
 
 .banner-conteudo {
     max-width: 800px; /* Largura máxima para o conteúdo do texto/botões */
