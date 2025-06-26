@@ -714,12 +714,7 @@ footer {
     align-items: center; /* Centraliza verticalmente o conteúdo */
     justify-content: center; /* Centraliza horizontalmente o conteúdo */
     
-    color: #fff; /* Cor do texto dentro do banner */
-    text-align: center; /* Alinha o texto ao centro */
     
-    /* Adicione um overlay escuro para melhorar a legibilidade do texto */
-    position: relative;
-    z-index: 1; /* Garante que o conteúdo e o overlay fiquem acima do background */
 }
 
 
