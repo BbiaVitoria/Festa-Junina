@@ -1,699 +1,222 @@
-/* Importação de Fontes do Google Fonts */
-@import url('https://fonts.googleapis.com/css2?family=Luckiest+Guy&family=Open+Sans:wght@400;700&display=swap');
+/* Importação de Fontes do Google Fonts (Mantenha se ainda não estiver no seu HTML) */
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&family=Poppins:wght@400;700&display=swap');
+/* Mantive Poppins e adicionei Dancing Script, pois estavam no seu código original */
 
 /* Variáveis de Cores (para facilitar a manutenção) */
 :root {
- --color-primary: #be7836; /* Laranja vibrante (Milho/Fogueira) */
- --color-secondary: #f8e265; /* Amarelo ouro (Milho/Sol) */
- --color-accent: #4c804c; /* Verde bandeira (Natureza/Roça) */
- --color-red: #c23939; /* Vermelho escuro (Fogueira/Paixão) */
- --color-dark: #242320; /* Texto escuro */
- --color-light: #f7f1dc; /* Creme claro / Cor de palha */
- --color-white: #FFFFFF;
- --color-fogueira: #fa7d4f; /* Laranja avermelhado */
- --color-xadrez: #d8a179; /* Marrom para detalhes (madeira/xadrez) */
- --color-chita-bg: #f7d6ab; /* Caqui claro para fundos sutis */
+    --color-primary: #be7836; /* Laranja vibrante (Milho/Fogueira) */
+    --color-secondary: #f8e265; /* Amarelo ouro (Milho/Sol) */
+    --color-accent: #4c804c; /* Verde bandeira (Natureza/Roça) */
+    --color-red: #c23939; /* Vermelho escuro (Fogueira/Paixão) */
+    --color-dark: #242320; /* Texto escuro */
+    --color-light: #f7f1dc; /* Creme claro / Cor de palha */
+    --color-white: #FFFFFF;
+    --color-fogueira: #fa7d4f; /* Laranja avermelhado */
+    --color-xadrez: #d8a179; /* Marrom para detalhes (madeira/xadrez) */
+    --color-chita-bg: #f7d6ab; /* Caqui claro para fundos sutis */
 }
 
 /* Reset Básico e Estilos Gerais */
-* {
- margin: 0;
- padding: 0;
- box-sizing: border-box;
-}
-
 body {
- font-family: 'Open Sans', sans-serif;
- line-height: 1.7; /* Mais espaço entre linhas */
- color: var(--color-dark);
- background-color: var(--color-light);
- /* Fundo com textura de chita ou palha */
- background-image: url('http://googleusercontent.com/image_generation_content/pW3-T7S8K0vSgE30oA1-N9u2qA'); /* Substitua por uma textura real de chita ou palha */
- background-size: 200px;
- background-attachment: fixed;
+    font-family: 'Poppins', sans-serif; /* Usando Poppins das variáveis */
+    margin: 0;
+    padding: 0;
+    /* Usando as variáveis para o gradiente vibrante */
+    background: linear-gradient(to bottom, var(--color-secondary), var(--color-primary), var(--color-red));
+    color: var(--color-dark); /* Marrom escuro para o texto */
+    line-height: 1.6;
+    overflow-x: hidden; /* Evita scroll horizontal */
 }
 
-a {
- color: var(--color-red);
- text-decoration: none;
- transition: color 0.3s ease;
+header {
+    background-color: var(--color-xadrez); /* Marrom de madeira (variável) */
+    color: var(--color-white);
+    padding: 40px 20px;
+    text-align: center;
+    border-bottom: 5px dashed var(--color-secondary); /* Borda tracejada amarela (variável) */
+    position: relative;
+    z-index: 1;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
-a:hover {
- color: var(--color-primary);
- text-decoration: underline;
+header h1 {
+    font-family: 'Dancing Script', cursive; /* Mantém a fonte Dancing Script */
+    font-size: 3.5em;
+    margin: 0;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+    position: relative;
+    z-index: 2;
 }
 
-/* Cabeçalho (Hero Section) */
-.hero {
-    /* CORRIGIDO: Usei as variáveis de cor diretamente, sem rgba() ao redor dos hexadecimais,
-       que é a forma correta para linear-gradient. */
-    background: linear-gradient(var(--color-red), var(--color-light)), url('http://googleusercontent.com/image_generation_content/1920x900/FF8C00/FFFFFF?text=Fundo+de+Fogueira+e+Bandeirinhas'); /* Substitua por uma imagem de fogueira, milho, bandeirinhas, noite */
- background-size: cover;
- background-position: center;
- color: var(--color-white);
- text-align: center;
- padding: 120px 20px; /* Mais padding para espaçamento */
- position: relative;
- overflow: hidden;
- border-bottom: 10px solid var(--color-accent); /* Borda decorativa */
+header::before {
+    content: '🌽🔥💃'; /* Ícones no cabeçalho */
+    position: absolute;
+    top: 10px;
+    left: 20px;
+    font-size: 3em;
+    opacity: 0.7;
+    transform: rotate(-10deg);
 }
 
-.hero::before {
- content: '';
- position: absolute;
- top: 0;
- left: 0;
- right: 0;
- height: 100%; /* Cobrir a altura do hero */
- background-image: url('http://googleusercontent.com/image_generation_content/100x100/FF6F00/FFFFFF?text=Bandeirinhas'); /* Substitua por uma imagem de bandeirinhas repetindo */
- background-size: 150px;
- background-repeat: repeat-x;
- animation: slideBandeirinhas 30s linear infinite; /* Animação mais lenta */
- opacity: 0.8;
- z-index: 0; /* Abaixo do conteúdo */
+header::after {
+    content: '🎶🌵🎉';
+    position: absolute;
+    bottom: 10px;
+    right: 20px;
+    font-size: 3em;
+    opacity: 0.7;
+    transform: rotate(10deg);
 }
 
-@keyframes slideBandeirinhas {
- from {
- background-position: 0 0;
- }
-
- to {
- background-position: 100% 0;
- }
+.container {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 30px;
+    background-color: var(--color-light); /* Creme claro, tipo palha (variável) */
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    position: relative;
+    z-index: 1;
+    border: 3px solid var(--color-secondary); /* Borda amarela sólida (variável) */
 }
 
-.hero-content {
- position: relative;
- z-index: 1; /* Garante que o conteúdo fique acima das bandeirinhas */
- padding: 20px;
-    /* CORRIGIDO: Usei um valor rgba numérico aproximado do #c04040. */
- background-color: rgba(192, 64, 64, 0.7); /* Fundo semi-transparente para o texto */
- border-radius: 15px;
- display: inline-block; /* Para o background-color se ajustar ao conteúdo */
+.container::before, .container::after {
+    content: '';
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    opacity: 0.3;
+    z-index: -1;
 }
 
-.hero h1 {
- font-family: 'Luckiest Guy', cursive;
- font-size: 2em;
- margin-bottom: 15px;
- color: var(--color-secondary);
- letter-spacing: 2px;
+.container::before {
+    top: -30px;
+    left: -30px;
+    /* URLs de imagens externas podem mudar ou não funcionar, considere hospedar localmente */
+    background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/c/c5/Bandeirinhas_de_s%C3%A3o_jo%C3%A3o.svg/1200px-Bandeirinhas_de_s%C3%A3o_jo%C3%A3o.svg.png');
+    transform: rotate(-15deg);
 }
 
-.hero h2 {
- font-family: 'Luckiest Guy', cursive;
- font-size: 1em;
- margin-bottom: 30px;
- color: var(--color-primary);
+.container::after {
+    bottom: -30px;
+    right: -30px;
+    /* URLs de imagens externas podem mudar ou não funcionar, considere hospedar localmente */
+    background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/a/a2/Cacto_no_semi%C3%A1rido_nordestino.jpg/800px-Cacto_no_semi%C3%A1rido_nordestino.jpg');
+    transform: rotate(15deg);
 }
 
-.info-data p {
- font-size: 1.5em;
- margin: 8px 0;
- font-weight: 700;
- background-color: rgba(255, 255, 255, 0.1);
- padding: 5px 10px;
- border-radius: 8px;
- display: inline-block; /* Para o background se ajustar ao texto */
+h2 {
+    font-family: 'Dancing Script', cursive; /* Mantém a fonte Dancing Script */
+    color: var(--color-primary); /* Laranja vibrante (variável) */
+    font-size: 2.2em;
+    border-bottom: 2px dashed var(--color-secondary); /* Amarelo ouro (variável) */
+    padding-bottom: 10px;
+    margin-top: 30px;
+    text-align: center;
 }
 
-.info-data strong {
- color: var(--color-secondary);
+p {
+    margin-bottom: 15px;
+    text-align: justify;
 }
 
-.info-data i {
- /* Ícones nas informações do cabeçalho */
- margin-right: 10px;
- color: var(--color-accent);
+ul {
+    list-style: none;
+    padding: 0;
 }
 
-.btn-scroll {
- display: inline-block;
- background-color: var(--color-red);
- color: var(--color-white);
- padding: 18px 35px;
- margin-top: 40px;
- text-decoration: none;
- border-radius: 50px;
- font-size: 1.4em;
- font-weight: bold;
- transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
- border: 4px solid var(--color-secondary); /* Borda mais grossa */
- box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
- text-transform: uppercase;
- letter-spacing: 1px;
+ul li {
+    background-color: var(--color-chita-bg); /* Caqui claro para fundos sutis (variável) */
+    margin-bottom: 10px;
+    padding: 10px 15px;
+    border-left: 5px solid var(--color-secondary); /* Amarelo ouro (variável) */
+    border-radius: 8px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
 }
 
-.btn-scroll:hover {
- background-color: var(--color-primary);
- transform: translateY(-8px) scale(1.05);
- box-shadow: 0 12px 30px rgba(101, 56, 56, 0.5);
+strong {
+    color: var(--color-red); /* Vermelho escuro (variável) */
 }
 
-/* Seções Gerais */
-.section-padded {
- padding: 100px 20px; /* Mais padding */
- text-align: center;
- max-width: 1300px; /* Largura máxima maior */
- margin: 0 auto;
+.image-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 30px;
 }
 
-.section-title {
- font-family: 'Luckiest Guy', cursive;
- font-size: 3.8em;
- color: var(--color-primary);
- margin-bottom: 60px;
- text-shadow: 3px 3px 5px rgba(95, 88, 88, 0.2);
- position: relative;
- display: inline-block;
- padding: 0 20px;
+.image-gallery img {
+    width: 100%;
+    max-width: 250px;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 10px;
+    border: 3px solid var(--color-xadrez); /* Marrom para detalhes (variável) */
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease;
 }
 
-.section-title::after {
- content: '';
- display: block;
- width: 120px;
- height: 10px;
- background-color: var(--color-red);
- margin: 15px auto 0;
- border-radius: 8px;
+.image-gallery img:hover {
+    transform: scale(1.05);
 }
 
-.section-description {
- font-size: 1.2em;
- margin-bottom: 40px;
- max-width: 800px;
- margin-left: auto;
- margin-right: auto;
- color: var(--color-dark);
+.button-back {
+    display: block;
+    width: fit-content;
+    margin: 40px auto 20px auto;
+    padding: 15px 30px;
+    /* Usando variáveis para o gradiente do botão */
+    background: linear-gradient(to right, var(--color-secondary), var(--color-primary));
+    color: var(--color-dark); /* Texto escuro (variável) */
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 50px;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
+    transition: background 0.3s ease, transform 0.3s ease;
+    text-align: center;
 }
 
-/* Estilo para seções de fundo claro */
-.bg-light-yellow {
- background-color: var(--color-chita-bg);
- background-image: url('http://googleusercontent.com/image_generation_content/pW3-T7S8K0vSgE30oA1-N9u2qA'); /* Padrão de chita sutil */
- background-size: 150px;
- background-repeat: repeat;
- border-top: 8px solid var(--color-xadrez);
- border-bottom: 8px solid var(--color-xadrez);
+.button-back:hover {
+    /* Gradiente invertido para o hover */
+    background: linear-gradient(to right, var(--color-primary), var(--color-secondary));
+    transform: translateY(-2px);
 }
 
-/* Grid para Atrações */
-.grid-container {
- display: grid;
- grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Itens maiores */
- gap: 40px; /* Mais espaçamento */
- margin-top: 50px;
-}
-
-.grid-item {
- background-color: var(--color-white);
- border-radius: 20px; /* Bordas mais arredondadas */
- padding: 35px;
- box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
- transition: transform 0.4s ease, box-shadow 0.4s ease;
- border: 4px dashed var(--color-xadrez);
- text-align: left; /* Alinhar texto à esquerda */
-}
-
-.grid-item:hover {
- transform: translateY(-15px) scale(1.02); /* Efeito mais pronunciado */
- box-shadow: 0 15px 35px rgba(0, 0, 0, 0.25);
-}
-
-.grid-item h3 {
- font-family: 'Luckiest Guy', cursive;
- color: var(--color-accent);
- font-size: 2.2em; /* Títulos maiores */
- margin-bottom: 20px;
- border-bottom: 2px solid var(--color-primary);
- padding-bottom: 10px;
-}
-
-.grid-item h3 i {
- /* Ícones nos títulos dos itens */
- margin-right: 15px;
- color: var(--color-red);
-}
-
-.grid-item ul {
- list-style: none;
- padding: 0;
-}
-
-.grid-item ul li {
- margin-bottom: 12px;
- font-size: 1.15em;
- color: var(--color-dark);
- position: relative;
- padding-left: 30px;
-}
-
-.grid-item ul li i {
- /* Ícones nos itens de lista */
- position: absolute;
- left: 0;
- color: var(--color-primary);
- font-size: 1.2em;
- top: 5px;
-}
-
-/* Estilo para o Menu de Comidas */
-.menu-categories {
- display: grid;
- grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
- gap: 40px;
- margin-top: 50px;
- text-align: left;
-}
-
-.category-item {
- background-color: var(--color-white);
- border-radius: 20px;
- padding: 30px;
- box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
- border: 3px solid var(--color-primary);
- position: relative;
- overflow: hidden;
-}
-
-.category-item::before {
- /* Decoração com triângulo/chita */
- content: '';
- position: absolute;
- top: 0;
- right: 0;
- width: 0;
- height: 0;
- border-top: 80px solid var(--color-red);
- border-left: 80px solid transparent;
- border-bottom-left-radius: 20px;
-}
-
-.category-item h3 {
- font-family: 'Luckiest Guy', cursive;
- color: var(--color-red);
- font-size: 1.9em;
- margin-bottom: 18px;
- border-bottom: 2px dotted var(--color-xadrez);
- padding-bottom: 12px;
-}
-
-.category-item h3 i {
- margin-right: 10px;
- color: var(--color-accent);
-}
-
-.category-item ul {
- list-style: none;
- padding: 0;
-}
-
-.category-item ul li {
- margin-bottom: 10px;
- font-size: 1.1em;
- position: relative;
- padding-left: 30px;
-}
-
-.category-item ul li i {
- /* Ícone de seta para listas de comida */
- position: absolute;
- left: 0;
- color: var(--color-red);
- font-size: 1em;
- top: 6px;
-}
-
-/* Seção de Trajes */
-.trajes-info {
- max-width: 1000px; /* Largura maior */
- margin: 0 auto;
-}
-
-.trajes-info p {
- font-size: 1.3em;
- margin-bottom: 40px;
- color: var(--color-dark);
-}
-
-.traje-grid {
- display: grid;
- grid-template-columns: 1fr;
- gap: 40px;
-}
-
-.traje-item {
- background-color: var(--color-white);
- border-radius: 20px;
- padding: 35px;
- box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
- border: 4px solid var(--color-accent);
- text-align: left;
-}
-
-.traje-item h3 {
- font-family: 'Luckiest Guy', cursive;
- color: var(--color-primary);
- font-size: 2.2em;
- margin-bottom: 20px;
- border-bottom: 2px dashed var(--color-xadrez);
- padding-bottom: 10px;
-}
-
-.traje-item h3 i {
- margin-right: 15px;
- color: var(--color-red);
-}
-
-.traje-item ul {
- list-style: none;
- padding: 0;
-}
-
-.traje-item ul li {
- margin-bottom: 10px;
- font-size: 1.15em;
- color: var(--color-dark);
-}
-
-.nota-traje {
- margin-top: 40px;
- font-style: italic;
- font-size: 1.1em;
- color: var(--color-xadrez);
-}
-
-/* Galeria de Fotos (Geral, para eventos passados e trajes) */
-.gallery-grid {
- display: grid;
- grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
- gap: 25px;
- margin-top: 50px;
-}
-
-.gallery-img {
- width: 100%;
- height: 250px; /* Altura fixa para fotos */
- object-fit: cover; /* Recorta a imagem para cobrir a área */
- border-radius: 15px;
- border: 5px solid var(--color-secondary);
- box-shadow: 0 8px 20px rgba(58, 0, 0, 0.1);
- transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.gallery-img:hover {
- transform: scale(1.05);
- box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
-}
-
-/* Seção Como Chegar */
-.location-info {
- max-width: 900px;
- margin: 0 auto;
- text-align: left;
-}
-
-.location-info p {
- font-size: 1.2em;
- margin-bottom: 20px;
- display: flex;
- align-items: center;
- color: var(--color-dark);
-}
-
-.location-info p i {
- margin-right: 15px;
- font-size: 1.5em;
- color: var(--color-primary);
-}
-
-.map-container {
- border: 5px solid var(--color-red);
- border-radius: 15px;
- overflow: hidden;
- margin: 40px 0;
- box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
-}
-
-.map-container iframe {
- display: block; /* Remove espaço extra abaixo do iframe */
-}
-
-/* Informações sobre arrecadação */
-.info-arrecadacao {
- font-size: 1.3em;
- font-weight: bold;
- color: var(--color-accent);
- margin-top: 30px;
- text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
-}
-
-/* Chamada para Ação Final */
-.call-to-action {
- font-size: 1.8em;
- font-weight: bold;
- color: var(--color-red);
- margin-top: 60px;
- text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
- padding: 20px;
- background-color: var(--color-secondary);
- border-radius: 15px;
- border: 3px solid var(--color-red);
- display: inline-block;
-}
-
-/* FAQ Section */
-.faq-container {
- max-width: 900px;
- margin: 50px auto 0;
- text-align: left;
-}
-
-.faq-item {
- background-color: var(--color-white);
- border: 2px solid var(--color-primary);
- border-radius: 10px;
- margin-bottom: 20px;
- overflow: hidden;
- box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
- transition: all 0.3s ease;
-}
-
-.faq-item.active {
- border-color: var(--color-red);
-}
-
-.faq-question {
- font-family: 'Open Sans', sans-serif;
- font-size: 1.3em;
- font-weight: bold;
- color: var(--color-dark);
- padding: 20px;
- background-color: var(--color-secondary);
- cursor: pointer;
- display: flex;
- justify-content: space-between;
- align-items: center;
- transition: background-color 0.3s ease;
-}
-
-.faq-question:hover {
- background-color: #fcd5a2;
- /* Um amarelo um pouco mais escuro */
-}
-
-.faq-question::after {
- content: '+';
- font-size: 1.5em;
- color: var(--color-dark);
- transition: transform 0.3s ease;
-}
-
-.faq-item.active .faq-question::after {
- content: '-';
- transform: rotate(0deg);
-}
-
-.faq-answer {
- font-size: 1.1em;
- color: var(--color-dark);
- padding: 0 20px;
- max-height: 0; /* Começa escondido */
- overflow: hidden;
- transition: max-height 0.4s ease-out, padding 0.4s ease-out;
-}
-
-.faq-answer.active {
- max-height: 200px;
- /* Altura máxima para mostrar conteúdo. Ajuste conforme necessário */
- padding-bottom: 20px;
-}
-
-/* Rodapé */
 footer {
- background-color: var(--color-xadrez);
- color: var(--color-white);
- text-align: center;
- padding: 50px 20px; /* Mais padding */
- font-size: 1em;
- border-top: 10px solid var(--color-fogueira);
- display: grid;
- grid-template-columns: 1fr;
- gap: 30px;
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+    background-color: var(--color-xadrez); /* Marrom para detalhes (variável) */
+    color: var(--color-white);
+    font-size: 0.9em;
+    border-top: 5px dashed var(--color-secondary); /* Amarelo ouro (variável) */
 }
 
-.footer-content {
- max-width: 1200px;
- margin: 0 auto;
- display: grid;
- grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
- gap: 30px;
- align-items: center;
- justify-content: center;
-}
-
-.footer-info p,
-.footer-contact p {
- margin-bottom: 10px;
- font-size: 1.1em;
-}
-
-.footer-contact h3 {
- font-family: 'Luckiest Guy', cursive;
- color: var(--color-secondary);
- font-size: 1.8em;
- margin-bottom: 20px;
-}
-
-.footer-contact h3 i {
- margin-right: 10px;
- color: var(--color-primary);
-}
-
-.social-links {
- margin-top: 20px;
-}
-
-.social-links a {
- color: var(--color-white);
- font-size: 2.5em; /* Ícones maiores */
- margin: 0 15px;
- transition: color 0.3s ease, transform 0.3s ease;
-}
-
-.social-links a:hover {
- color: var(--color-secondary);
- transform: scale(1.2);
-}
-
-.copyright {
- margin-top: 30px;
- font-size: 0.9em;
- opacity: 0.8;
- grid-column: 1 / -1;
- /* Ocupa todas as colunas */
-}
-
-/* Responsividade */
-@media (max-width: 992px) {
- .hero h1 {
- font-size: 4em;
- }
-
- .hero h2 {
- font-size: 2.2em;
- }
-
- .section-title {
- font-size: 3em;
- }
-
- .grid-container,
- .menu-categories,
- .traje-grid,
- .gallery-grid,
- .footer-content {
- grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
- }
-}
-
+/* Responsividade básica */
 @media (max-width: 768px) {
- .hero {
- padding: 80px 15px;
- }
-
- .hero h1 {
- font-size: 3.5em;
- }
-
- .hero h2 {
- font-size: 1.8em;
- }
-
- .info-data p {
- font-size: 1.2em;
- }
-
- .btn-scroll {
- padding: 15px 30px;
- font-size: 1.2em;
- }
-
- .section-title {
- font-size: 2.5em;
- }
-
- .section-padded {
- padding: 60px 15px;
- }
-
- .grid-item,
- .category-item,
- .traje-item,
- .gallery-img,
- .faq-item {
- padding: 25px;
- }
-
- .faq-question {
- font-size: 1.2em;
- }
-
- .footer-content {
- grid-template-columns: 1fr;
- /* Colunas empilhadas no mobile */
- text-align: center;
- }
+    header h1 {
+        font-size: 2.5em;
+    }
+    .container {
+        margin: 20px auto;
+        padding: 20px;
+    }
+    header::before, header::after {
+        font-size: 2em;
+    }
 }
 
 @media (max-width: 480px) {
- .hero h1 {
- font-size: 2.5em;
- }
-
- .hero h2 {
- font-size: 1.5em;
- }
-
- .section-title {
- font-size: 2em;
- }
-
- .btn-scroll {
- padding: 12px 25px;
- font-size: 1em;
- }
-
- .grid-item h3,
- .category-item h3,
- .traje-item h3 {
- font-size: 1.8em;
- }
-
- .gallery-img {
- height: 200px;
- }
+    header h1 {
+        font-size: 2em;
+    }
+    header::before, header::after {
+        font-size: 1.5em;
+    }
+    .image-gallery img {
+        max-width: 100%;
+    }
 }
