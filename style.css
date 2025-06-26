@@ -693,3 +693,114 @@ footer {
         height: 200px;
     }
 }
+
+
+
+
+
+/* --- Banner Principal Section --- */
+.banner-principal {
+    width: 100%; /* O banner ocupará 100% da largura do seu contêiner pai */
+    height: 400px; /* Altura fixa para o banner. Ajuste conforme necessário. */
+    /* Para banners que ocupam a tela inteira (como no seu .hero), use min-height */
+    /* min-height: 550px; */ 
+    
+    background-image: url('Ingresso\ para\ festa\ junina\ alegre\ ilustrado\ colorido.jpg'); /* Substitua pelo link da sua imagem */
+    background-size: cover; /* Faz a imagem cobrir toda a área do banner, cortando se necessário */
+    background-position: center center; /* Centraliza a imagem no banner */
+    background-repeat: no-repeat; /* Evita que a imagem se repita */
+    
+    display: flex; /* Para centralizar o conteúdo interno do banner */
+    align-items: center; /* Centraliza verticalmente o conteúdo */
+    justify-content: center; /* Centraliza horizontalmente o conteúdo */
+    
+    color: #fff; /* Cor do texto dentro do banner */
+    text-align: center; /* Alinha o texto ao centro */
+    
+    /* Adicione um overlay escuro para melhorar a legibilidade do texto */
+    position: relative;
+    z-index: 1; /* Garante que o conteúdo e o overlay fiquem acima do background */
+}
+
+/* Overlay para escurecer a imagem e destacar o texto */
+.banner-principal::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4); /* Preto com 40% de opacidade */
+    z-index: -1; /* Fica abaixo do conteúdo, mas acima da imagem de fundo */
+}
+
+.banner-conteudo {
+    max-width: 800px; /* Largura máxima para o conteúdo do texto/botões */
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.3); /* Fundo semi-transparente para o conteúdo */
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.banner-conteudo h1 {
+    font-size: 3.5em; /* Tamanho do título do banner */
+    margin-bottom: 15px;
+    color: #fff; /* Título branco */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Sombra para o texto */
+}
+
+.banner-conteudo p {
+    font-size: 1.2em;
+    margin-bottom: 30px;
+    line-height: 1.6;
+}
+
+/* Estilo para o botão dentro do banner (se usar a classe .btn do seu CSS) */
+.banner-conteudo .btn {
+    background-color: #b560e0; /* Cor do seu botão */
+    color: #fff;
+    padding: 15px 30px;
+    border-radius: 30px;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 1px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.banner-conteudo .btn:hover {
+    background-color: #cf81ff;
+    transform: translateY(-2px);
+}
+
+/* --- Responsividade para o Banner --- */
+@media (max-width: 768px) {
+    .banner-principal {
+        height: 300px; /* Reduz a altura do banner em telas menores */
+    }
+
+    .banner-conteudo h1 {
+        font-size: 2.2em; /* Reduz o tamanho do título em telas menores */
+    }
+
+    .banner-conteudo p {
+        font-size: 1em; /* Reduz o tamanho do parágrafo */
+    }
+
+    .banner-conteudo .btn {
+        padding: 10px 20px; /* Reduz o padding do botão */
+    }
+}
+
+@media (max-width: 480px) {
+    .banner-principal {
+        height: 250px; /* Altura ainda menor para celulares */
+    }
+
+    .banner-conteudo h1 {
+        font-size: 1.8em;
+    }
+
+    .banner-conteudo p {
+        font-size: 0.9em;
+    }
+}
