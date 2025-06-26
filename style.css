@@ -99,7 +99,7 @@ a:hover {
 
 .hero h1 {
     font-family: 'Luckiest Guy', cursive;
-    font-size: 2em;
+    font-size: 1em;
     margin-bottom: 15px;
     color: var(--color-secondary);
     letter-spacing: 2px;
