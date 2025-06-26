@@ -69,7 +69,7 @@ a:hover {
     right: 0;
     height: 100%; /* Cobrir a altura do hero */
     /* IMAGEM DE BANDEIRINHAS REPETINDO - COLOQUE A SUA IMAGEM AQUI */
-    background-image: url('../images/bandeirinhas-repetindo.png');
+    background-image: url('—Pngtree—party\ bunting\ color\ paper\ triangular_5569246.png');
     background-size: 150px;
     background-repeat: repeat-x;
     animation: slideBandeirinhas 30s linear infinite; /* Animação mais lenta */
@@ -200,7 +200,7 @@ a:hover {
 .bg-light-yellow {
     background-color: var(--color-chita-bg);
     /* Padrão de chita sutil - COLOQUE A SUA IMAGEM AQUI */
-    background-image: url('../images/padrao-chita-sutil.png');
+    background-image: url('—Pngtree—party\ bunting\ color\ paper\ triangular_5569246.png');
     background-size: 150px;
     background-repeat: repeat;
     border-top: 8px solid var(--color-xadrez);
