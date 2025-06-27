@@ -708,10 +708,10 @@ footer {
 .banner-principal::after {
     content: '';
     position: absolute;
-    bottom: 30; /* Posiciona na parte de baixo do banner */
+    bottom: 40; /* Posiciona na parte de baixo do banner */
     left: 0;
     right: 0;
-    height: 70px; /* Altura das bandeirinhas */
+    height: 80px; /* Altura das bandeirinhas */
     background-image: url('—Pngtree—party\ bunting\ color\ paper\ triangular_5569246.png'); /* Sua imagem de bandeirinhas */
     background-size: 100px; /* Tamanho das bandeirinhas */
     background-repeat: repeat-x; /* Repete horizontalmente */
