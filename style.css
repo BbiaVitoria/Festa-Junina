@@ -1,5 +1,4 @@
 /* Importação de Fontes do Google Fonts */
-/* Mantive 'Luckiest Guy' e 'Open Sans' conforme seu código mais recente. */
 @import url('https://fonts.googleapis.com/css2?family=Luckiest+Guy&family=Open+Sans:wght@400;700&display=swap');
 
 /* Variáveis de Cores (para facilitar a manutenção) */
@@ -11,11 +10,15 @@
     --color-dark: #312c1b; /* Texto escuro */
     --color-light: #faf1d1; /* Creme claro / Cor de palha */
     --color-white: #FFFFFF;
-    --color-fogueira: #94d1f5; /* Laranja avermelhado */
+    --color-fogueira: #94d1f5; /* Laranja avermelhado - Nota: Essa cor está clara, talvez ajustar para um laranja mais quente se for 'fogueira' */
     --color-xadrez: #d8a179; /* Marrom para detalhes (madeira/xadrez) */
     --color-chita-bg: #f7d6ab; /* Caqui claro para fundos sutis */
     /* Variável para o hover do FAQ, para maior consistência */
     --color-secondary-hover: #ffd194;
+    /* Novas variáveis para mais cores e detalhes juninos */
+    --color-milho: #fcc43d; /* Amarelo milho */
+    --color-balao: #8e44ad; /* Roxo para balões */
+    --color-verde-claro: #98fb98; /* Verde mais vibrante */
 }
 
 /* Reset Básico e Estilos Gerais */
@@ -31,7 +34,7 @@ body {
     color: var(--color-dark);
     background-color: var(--color-light);
     /* Fundo com textura de chita ou palha - COLOQUE A SUA IMAGEM AQUI */
-    background-image: url('../images/textura-chita-ou-palha.png');
+    background-image: url('../images/textura-chita-ou-palha.png'); /* Certifique-se de que o caminho da imagem está correto */
     background-size: 200px;
     background-attachment: fixed;
 }
@@ -50,7 +53,7 @@ a:hover {
 /* Cabeçalho (Hero Section) */
 .hero {
     /* Gradiente com variáveis + IMAGEM DE FUNDO - COLOQUE A SUA IMAGEM AQUI */
-    background: linear-gradient(var(--color-red), var(--color-light)), url('../images/fundo-fogueira-bandeirinhas.jpg');
+    background: linear-gradient(var(--color-red), var(--color-light)), url('../images/fundo-fogueira-bandeirinhas.jpg'); /* Certifique-se de que o caminho da imagem está correto */
     background-size: cover;
     background-position: center;
     color: var(--color-white);
@@ -69,7 +72,7 @@ a:hover {
     right: 0;
     height: 100%; /* Cobrir a altura do hero */
     /* IMAGEM DE BANDEIRINHAS REPETINDO - COLOQUE A SUA IMAGEM AQUI */
-    background-image: url('—Pngtree—party\ bunting\ color\ paper\ triangular_5569246.png');
+    background-image: url('../images/bandeirinhas.png'); /* Ajustado o caminho e o nome da imagem para algo mais comum, substitua pela sua */
     background-size: 150px;
     background-repeat: repeat-x;
     animation: slideBandeirinhas 30s linear infinite; /* Animação mais lenta */
@@ -91,7 +94,7 @@ a:hover {
     z-index: 1; /* Garante que o conteúdo fique acima das bandeirinhas */
     padding: 20px;
     /* Fundo semi-transparente. Mantido o rgba hardcoded para essa transparência específica,
-       mas você poderia criar uma variável para isso, se necessário. */
+        mas você poderia criar uma variável para isso, se necessário. */
     background-color: rgba(192, 64, 64, 0.7);
     border-radius: 15px;
     display: inline-block; /* Para o background-color se ajustar ao conteúdo */
@@ -155,9 +158,7 @@ a:hover {
     box-shadow: 0 12px 30px rgba(101, 56, 56, 0.5);
 }
 
----
-
-## Seções Gerais
+/* --- Seções Gerais --- */
 
 .section-padded {
     padding: 100px 20px; /* Mais padding */
@@ -200,7 +201,7 @@ a:hover {
 .bg-light-yellow {
     background-color: var(--color-chita-bg);
     /* Padrão de chita sutil - COLOQUE A SUA IMAGEM AQUI */
-    background-image: url('—Pngtree—party\ bunting\ color\ paper\ triangular_5569246.png');
+    background-image: url('../images/padrao-chita.png'); /* Ajustado o caminho e o nome da imagem para algo mais comum, substitua pela sua */
     background-size: 150px;
     background-repeat: repeat;
     border-top: 8px solid var(--color-xadrez);
@@ -472,9 +473,7 @@ a:hover {
     display: inline-block;
 }
 
----
-
-## Seção de Perguntas Frequentes (FAQ)
+/* --- Seção de Perguntas Frequentes (FAQ) --- */
 
 .faq-container {
     max-width: 900px;
@@ -541,9 +540,7 @@ a:hover {
     padding-bottom: 20px;
 }
 
----
-
-## Rodapé
+/* --- Rodapé --- */
 
 footer {
     background-color: var(--color-xadrez);
@@ -608,9 +605,7 @@ footer {
     grid-column: 1 / -1; /* Ocupa todas as colunas */
 }
 
----
-
-## Responsividade
+/* --- Responsividade --- */
 
 @media (max-width: 992px) {
     .hero h1 {
@@ -694,91 +689,115 @@ footer {
     }
 }
 
-
-
-
-
 /* --- Banner Principal Section --- */
 .banner-principal {
-    width: 100%; /* O banner ocupará 100% da largura do seu contêiner pai */
-    height: 400px; /* Altura fixa para o banner. Ajuste conforme necessário. */
-    /* Para banners que ocupam a tela inteira (como no seu .hero), use min-height */
-    /* min-height: 550px; */ 
-    
-    background-image: url('Ingresso\ para\ festa\ junina\ alegre\ ilustrado\ colorido.jpg'); /* Substitua pelo link da sua imagem */
-    background-size: cover; /* Faz a imagem cobrir toda a área do banner, cortando se necessário */
-    background-position: center center; /* Centraliza a imagem no banner */
-    background-repeat: no-repeat; /* Evita que a imagem se repita */
-    
-    display: flex; /* Para centralizar o conteúdo interno do banner */
-    align-items: center; /* Centraliza verticalmente o conteúdo */
-    justify-content: center; /* Centraliza horizontalmente o conteúdo */
-    
-    
+    width: 100%;
+    height: 400px;
+    background-image: url('../images/Ingresso-para-festa-junina-alegre-ilustrado-colorido.jpg'); /* Substitua pelo caminho correto da sua imagem */
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative; /* Adicionado para posicionar as bandeirinhas */
+    overflow: hidden; /* Para garantir que as bandeirinhas não saiam do limite do banner */
 }
 
+/* Novas bandeirinhas abaixo do banner */
+.banner-principal::after {
+    content: '';
+    position: absolute;
+    bottom: 0; /* Posiciona na parte de baixo do banner */
+    left: 0;
+    right: 0;
+    height: 50px; /* Altura das bandeirinhas */
+    background-image: url('../images/bandeirinhas.png'); /* Sua imagem de bandeirinhas */
+    background-size: 100px; /* Tamanho das bandeirinhas */
+    background-repeat: repeat-x; /* Repete horizontalmente */
+    animation: slideBandeirinhas 20s linear infinite; /* Animação para dar movimento */
+    z-index: 2; /* Garante que as bandeirinhas fiquem sobre o fundo */
+}
 
 
 .banner-conteudo {
-    max-width: 800px; /* Largura máxima para o conteúdo do texto/botões */
+    max-width: 800px;
     padding: 20px;
-    background-color: rgba(0, 0, 0, 0.3); /* Fundo semi-transparente para o conteúdo */
+    background-color: rgba(0, 0, 0, 0.3);
     border-radius: 10px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    color: var(--color-white); /* Adicionado para o texto do banner */
+    text-align: center; /* Centraliza o texto do banner */
 }
 
 .banner-conteudo h1 {
-    font-size: 3.5em; /* Tamanho do título do banner */
+    font-family: 'Luckiest Guy', cursive; /* Usando a fonte junina */
+    font-size: 3.5em;
     margin-bottom: 15px;
-    color: #fff; /* Título branco */
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Sombra para o texto */
+    color: var(--color-secondary); /* Cor do título mais vibrante */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    letter-spacing: 2px; /* Mais espaçamento para o título */
 }
 
 .banner-conteudo p {
     font-size: 1.2em;
     margin-bottom: 30px;
     line-height: 1.6;
+    color: var(--color-light); /* Cor do parágrafo */
 }
 
 /* Estilo para o botão dentro do banner (se usar a classe .btn do seu CSS) */
 .banner-conteudo .btn {
-    background-color: #b560e0; /* Cor do seu botão */
-    color: #fff;
+    background-color: var(--color-red); /* Usando sua variável de cor */
+    color: var(--color-white);
     padding: 15px 30px;
     border-radius: 30px;
     text-transform: uppercase;
     font-weight: bold;
     letter-spacing: 1px;
     transition: background-color 0.3s ease, transform 0.3s ease;
+    border: 2px solid var(--color-secondary); /* Borda para o botão */
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
 }
 
 .banner-conteudo .btn:hover {
-    background-color: #cf81ff;
-    transform: translateY(-2px);
+    background-color: var(--color-primary); /* Usando sua variável de cor */
+    transform: translateY(-2px) scale(1.02);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
 }
 
 /* --- Responsividade para o Banner --- */
 @media (max-width: 768px) {
     .banner-principal {
-        height: 300px; /* Reduz a altura do banner em telas menores */
+        height: 300px;
+    }
+
+    .banner-principal::after {
+        height: 40px; /* Reduz a altura das bandeirinhas */
+        background-size: 80px;
     }
 
     .banner-conteudo h1 {
-        font-size: 2.2em; /* Reduz o tamanho do título em telas menores */
+        font-size: 2.2em;
     }
 
     .banner-conteudo p {
-        font-size: 1em; /* Reduz o tamanho do parágrafo */
+        font-size: 1em;
     }
 
     .banner-conteudo .btn {
-        padding: 10px 20px; /* Reduz o padding do botão */
+        padding: 10px 20px;
     }
 }
 
 @media (max-width: 480px) {
     .banner-principal {
-        height: 250px; /* Altura ainda menor para celulares */
+        height: 250px;
+    }
+
+    .banner-principal::after {
+        height: 30px; /* Altura ainda menor para celulares */
+        background-size: 60px;
     }
 
     .banner-conteudo h1 {
