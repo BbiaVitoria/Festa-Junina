@@ -708,7 +708,7 @@ footer {
 .banner-principal::after {
     content: '';
     position: absolute;
-    bottom: 90; /* Posiciona na parte de baixo do banner */
+    bottom: 70; /* Posiciona na parte de baixo do banner */
     left: 0;
     right: 0;
     height: 10px; /* Altura das bandeirinhas */
