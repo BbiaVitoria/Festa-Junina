@@ -57,7 +57,7 @@ a:hover {
 .hero {
     /* Gradiente com variáveis + IMAGEM DE FUNDO - COLOQUE A SUA IMAGEM AQUI */
     /* ATENÇÃO: Verifique o caminho da imagem. */
-    background: linear-gradient(rgba(194, 57, 57, 0.8), rgba(250, 241, 209, 0.8)), url('../images/fundo-fogueira-bandeirinhas.jpg');
+    background: linear-gradient(rgba(194, 57, 57, 0.8), rgba(250, 241, 209, 0.8)), url('360_F_125388578_5qyVgSLTQb1EYa2kI4aeX5v714WP6eA1.jpg');
     background-size: cover;
     background-position: center;
     color: var(--color-white);
