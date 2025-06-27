@@ -731,26 +731,13 @@ footer {
     border-bottom: 10px solid var(--color-xadrez); /* Borda decorativa abaixo do banner */
 }
 
-<<<<<<< HEAD
 /* Nova seção para as bandeirinhas abaixo do banner */
 .bandeirinhas-abaixo-banner {
     position: relative; /* Para posicionar o balão */
     width: 100%;
     height: 60px; /* Altura para as bandeirinhas */
-    background-image: url('party bunting color paper triangular_5569246.png'); /* Sua imagem de bandeirinhas */
-    background-size: 120px; /* Tamanho das bandeirinhas */
-=======
-/* Novas bandeirinhas abaixo do banner */
-.banner-principal::after {
-    content: '';
-    position: absolute;
-    bottom: 50; /* Posiciona na parte de baixo do banner */
-    left: 0;
-    right: 0;
-    height: 99px; /* Altura das bandeirinhas */
     background-image: url('—Pngtree—party\ bunting\ color\ paper\ triangular_5569246.png'); /* Sua imagem de bandeirinhas */
-    background-size: 100px; /* Tamanho das bandeirinhas */
->>>>>>> 52720c6da632153198e1d569380d075067ea6729
+    background-size: 120px; /* Tamanho das bandeirinhas */
     background-repeat: repeat-x; /* Repete horizontalmente */
     animation: slideBandeirinhas 25s linear infinite; /* Animação para dar movimento */
     border-top: 5px dashed var(--color-primary); /* Decoração extra */
