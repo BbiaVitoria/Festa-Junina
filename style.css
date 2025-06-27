@@ -734,10 +734,10 @@ footer {
 /* Nova seção para as bandeirinhas abaixo do banner */
 .bandeirinhas-abaixo-banner {
     position: relative; /* Para posicionar o balão */
-    width: 100%;
-    height: 60px; /* Altura para as bandeirinhas */
+    width: 150%;
+    height: 70px; /* Altura para as bandeirinhas */
     background-image: url('—Pngtree—party\ bunting\ color\ paper\ triangular_5569246.png'); /* Sua imagem de bandeirinhas */
-    background-size: 120px; /* Tamanho das bandeirinhas */
+    background-size: 140px; /* Tamanho das bandeirinhas */
     background-repeat: repeat-x; /* Repete horizontalmente */
     animation: slideBandeirinhas 25s linear infinite; /* Animação para dar movimento */
     border-top: 5px dashed var(--color-primary); /* Decoração extra */
