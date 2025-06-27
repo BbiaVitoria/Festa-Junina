@@ -735,7 +735,7 @@ footer {
 .bandeirinhas-abaixo-banner {
     position: relative; /* Para posicionar o balão */
     width: 150%;
-    height: 70px; /* Altura para as bandeirinhas */
+    height: 100px; /* Altura para as bandeirinhas */
     background-image: url('—Pngtree—party\ bunting\ color\ paper\ triangular_5569246.png'); /* Sua imagem de bandeirinhas */
     background-size: 140px; /* Tamanho das bandeirinhas */
     background-repeat: repeat-x; /* Repete horizontalmente */
