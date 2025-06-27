@@ -201,7 +201,7 @@ a:hover {
 .bg-light-yellow {
     background-color: var(--color-chita-bg);
     /* Padrão de chita sutil - COLOQUE A SUA IMAGEM AQUI */
-    background-image: url('../images/padrao-chita.png'); /* Ajustado o caminho e o nome da imagem para algo mais comum, substitua pela sua */
+    background-image: url('—Pngtree—festa\ junina\ brazil\ são\ joão_10354738.png'); /* Ajustado o caminho e o nome da imagem para algo mais comum, substitua pela sua */
     background-size: 150px;
     background-repeat: repeat;
     border-top: 8px solid var(--color-xadrez);
@@ -536,7 +536,7 @@ a:hover {
 }
 
 .faq-answer.active {
-    max-height: 200px; /* Altura máxima para mostrar conteúdo. Ajuste conforme necessário */
+    max-height: 150px; /* Altura máxima para mostrar conteúdo. Ajuste conforme necessário */
     padding-bottom: 20px;
 }
 
