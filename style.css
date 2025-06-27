@@ -34,7 +34,7 @@ body {
     color: var(--color-dark);
     background-color: var(--color-light);
     /* Fundo com textura de chita ou palha - COLOQUE A SUA IMAGEM AQUI */
-    background-image: url('../images/textura-chita-ou-palha.png'); /* Certifique-se de que o caminho da imagem está correto */
+    background-image: url('—Pngtree—festa\ junina\ brazil\ são\ joão_10354738.png'); /* Certifique-se de que o caminho da imagem está correto */
     background-size: 200px;
     background-attachment: fixed;
 }
@@ -72,7 +72,7 @@ a:hover {
     right: 0;
     height: 100%; /* Cobrir a altura do hero */
     /* IMAGEM DE BANDEIRINHAS REPETINDO - COLOQUE A SUA IMAGEM AQUI */
-    background-image: url('../images/bandeirinhas.png'); /* Ajustado o caminho e o nome da imagem para algo mais comum, substitua pela sua */
+    background-image: url(—Pngtree—party\ bunting\ color\ paper\ triangular_5569246.png')
     background-size: 150px;
     background-repeat: repeat-x;
     animation: slideBandeirinhas 30s linear infinite; /* Animação mais lenta */
