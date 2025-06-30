@@ -762,7 +762,7 @@ footer {
     width: 100%; /* Ocupa 100% da largura do contêiner pai */
     height: 80px; /* Altura um pouco menor e mais proporcional */
     /* ATENÇÃO: Verifique o caminho da imagem. */
-    background-image: url('—Pngtree—party_bunting_color_paper_triangular_5569246.png');
+    background-image: url('—Pngtree—party\ bunting\ color\ paper\ triangular_5569246.png');
     background-size: 120px; /* Tamanho das bandeirinhas ajustado para mais detalhes */
     background-repeat: repeat-x;
     animation: slideBandeirinhas 25s linear infinite; /* Animação para dar movimento */
@@ -781,7 +781,7 @@ footer {
     content: '🎈'; /* Emoji de balão */
     font-size: 3.5em; /* Balão um pouco maior */
     position: absolute;
-    top: -30px; /* Ajuste para flutuar mais acima das bandeirinhas */
+    top: -20px; /* Ajuste para flutuar mais acima das bandeirinhas */
     left: 15%; /* Posição à esquerda */
     animation: floatBalao 12s ease-in-out infinite alternate; /* Animação mais suave */
     z-index: 2;
