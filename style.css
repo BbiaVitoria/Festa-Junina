@@ -85,7 +85,7 @@ a:hover {
     &::before {
         /* Exemplo: Espiga de milho no canto superior esquerdo */
         /* ATENÇÃO: Você precisará de uma imagem de espiga de milho (milho.png) no seu projeto */
-        background-image: url('milho.png'); /* Caminho da sua imagem de milho */
+        background-image: url('26f2a3986c5778e6046c478f26775e32-icone-de-desenho-animado-de-milho.png'); /* Caminho da sua imagem de milho */
         top: 20px;
         left: 20px;
         transform: rotate(-15deg);
