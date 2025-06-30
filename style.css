@@ -969,96 +969,621 @@ footer {
 
 
 
-<!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Preços das Comidas - Arraiá da Alegria</title>
-    <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Luckiest+Guy&family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-</head>
-<body class="body-precos">
+/* --- Novo Estilo para o Botão "Ver Preços" na Página Principal (parte de baixo) --- */
+.section-description-precos {
+    text-align: center;
+    margin-top: 30px; /* Espaçamento após as categorias de comida */
+    margin-bottom: 20px;
+    font-size: 1.3em;
+    color: var(--color-dark);
+    font-weight: bold;
+    text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.5);
+}
 
-    <header class="header-precos">
-        <div class="header-content-precos">
-            <h1>🌽 Tabela de Preços do Arraiá da Alegria! 🍿</h1>
-            <p>Prepare o bolso e o coração para as delícias juninas!</p>
-            <a href="index.html" class="btn-voltar"><i class="fas fa-home"></i> Voltar para o Arraiá</a>
-        </div>
-    </header>
+.btn-ver-precos-bottom {
+    display: inline-block;
+    background: linear-gradient(to right, var(--color-red), var(--color-primary)); /* Gradiente de vermelho para laranja */
+    color: var(--color-white);
+    padding: 15px 30px;
+    border-radius: 50px; /* Mais arredondado */
+    font-family: 'Luckiest Guy', cursive; /* Fonte especial */
+    font-size: 1.5em; /* Maior destaque */
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border: 4px solid var(--color-secondary); /* Borda amarela */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+    transition: all 0.3s ease;
+    animation: bounceButton 2s infinite alternate; /* Animação para chamar atenção */
+}
 
-    <main class="main-precos">
-        <section class="section-padded precos-section">
-            <h2 class="section-title">💸 Nossas Delícias e Seus Valores! 💸</h2>
-            <p class="section-description">Na nossa Festa Junina, a moeda oficial são as **Fichas Juninas**! Troque seu dinheiro por fichas e aproveite cada quitute sem preocupação. Cada ficha vale **R$ 2,00**.</p>
-            
-            <div class="precos-grid">
-                <div class="preco-categoria">
-                    <h3><i class="fas fa-cake-candles"></i> Reino do Bolo</h3>
-                    <ul>
-                        <li>Bolo de Chocolate Crocante <span class="preco">2 Fichas</span></li>
-                        <li>Bolo de Milho <span class="preco">2 Fichas</span></li>
-                        <li>Bolo de Formigueiro <span class="preco">2 Fichas</span></li>
-                        <li>Bolo de Fubá com Goiabada <span class="preco">2 Fichas</span></li>
-                        <li>Bolo de Cenoura <span class="preco">2 Fichas</span></li>
-                        <li>Bolo de Coco Gelado <span class="preco">2 Fichas</span></li>
-                    </ul>
-                </div>
+.btn-ver-precos-bottom:hover {
+    background: linear-gradient(to right, var(--color-primary), var(--color-red)); /* Inverte o gradiente no hover */
+    transform: translateY(-5px) scale(1.03);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.5);
+    animation: none; /* Remove a animação no hover */
+}
 
-                <div class="preco-categoria">
-                    <h3><i class="fas fa-candy-cane"></i> Doces e Sobremesas</h3>
-                    <ul>
-                        <li>Canjica com Amendoim <span class="preco">3 Fichas</span></li>
-                        <li>Arroz Doce Cremoso <span class="preco">3 Fichas</span></li>
-                        <li>Paçoca <span class="preco">1 Ficha</span></li>
-                        <li>Algodão Doce <span class="preco">2 Fichas</span></li>
-                        <li>Pudim de Leite Condensado <span class="preco">3 Fichas</span></li>
-                        <li>Maçã do Amor <span class="preco">4 Fichas</span></li>
-                        <li>Pé de Moleque <span class="preco">1 Ficha</span></li>
-                    </ul>
-                </div>
+.btn-ver-precos-bottom i {
+    margin-left: 10px;
+    font-size: 1.2em;
+}
 
-                <div class="preco-categoria">
-                    <h3><i class="fas fa-hotdog"></i> Salgados Quentinhos</h3>
-                    <ul>
-                        <li>Pastel (Carne/Queijo) <span class="preco">3 Fichas</span></li>
-                        <li>Cachorro-Quente <span class="preco">4 Fichas</span></li>
-                        <li>Pipoca (Doce/Salgada) <span class="preco">2 Fichas</span></li>
-                        <li>Milho Cozido <span class="preco">3 Fichas</span></li>
-                        <li>Espetinho de Frango <span class="preco">5 Fichas</span></li>
-                        <li>Caldo Verde <span class="preco">4 Fichas</span></li>
-                    </ul>
-                </div>
+@keyframes bounceButton {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-8px); }
+}
 
-                <div class="preco-categoria">
-                    <h3><i class="fas fa-mug-hot"></i> Bebidas Refrescantes</h3>
-                    <ul>
-                        <li>Sucos Naturais <span class="preco">2 Fichas</span></li>
-                        <li>Água Mineral <span class="preco">1 Ficha</span></li>
-                        <li>Refrigerantes <span class="preco">2 Fichas</span></li>
-                        <li>Quentão (sem álcool) <span class="preco">3 Fichas</span></li>
-                        <li>Chá de Amendoim <span class="preco">3 Fichas</span></li>
-                    </ul>
-                </div>
-            </div>
+/* --- NOVO DESIGN PARA A PÁGINA DE PREÇOS (precos-comidas.html) --- */
 
-            <p class="aviso-fichas">Lembre-se: As fichas podem ser compradas na barraca de **Câmbio Junino**, ao lado da entrada principal. Aceitamos dinheiro e Pix!</p>
-            <p class="chamada-especial">Aproveite para experimentar um pouco de tudo e celebrar os sabores do nosso Arraiá!</p>
-            <div class="decoracao-extra">
-                <i class="fas fa-fire fa-3x"></i>
-                <i class="fas fa-fire fa-3x"></i>
-                <i class="fas fa-fire fa-3x"></i>
-            </div>
-        </section>
-    </main>
+.body-precos-v2 {
+    background: linear-gradient(to bottom, var(--color-light-yellow) 0%, var(--color-chita-bg) 100%);
+    min-height: 100vh; /* Garante que o gradiente preencha toda a tela */
+    display: flex;
+    flex-direction: column;
+}
 
-    <footer class="footer-precos">
-        <p>Preços sujeitos a alteração sem aviso prévio. Em caso de dúvidas, procure nossos monitores!</p>
-        <p>© 2025 Arraiá da Alegria - Colégio Cecm 11 de outubro. Todos os direitos reservados.</p>
-    </footer>
+.header-precos-v2 {
+    background: linear-gradient(to bottom, rgba(139, 69, 19, 0.9), rgba(255, 215, 0, 0.9)), url('fogueira-junina.jpg'); /* Marrom e dourado com fogueira */
+    background-size: cover;
+    background-position: center;
+    color: var(--color-white);
+    text-align: center;
+    padding: 100px 20px 60px;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
 
-    <script src="faq.js"></script>
-</body>
-</html>
+.header-precos-v2::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    /* ATENÇÃO: Verifique o caminho da imagem. */
+    background-image: url('—Pngtree—party_bunting_color_paper_triangular_5569246.png');
+    background-size: 150px;
+    background-repeat: repeat-x;
+    animation: slideBandeirinhas 25s linear infinite;
+    opacity: 0.9;
+    z-index: 0;
+}
+
+.header-content-precos-v2 {
+    position: relative;
+    z-index: 1;
+    background-color: rgba(139, 69, 19, 0.8); /* Fundo semi-transparente para o texto */
+    border-radius: 25px; /* Mais arredondado */
+    padding: 30px 40px;
+    max-width: 900px;
+    margin: 0 auto;
+    border: 5px dashed var(--color-milho); /* Borda tracejada amarela */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    transform: rotateX(5deg); /* Leve inclinação */
+}
+
+.header-precos-v2 h1 {
+    font-family: 'Luckiest Guy', cursive;
+    font-size: 4em;
+    margin-bottom: 20px;
+    color: var(--color-secondary); /* Amarelo dourado */
+    text-shadow: 5px 5px 8px rgba(0, 0, 0, 0.8);
+    letter-spacing: 4px;
+}
+
+.header-precos-v2 p {
+    font-size: 1.5em;
+    margin-bottom: 30px;
+    color: var(--color-white);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+    line-height: 1.4;
+}
+
+.btn-voltar-v2 {
+    display: inline-block;
+    background: linear-gradient(to right, var(--color-red), var(--color-primary));
+    color: var(--color-white);
+    padding: 15px 30px;
+    border-radius: 50px;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: bold;
+    font-size: 1.2em;
+    text-transform: uppercase;
+    text-decoration: none;
+    border: 3px solid var(--color-secondary);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease;
+}
+
+.btn-voltar-v2:hover {
+    background: linear-gradient(to right, var(--color-primary), var(--color-red));
+    transform: translateY(-5px) scale(1.02);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+}
+
+.btn-voltar-v2 i {
+    margin-right: 8px;
+}
+
+.header-decoration {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 30px; /* Altura da "sanfona" */
+    background: repeating-linear-gradient(
+        45deg,
+        var(--color-red),
+        var(--color-red) 5px,
+        var(--color-white) 5px,
+        var(--color-white) 10px
+    );
+    transform: translateY(50%); /* Posiciona metade para fora do header */
+    z-index: 1;
+    border-top: 2px solid var(--color-dark);
+}
+
+.main-precos-v2 {
+    flex-grow: 1; /* Permite que o main ocupe o espaço restante */
+    padding: 50px 0;
+}
+
+.section-title-precos {
+    font-family: 'Luckiest Guy', cursive;
+    font-size: 3.5em;
+    color: var(--color-red);
+    text-align: center;
+    margin-bottom: 40px;
+    text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.3);
+    letter-spacing: 2px;
+}
+
+/* Seção de Visão Geral das Fichas */
+.precos-overview {
+    background-color: var(--color-secondary); /* Amarelo da palha/milho */
+    padding: 60px 40px;
+    text-align: center;
+    border-radius: 20px;
+    max-width: 1000px;
+    margin: 40px auto;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    border: 5px dashed var(--color-primary); /* Borda tracejada laranja */
+    position: relative;
+    z-index: 2; /* Para ficar acima do fundo principal */
+}
+
+.overview-box {
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 30px;
+    border-radius: 15px;
+    border: 2px solid var(--color-red);
+    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.overview-box p {
+    font-size: 1.25em;
+    line-height: 1.6;
+    color: var(--color-dark);
+    margin-bottom: 20px;
+}
+
+.overview-box ul {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+}
+
+.overview-box ul li {
+    font-size: 1.1em;
+    color: var(--color-dark);
+    background-color: var(--color-light);
+    padding: 10px 20px;
+    border-radius: 25px;
+    border: 1px solid var(--color-primary);
+    display: flex;
+    align-items: center;
+}
+
+.overview-box ul li i {
+    margin-right: 8px;
+    color: var(--color-red);
+}
+
+.decoracao-fichas {
+    margin-top: 30px;
+}
+
+.decoracao-fichas span {
+    font-size: 3.5em;
+    margin: 0 10px;
+    opacity: 0.8;
+    animation: floatEmojis 3s infinite alternate ease-in-out;
+}
+.decoracao-fichas span:nth-child(2) { animation-delay: 0.2s; }
+.decoracao-fichas span:nth-child(3) { animation-delay: 0.4s; }
+
+@keyframes floatEmojis {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(-10px); }
+}
+
+/* Seção do Cardápio de Preços */
+.precos-cardapio {
+    padding: 60px 40px;
+    background-color: var(--color-chita-bg-dark); /* Fundo de chita mais escuro */
+    border-top: 10px dashed var(--color-xadrez);
+    border-bottom: 10px dashed var(--color-xadrez);
+}
+
+.cardapio-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.cardapio-categoria {
+    background-color: var(--color-white);
+    border-radius: 20px;
+    padding: 30px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+    border: 4px solid var(--color-primary); /* Borda mais grossa */
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.cardapio-categoria:hover {
+    transform: translateY(-10px) scale(1.02);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+}
+
+.cardapio-categoria h3 {
+    font-family: 'Luckiest Guy', cursive;
+    font-size: 2.2em;
+    color: var(--color-red);
+    text-align: center;
+    margin-bottom: 25px;
+    padding-bottom: 15px;
+    border-bottom: 3px dotted var(--color-xadrez);
+    position: relative;
+}
+
+.cardapio-categoria h3 i {
+    margin-right: 10px;
+    color: var(--color-accent);
+}
+
+.cardapio-categoria h3::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 30px;
+    height: 5px;
+    background-color: var(--color-milho); /* Detalhe amarelo abaixo do título */
+    border-radius: 5px;
+}
+
+.cardapio-categoria ul {
+    list-style: none;
+    padding: 0;
+}
+
+.cardapio-categoria ul li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+    font-size: 1.2em;
+    color: var(--color-dark);
+    padding: 10px 0;
+    border-bottom: 1px dashed var(--color-light);
+}
+
+.cardapio-categoria ul li:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+}
+
+.preco-ficha {
+    font-family: 'Luckiest Guy', cursive;
+    font-weight: bold;
+    color: var(--color-white);
+    background-color: var(--color-red);
+    padding: 8px 15px;
+    border-radius: 20px;
+    border: 2px solid var(--color-secondary);
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+    font-size: 1.1em;
+    white-space: nowrap; /* Evita que o texto quebre */
+}
+
+/* Cores específicas por categoria para um toque especial */
+.bolo-cat { border-color: #FF6347; } /* Tom de laranja para bolos */
+.bolo-cat h3 { color: #FF6347; }
+.bolo-cat h3::after { background-color: #FFD700; }
+.doce-cat { border-color: #FFD700; } /* Tom de dourado para doces */
+.doce-cat h3 { color: #FFD700; }
+.doce-cat h3::after { background-color: #8B4513; }
+.salgado-cat { border-color: #8B4513; } /* Tom de marrom para salgados */
+.salgado-cat h3 { color: #8B4513; }
+.salgado-cat h3::after { background-color: #FF6347; }
+.bebida-cat { border-color: #4682B4; } /* Tom de azul para bebidas */
+.bebida-cat h3 { color: #4682B4; }
+.bebida-cat h3::after { background-color: #DAA520; }
+.brincadeira-cat { border-color: #32CD32; } /* Tom de verde para brincadeiras */
+.brincadeira-cat h3 { color: #32CD32; }
+.brincadeira-cat h3::after { background-color: #FFD700; }
+
+
+.nota-final-cardapio {
+    font-size: 1.4em;
+    font-style: italic;
+    color: var(--color-dark);
+    text-align: center;
+    margin-top: 50px;
+    padding: 20px;
+    background-color: var(--color-light);
+    border-radius: 15px;
+    border: 3px dashed var(--color-red);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Seção de Informações Extras/Curiosidades */
+.info-extra {
+    background-color: var(--color-primary); /* Laranja */
+    color: var(--color-white);
+    padding: 70px 40px;
+    text-align: center;
+    border-top: 10px solid var(--color-secondary);
+    border-bottom: 10px solid var(--color-secondary);
+    position: relative;
+    overflow: hidden;
+}
+
+.info-extra::before, .info-extra::after {
+    content: '🎉';
+    position: absolute;
+    font-size: 8em;
+    opacity: 0.1;
+    z-index: 0;
+    color: var(--color-white);
+}
+.info-extra::before { top: 10%; left: 5%; transform: rotate(-20deg); }
+.info-extra::after { bottom: 10%; right: 5%; transform: rotate(30deg); }
+
+
+.info-content {
+    max-width: 1100px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 1;
+}
+
+.info-extra h2 {
+    font-family: 'Luckiest Guy', cursive;
+    font-size: 3.8em;
+    color: var(--color-secondary);
+    margin-bottom: 40px;
+    text-shadow: 4px 4px 6px rgba(0, 0, 0, 0.6);
+}
+
+.curiosidade-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    margin-top: 30px;
+}
+
+.curiosidade-item {
+    background-color: rgba(255, 255, 255, 0.95);
+    border-radius: 15px;
+    padding: 25px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+    border: 3px solid var(--color-milho); /* Borda amarela */
+    text-align: left;
+    transition: transform 0.3s ease;
+}
+
+.curiosidade-item:hover {
+    transform: translateY(-8px);
+}
+
+.curiosidade-item h3 {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: bold;
+    font-size: 1.5em;
+    color: var(--color-red);
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+}
+
+.curiosidade-item h3 i {
+    margin-right: 10px;
+    color: var(--color-primary);
+    font-size: 1.2em;
+}
+
+.curiosidade-item p {
+    font-size: 1.1em;
+    color: var(--color-dark);
+    line-height: 1.6;
+}
+
+
+/* Footer da página de preços (V2) */
+.footer-precos-v2 {
+    background-color: var(--color-dark);
+    color: var(--color-light);
+    text-align: center;
+    padding: 30px 20px;
+    font-size: 0.9em;
+    border-top: 10px solid var(--color-accent); /* Borda verde */
+    margin-top: auto; /* Empurra o footer para baixo */
+}
+
+.footer-precos-v2 p {
+    margin-bottom: 8px;
+}
+
+
+/* --- Responsividade para a NOVA página de preços (precos-comidas.html) --- */
+
+@media (max-width: 992px) {
+    .header-precos-v2 h1 {
+        font-size: 3.5em;
+    }
+    .header-precos-v2 p {
+        font-size: 1.3em;
+    }
+    .section-title-precos {
+        font-size: 3em;
+    }
+    .precos-overview, .precos-cardapio, .info-extra {
+        padding: 50px 30px;
+    }
+    .cardapio-categoria h3 {
+        font-size: 2em;
+    }
+    .cardapio-categoria ul li {
+        font-size: 1.1em;
+    }
+    .curiosidade-item h3 {
+        font-size: 1.4em;
+    }
+    .curiosidade-item p {
+        font-size: 1em;
+    }
+}
+
+@media (max-width: 768px) {
+    .header-precos-v2 {
+        padding: 80px 15px 50px;
+    }
+    .header-precos-v2 h1 {
+        font-size: 2.8em;
+        letter-spacing: 2px;
+    }
+    .header-precos-v2 p {
+        font-size: 1.1em;
+    }
+    .btn-voltar-v2 {
+        padding: 12px 25px;
+        font-size: 1em;
+    }
+    .header-content-precos-v2 {
+        padding: 20px 25px;
+    }
+    .section-title-precos {
+        font-size: 2.5em;
+        margin-bottom: 30px;
+    }
+    .precos-overview, .precos-cardapio, .info-extra {
+        padding: 40px 25px;
+        margin: 30px auto;
+    }
+    .overview-box p, .overview-box ul li {
+        font-size: 1.1em;
+    }
+    .decoracao-fichas span {
+        font-size: 3em;
+        margin: 0 8px;
+    }
+    .cardapio-grid {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 25px;
+    }
+    .cardapio-categoria {
+        padding: 25px;
+    }
+    .cardapio-categoria h3 {
+        font-size: 1.8em;
+    }
+    .cardapio-categoria ul li {
+        font-size: 1em;
+    }
+    .preco-ficha {
+        padding: 6px 12px;
+        font-size: 1em;
+    }
+    .info-extra h2 {
+        font-size: 3em;
+    }
+    .curiosidade-item h3 {
+        font-size: 1.2em;
+    }
+    .curiosidade-item p {
+        font-size: 0.95em;
+    }
+}
+
+@media (max-width: 480px) {
+    .header-precos-v2 {
+        padding: 60px 10px 40px;
+    }
+    .header-precos-v2 h1 {
+        font-size: 2em;
+        letter-spacing: 1px;
+    }
+    .header-precos-v2 p {
+        font-size: 0.9em;
+    }
+    .header-content-precos-v2 {
+        padding: 15px 20px;
+    }
+    .section-title-precos {
+        font-size: 2em;
+        margin-bottom: 25px;
+    }
+    .precos-overview, .precos-cardapio, .info-extra {
+        padding: 30px 15px;
+        margin: 20px auto;
+    }
+    .overview-box p, .overview-box ul li {
+        font-size: 1em;
+    }
+    .decoracao-fichas span {
+        font-size: 2.5em;
+        margin: 0 5px;
+    }
+    .cardapio-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    .cardapio-categoria {
+        padding: 20px;
+    }
+    .cardapio-categoria h3 {
+        font-size: 1.6em;
+    }
+    .cardapio-categoria ul li {
+        font-size: 0.9em;
+    }
+    .preco-ficha {
+        padding: 5px 10px;
+        font-size: 0.9em;
+    }
+    .info-extra h2 {
+        font-size: 2.5em;
+    }
+    .curiosidade-grid {
+        grid-template-columns: 1fr;
+    }
+    .curiosidade-item {
+        padding: 20px;
+    }
+    .curiosidade-item h3 {
+        font-size: 1.1em;
+    }
+    .curiosidade-item p {
+        font-size: 0.9em;
+    }
+}
