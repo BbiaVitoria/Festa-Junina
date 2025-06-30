@@ -427,6 +427,13 @@ a:hover {
 }
 
 /* Seção Como Chegar */
+:root {
+  --color-dark: #333333; /* Exemplo de cor escura */
+  --color-primary: #6a0dad; /* Exemplo de cor primária (roxo) */
+  --color-red: #ff0000;   /* Exemplo de cor vermelha */
+}
+
+/* Seu código CSS existente abaixo */
 .location-info {
     max-width: 900px;
     margin: 0 auto;
