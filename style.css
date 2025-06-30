@@ -759,7 +759,7 @@ footer {
     content: '🎈'; /* Emoji de balão */
     font-size: 3em;
     position: absolute;
-    top: -30px; /* Ajuste para flutuar acima das bandeirinhas */
+    top: -20px; /* Ajuste para flutuar acima das bandeirinhas */
     left: 10%;
     animation: floatBalao 10s ease-in-out infinite alternate; /* Animação de flutuação */
     z-index: 2;
