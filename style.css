@@ -801,7 +801,7 @@ footer {
     background-image: url('—Pngtree—party\ bunting\ color\ paper\ triangular_5569246.png');
     background-size: 120px; /* Tamanho das bandeirinhas ajustado para mais detalhes */
     background-repeat: repeat-x;
-    animation: slideBandeirinhas 25s linear infinite; /* Animação para dar movimento */
+    animation: slideBandeirinhas 30s linear infinite; /* Animação para dar movimento */
     border-top: 5px dashed var(--color-primary); /* Decoração extra */
     border-bottom: 5px dashed var(--color-primary);
     margin-top: 0; /* Remove a margem negativa, o banner já não tem margin-bottom */
@@ -819,7 +819,7 @@ footer {
     position: absolute;
     top: -20px; /* Ajuste para flutuar mais acima das bandeirinhas */
     left: 15%; /* Posição à esquerda */
-    animation: floatBalao 12s ease-in-out infinite alternate; /* Animação mais suave */
+    animation: floatBalao 15s ease-in-out infinite alternate; /* Animação mais suave */
     z-index: 2;
     text-shadow: 2px 2px 5px rgba(0,0,0,0.3); /* Sombra para o emoji */
 }
@@ -830,7 +830,7 @@ footer {
     position: absolute;
     bottom: -10px; /* Ajuste para aparecer sobre as bandeirinhas, mas na parte de baixo */
     right: 15%; /* Posição à direita */
-    animation: bounceMilho 4s ease-out infinite alternate; /* Animação um pouco mais lenta */
+    animation: bounceMilho 8s ease-out infinite alternate; /* Animação um pouco mais lenta */
     z-index: 2;
     text-shadow: 2px 2px 5px rgba(0,0,0,0.3); /* Sombra para o emoji */
 }
