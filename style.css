@@ -1347,8 +1347,8 @@ footer {
 .bolo-cat h3::after { background-color: #FFD700; }
 .doce-cat { border-color: #FFD700; } /* Tom de dourado para doces */
 .doce-cat h3 { color: #FFD700; }
-.doce-cat h3::after { background-color: #8B4513; }
-.salgado-cat { border-color: #8B4513; } /* Tom de marrom para salgados */
+.doce-cat h3::after { background-color: #88532e; }
+.salgado-cat { border-color: #6b4021; } /* Tom de marrom para salgados */
 .salgado-cat h3 { color: #8B4513; }
 .salgado-cat h3::after { background-color: #FF6347; }
 .bebida-cat { border-color: #4682B4; } /* Tom de azul para bebidas */
