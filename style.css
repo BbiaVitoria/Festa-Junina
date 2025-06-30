@@ -94,7 +94,7 @@ a:hover {
     &::after {
         /* Exemplo: Balão de festa junina no canto inferior direito */
         /* ATENÇÃO: Você precisará de uma imagem de balão (balao.png) no seu projeto */
-        background-image: url('balao.png'); /* Caminho da sua imagem de balão */
+        background-image: url('OIP.webp'); /* Caminho da sua imagem de balão */
         bottom: 20px;
         right: 20px;
         transform: rotate(10deg);
