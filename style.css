@@ -3,20 +3,20 @@
 
 /* Variáveis de Cores (para facilitar a manutenção) */
 :root {
-    --color-primary: #f09f54; /* Laranja vibrante (Milho/Fogueira) */
-    --color-secondary: #f8e265; /* Amarelo ouro (Milho/Sol) */
+    --color-primary: #f4aa65; /* Laranja vibrante (Milho/Fogueira) */
+    --color-secondary: #f9e579; /* Amarelo ouro (Milho/Sol) */
     --color-accent: #5e8b5e; /* Verde bandeira (Natureza/Roça) */
-    --color-red: #c23939; /* Vermelho escuro (Fogueira/Paixão) */
-    --color-dark: #312c1b; /* Texto escuro */
+    --color-red: #af3a3a; /* Vermelho escuro (Fogueira/Paixão) */
+    --color-dark: #403a25; /* Texto escuro */
     --color-light: #faf1d1; /* Creme claro / Cor de palha */
     --color-white: #FFFFFF;
-    --color-fogueira: #c04330; 
+    --color-fogueira: #a24d40; 
     --color-xadrez: #d8a179; /* Marrom para detalhes (madeira/xadrez) */
     --color-chita-bg: #f7d6ab; /* Caqui claro para fundos sutis */
     /* Variável para o hover do FAQ, para maior consistência */
     --color-secondary-hover: #ffd194;
     /* Novas variáveis para mais cores e detalhes juninos */
-    --color-milho: #fcc43d; /* Amarelo milho */
+    --color-milho: #b89034; /* Amarelo milho */
     --color-balao: #a8564f; /* Roxo para balões */
     --color-verde-claro: #98fb98; /* Verde mais vibrante */
     --color-rosa: #e76f8e; /* Rosa junino */
