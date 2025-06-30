@@ -738,125 +738,189 @@ footer {
     border-bottom: 10px solid var(--color-xadrez); /* Borda decorativa abaixo do banner */
 }
 
+/* --- Banner Principal Section --- */
+.banner-principal {
+    width: 100%;
+    height: 400px;
+    /* ATENÇÃO: Verifique o caminho da imagem. */
+    background-image: url('Ingresso para festa junina alegre ilustrado colorido.jpg');
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 0; /* Remove a margem inferior para as bandeirinhas se "encaixarem" */
+    border-bottom: 10px solid var(--color-xadrez); /* Borda decorativa abaixo do banner */
+}
+
 /* Nova seção para as bandeirinhas abaixo do banner */
 .bandeirinhas-abaixo-banner {
-    position: relative; /* Para posicionar o balão */
-    width: 150%;
-    height: 100px; /* Altura para as bandeirinhas */
-    background-image: url('—Pngtree—party\ bunting\ color\ paper\ triangular_5569246.png'); /* Sua imagem de bandeirinhas */
-    background-size: 140px; /* Tamanho das bandeirinhas */
-    background-repeat: repeat-x; /* Repete horizontalmente */
+    position: relative;
+    width: 100%; /* Ocupa 100% da largura do contêiner pai */
+    height: 80px; /* Altura um pouco menor e mais proporcional */
+    /* ATENÇÃO: Verifique o caminho da imagem. */
+    background-image: url('—Pngtree—party_bunting_color_paper_triangular_5569246.png');
+    background-size: 120px; /* Tamanho das bandeirinhas ajustado para mais detalhes */
+    background-repeat: repeat-x;
     animation: slideBandeirinhas 25s linear infinite; /* Animação para dar movimento */
     border-top: 5px dashed var(--color-primary); /* Decoração extra */
     border-bottom: 5px dashed var(--color-primary);
-    margin-top: -50px; /* Puxa para cima para "encaixar" no espaço do margin-bottom do banner */
+    margin-top: 0; /* Remove a margem negativa, o banner já não tem margin-bottom */
     z-index: 1; /* Garante que fique sobre outros elementos se houver sobreposição */
-    overflow: hidden; /* Para esconder qualquer parte da imagem que exceda a altura */
+    overflow: hidden;
+    /* Adiciona um gradiente sutil no topo para misturar com o banner */
+    mask-image: linear-gradient(to bottom, transparent, black 20px);
+    -webkit-mask-image: linear-gradient(to bottom, transparent, black 20px);
 }
 
 /* Decoração extra: Balão junino flutuante sobre as bandeirinhas */
 .bandeirinhas-abaixo-banner::before {
     content: '🎈'; /* Emoji de balão */
-    font-size: 3em;
+    font-size: 3.5em; /* Balão um pouco maior */
     position: absolute;
-    top: -20px; /* Ajuste para flutuar acima das bandeirinhas */
-    left: 10%;
-    animation: floatBalao 10s ease-in-out infinite alternate; /* Animação de flutuação */
+    top: -30px; /* Ajuste para flutuar mais acima das bandeirinhas */
+    left: 15%; /* Posição à esquerda */
+    animation: floatBalao 12s ease-in-out infinite alternate; /* Animação mais suave */
     z-index: 2;
+    text-shadow: 2px 2px 5px rgba(0,0,0,0.3); /* Sombra para o emoji */
 }
 
 .bandeirinhas-abaixo-banner::after {
     content: '🌽'; /* Emoji de milho */
-    font-size: 2.5em;
+    font-size: 3em; /* Milho um pouco maior */
     position: absolute;
-    bottom: 5px; /* Ajuste para aparecer sobre as bandeirinhas */
-    right: 5%;
-    animation: bounceMilho 3s ease-out infinite alternate; /* Animação de "pulo" */
+    bottom: -10px; /* Ajuste para aparecer sobre as bandeirinhas, mas na parte de baixo */
+    right: 15%; /* Posição à direita */
+    animation: bounceMilho 4s ease-out infinite alternate; /* Animação um pouco mais lenta */
     z-index: 2;
+    text-shadow: 2px 2px 5px rgba(0,0,0,0.3); /* Sombra para o emoji */
+}
+
+@keyframes slideBandeirinhas {
+    from {
+        background-position: 0 0;
+    }
+    to {
+        background-position: -120px 0; /* Move pela largura da bandeirinha para um loop perfeito */
+    }
 }
 
 @keyframes floatBalao {
     0% { transform: translateY(0) rotate(0deg); }
-    50% { transform: translateY(-20px) rotate(5deg); }
-    100% { transform: translateY(0) rotate(-5deg); }
+    50% { transform: translateY(-25px) rotate(8deg); } /* Mais movimento para cima e rotação */
+    100% { transform: translateY(0) rotate(-8deg); }
 }
 
 @keyframes bounceMilho {
-    0%, 100% { transform: translateY(0); }
-    50% { transform: translateY(-10px); }
+    0%, 100% { transform: translateY(0) scale(1); }
+    50% { transform: translateY(-15px) scale(1.05); } /* Salto maior com pequeno zoom */
 }
 
+/* --- Banner Content --- */
 .banner-conteudo {
     max-width: 800px;
-    padding: 20px;
-    background-color: rgba(0, 0, 0, 0.4); /* Levemente mais escuro para melhor contraste */
-    border-radius: 15px; /* Mais arredondado */
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4); /* Sombra mais pronunciada */
+    padding: 30px; /* Mais padding */
+    background-color: rgba(0, 0, 0, 0.5); /* Levemente mais escuro para melhor contraste */
+    border-radius: 20px; /* Mais arredondado */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5); /* Sombra mais pronunciada */
     color: var(--color-white);
     text-align: center;
-    border: 3px solid var(--color-secondary); /* Borda decorativa */
+    border: 4px solid var(--color-secondary); /* Borda decorativa mais grossa */
+    transform: perspective(1000px) rotateX(5deg); /* Efeito de perspectiva sutil */
+    transition: transform 0.5s ease;
+}
+
+.banner-conteudo:hover {
+    transform: perspective(1000px) rotateX(0deg) scale(1.02); /* Retorna e expande no hover */
 }
 
 .banner-conteudo h1 {
     font-family: 'Luckiest Guy', cursive;
-    font-size: 4em; /* Maior destaque */
-    margin-bottom: 15px;
+    font-size: 4.5em; /* Maior destaque */
+    margin-bottom: 20px; /* Mais espaço */
     color: var(--color-secondary);
-    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.7); /* Sombra mais forte */
-    letter-spacing: 3px;
+    text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.8); /* Sombra mais forte */
+    letter-spacing: 4px; /* Mais espaçamento */
 }
 
 .banner-conteudo p {
-    font-size: 1.3em; /* Levemente maior */
-    margin-bottom: 30px;
-    line-height: 1.6;
+    font-size: 1.4em; /* Levemente maior */
+    margin-bottom: 35px; /* Mais espaço */
+    line-height: 1.7;
     color: var(--color-light);
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.4);
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
 }
 
 .banner-conteudo .btn {
     background-color: var(--color-red);
     color: var(--color-white);
-    padding: 18px 35px; /* Mais padding */
-    border-radius: 50px; /* Botão mais "redondo" */
+    padding: 20px 40px; /* Mais padding para um botão imponente */
+    border-radius: 50px;
     text-transform: uppercase;
     font-weight: bold;
-    letter-spacing: 1px;
-    transition: background-color 0.3s ease, transform 0.3s ease;
-    border: 4px solid var(--color-secondary);
-    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+    letter-spacing: 1.5px;
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+    border: 5px solid var(--color-secondary); /* Borda mais grossa */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
 }
 
 .banner-conteudo .btn:hover {
     background-color: var(--color-primary);
-    transform: translateY(-5px) scale(1.03); /* Efeito mais sutil no hover do banner */
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+    transform: translateY(-7px) scale(1.05); /* Efeito mais sutil no hover do banner */
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.5);
 }
 
 /* --- Responsividade para o Banner --- */
+@media (max-width: 992px) {
+    .banner-principal {
+        height: 380px;
+    }
+    .bandeirinhas-abaixo-banner {
+        height: 70px;
+        background-size: 110px;
+    }
+    .banner-conteudo h1 {
+        font-size: 3.5em;
+    }
+    .banner-conteudo p {
+        font-size: 1.2em;
+    }
+    .banner-conteudo .btn {
+        padding: 18px 35px;
+    }
+    .bandeirinhas-abaixo-banner::before {
+        font-size: 3em;
+        top: -25px;
+    }
+    .bandeirinhas-abaixo-banner::after {
+        font-size: 2.5em;
+    }
+}
+
 @media (max-width: 768px) {
     .banner-principal {
-        height: 350px; /* Reduz a altura do banner em telas menores */
+        height: 300px;
     }
-
     .bandeirinhas-abaixo-banner {
-        height: 50px; /* Ajusta a altura das bandeirinhas */
+        height: 60px;
         background-size: 100px;
-        margin-top: -40px; /* Ajusta o espaçamento */
     }
-
+    .banner-conteudo {
+        padding: 25px;
+    }
     .banner-conteudo h1 {
-        font-size: 3em;
+        font-size: 2.8em;
     }
-
     .banner-conteudo p {
-        font-size: 1.1em;
+        font-size: 1.05em;
     }
-
     .banner-conteudo .btn {
         padding: 15px 30px;
+        font-size: 0.95em;
     }
-
     .bandeirinhas-abaixo-banner::before {
         font-size: 2.5em;
         top: -20px;
@@ -868,34 +932,35 @@ footer {
 
 @media (max-width: 480px) {
     .banner-principal {
-        height: 300px;
-        margin-bottom: 40px;
+        height: 250px;
     }
-
     .bandeirinhas-abaixo-banner {
-        height: 40px;
+        height: 50px;
         background-size: 80px;
-        margin-top: -30px;
     }
-
+    .banner-conteudo {
+        padding: 15px;
+        border-radius: 10px;
+    }
     .banner-conteudo h1 {
-        font-size: 2.5em;
+        font-size: 2em;
+        letter-spacing: 2px;
     }
-
     .banner-conteudo p {
-        font-size: 1em;
-    }
-
-    .banner-conteudo .btn {
-        padding: 12px 25px;
         font-size: 0.9em;
+        margin-bottom: 20px;
     }
-
+    .banner-conteudo .btn {
+        padding: 10px 20px;
+        font-size: 0.8em;
+    }
     .bandeirinhas-abaixo-banner::before {
         font-size: 2em;
         top: -15px;
+        left: 5%;
     }
     .bandeirinhas-abaixo-banner::after {
         font-size: 1.5em;
+        right: 5%;
     }
 }
