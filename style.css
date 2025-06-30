@@ -53,20 +53,56 @@ a:hover {
     text-decoration: underline;
 }
 
+
+
+
 /* Cabeçalho (Hero Section) */
 .hero {
-    /* Gradiente com variáveis + IMAGEM DE FUNDO - COLOQUE A SUA IMAGEM AQUI */
-    /* ATENÇÃO: Verifique o caminho da imagem. */
-    background: linear-gradient(rgba(194, 57, 57, 0.8), rgba(250, 241, 209, 0.8)), url('360_F_125388578_5qyVgSLTQb1EYa2kI4aeX5v714WP6eA1.jpg');
+    /* Fundo com degradê suave e pequenas decorações juninas */
+    /* Substituindo o gradiente anterior por um mais suave e adicionando decorações */
+    background: linear-gradient(to bottom, var(--color-light-yellow), var(--color-chita-bg)); /* Degradê suave de amarelo claro para um tom de chita */
     background-size: cover;
     background-position: center;
-    color: var(--color-white);
+    color: var(--color-white); /* Mantém a cor do texto branca para contraste */
     text-align: center;
     padding: 120px 20px; /* Mais padding para espaçamento */
     position: relative;
     overflow: hidden;
     border-bottom: 10px solid var(--color-accent); /* Borda decorativa */
+
+    /* Adição das decorações juninas com pseudo-elementos */
+    &::before, &::after {
+        content: '';
+        position: absolute;
+        width: 100px; /* Tamanho das decorações */
+        height: 100px; /* Tamanho das decorações */
+        background-repeat: no-repeat;
+        background-size: contain;
+        opacity: 0.2; /* Suave para não roubar a atenção */
+        z-index: 0; /* Fica abaixo do conteúdo do hero */
+    }
+
+    &::before {
+        /* Exemplo: Espiga de milho no canto superior esquerdo */
+        /* ATENÇÃO: Você precisará de uma imagem de espiga de milho (milho.png) no seu projeto */
+        background-image: url('milho.png'); /* Caminho da sua imagem de milho */
+        top: 20px;
+        left: 20px;
+        transform: rotate(-15deg);
+    }
+
+    &::after {
+        /* Exemplo: Balão de festa junina no canto inferior direito */
+        /* ATENÇÃO: Você precisará de uma imagem de balão (balao.png) no seu projeto */
+        background-image: url('balao.png'); /* Caminho da sua imagem de balão */
+        bottom: 20px;
+        right: 20px;
+        transform: rotate(10deg);
+    }
 }
+
+
+
 
 .hero::before {
     content: '';
