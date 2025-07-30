@@ -245,7 +245,7 @@ a:hover {
     /* Padrão de chita sutil - COLOQUE A SUA IMAGEM AQUI */
     /* ATENÇÃO: Verifique o caminho da imagem. */
     background-image: url('festa-junina-brazil-sao-joao_10354738.png');
-    background-size: 150px;
+    background-size: 200px;
     background-repeat: repeat;
     border-top: 8px solid var(--color-xadrez);
     border-bottom: 8px solid var(--color-xadrez);
@@ -398,7 +398,7 @@ a:hover {
     background-color: var(--color-white);
     border-radius: 20px;
     padding: 35px;
-    box-shadow: 0 10px 25px rgba(12, 12, 12, 0.15);
+    box-shadow: 0 10px 25px rgba(65, 62, 62, 0.15);
     border: 4px solid var(--color-accent);
     text-align: left;
 }
@@ -466,7 +466,7 @@ a:hover {
 :root {
   --color-dark: #333333; /* Exemplo de cor escura */
   --color-primary: #ba3a3a; /* Exemplo de cor primária (roxo) */
-  --color-red: #ff0000;   /* Exemplo de cor vermelha */
+  --color-red: #d41717;   /* Exemplo de cor vermelha */
 }
 
 /* Seu código CSS existente abaixo */
@@ -799,7 +799,7 @@ footer {
     height: 80px; /* Altura um pouco menor e mais proporcional */
     /* ATENÇÃO: Verifique o caminho da imagem. */
     background-image: url('—Pngtree—party\ bunting\ color\ paper\ triangular_5569246.png');
-    background-size: 120px; /* Tamanho das bandeirinhas ajustado para mais detalhes */
+    background-size: 130px; /* Tamanho das bandeirinhas ajustado para mais detalhes */
     background-repeat: repeat-x;
     animation: slideBandeirinhas 30s linear infinite; /* Animação para dar movimento */
     border-top: 5px dashed var(--color-primary); /* Decoração extra */
