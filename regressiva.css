@@ -1,0 +1,51 @@
+/* Estilo da Seção de Contagem Regressiva */
+#countdown-section {
+    background-color: #f7e6c4; /* Cor de fundo clarinha */
+    border-top: 5px dashed #a52a2a;
+    border-bottom: 5px dashed #a52a2a;
+    margin-top: 20px;
+    padding: 30px;
+    text-align: center;
+}
+
+/* Título da contagem */
+#countdown-section .section-title {
+    font-family: 'Luckiest Guy', cursive;
+    color: #4b0082;
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+/* Container dos boxes da contagem */
+.countdown-timer {
+    display: flex;
+    justify-content: center;
+    gap: 20px; /* Espaço entre os boxes */
+    flex-wrap: wrap;
+}
+
+/* Estilo de cada box (dias, horas, etc.) */
+.timer-box {
+    background-color: #ff8c00; /* Laranja */
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    border: 3px solid #a52a2a; /* Vermelho escuro */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    min-width: 100px;
+}
+
+.timer-box span {
+    display: block;
+    font-family: 'Luckiest Guy', cursive;
+    font-size: 3em;
+    line-height: 1;
+}
+
+.timer-box .label {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 0.9em;
+    font-weight: bold;
+    margin-top: 5px;
+    text-transform: uppercase;
+}
