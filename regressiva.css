@@ -1,36 +1,93 @@
-/* Estilo da Seção de Contagem Regressiva */
+/* Importação de fontes do Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Luckiest+Guy&family=Open+Sans:wght@400;700&family=Balsamiq+Sans:wght@400;700&display=swap');
+
+/* Estilos globais e de corpo da página */
+body {
+    font-family: 'Open Sans', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #fce4b3; /* Amarelo claro de fundo */
+    color: #4b0082; /* Cor principal de texto (roxo escuro) */
+    line-height: 1.6;
+}
+
+/* Estilo para todas as seções */
+.section-padded {
+    padding: 60px 20px;
+    margin: 0;
+}
+
+.bg-light-yellow {
+    background-color: #f7e6c4; /* Amarelo mais claro para seções alternadas */
+}
+
+/* Títulos das seções */
+.section-title {
+    font-family: 'Luckiest Guy', cursive;
+    font-size: 2.8em;
+    text-align: center;
+    color: #8b0000; /* Vermelho escuro */
+    margin-bottom: 40px;
+    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.2);
+}
+
+.section-description {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto 40px;
+    font-size: 1.1em;
+}
+
+.section-description-precos {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+/* Seção de Banner Principal */
+.banner-principal {
+    background: url('https://i.imgur.com/g8o29iG.png') no-repeat center center/cover;
+    height: 400px;
+    position: relative;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.bandeirinhas-abaixo-banner {
+    background: url('https://i.imgur.com/g8o29iG.png') repeat-x bottom;
+    height: 40px;
+    width: 100%;
+}
+
+/* Estilo para a contagem regressiva */
 #countdown-section {
-    background-color: #f7e6c4; /* Cor de fundo clarinha */
+    background-color: #ffcc00; /* Dourado */
     border-top: 5px dashed #a52a2a;
     border-bottom: 5px dashed #a52a2a;
-    margin-top: 20px;
-    padding: 30px;
+    padding: 40px 20px;
     text-align: center;
 }
 
-/* Título da contagem */
 #countdown-section .section-title {
     font-family: 'Luckiest Guy', cursive;
-    color: #4b0082;
-    font-size: 2em;
+    color: #a52a2a;
+    font-size: 2.2em;
     margin-bottom: 20px;
 }
 
-/* Container dos boxes da contagem */
 .countdown-timer {
     display: flex;
     justify-content: center;
-    gap: 20px; /* Espaço entre os boxes */
+    gap: 20px;
     flex-wrap: wrap;
 }
 
-/* Estilo de cada box (dias, horas, etc.) */
 .timer-box {
-    background-color: #ff8c00; /* Laranja */
+    background-color: #ff8c00; /* Laranja forte */
     color: white;
     padding: 20px;
     border-radius: 10px;
-    border: 3px solid #a52a2a; /* Vermelho escuro */
+    border: 3px solid #a52a2a;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
     min-width: 100px;
 }
@@ -48,4 +105,374 @@
     font-weight: bold;
     margin-top: 5px;
     text-transform: uppercase;
+}
+
+/* Seções de Atrações e Gastronomia */
+.grid-container, .menu-categories, .traje-grid, .location-info {
+    display: grid;
+    gap: 30px;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+}
+
+.grid-item, .category-item {
+    background-color: #fffaf0; /* Branco sujo */
+    border-radius: 10px;
+    padding: 30px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.grid-item:hover, .category-item:hover {
+    transform: translateY(-10px);
+}
+
+.grid-item h3, .category-item h3 {
+    font-family: 'Balsamiq Sans', cursive;
+    color: #4b0082;
+    font-size: 1.5em;
+    margin-bottom: 15px;
+}
+
+.grid-item ul, .category-item ul {
+    list-style: none;
+    padding: 0;
+    text-align: left;
+    margin-top: 15px;
+}
+
+.grid-item ul li, .category-item ul li {
+    font-size: 1em;
+    margin-bottom: 8px;
+}
+
+/* Seção de Trajes */
+.trajes-info {
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.traje-item {
+    text-align: left;
+    background-color: #fffaf0;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.traje-item h3 {
+    font-family: 'Balsamiq Sans', cursive;
+    font-size: 1.4em;
+    color: #8b0000;
+}
+
+.traje-item ul {
+    padding-left: 20px;
+}
+
+.nota-traje {
+    margin-top: 25px;
+    font-style: italic;
+    font-weight: bold;
+    color: #a52a2a;
+}
+
+/* Galeria de Fotos */
+.gallery-grid {
+    display: grid;
+    gap: 15px;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.gallery-img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.gallery-img:hover {
+    transform: scale(1.05);
+    filter: brightness(1.1);
+}
+
+/* Seção de Localização */
+.map-container {
+    margin: 20px auto;
+    max-width: 1000px;
+    border: 3px solid #8b0000;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.location-info p {
+    font-size: 1.1em;
+    font-weight: bold;
+    color: #4b0082;
+}
+
+/* Botão de Ver Preços */
+.btn-ver-precos-bottom {
+    background-color: #ff8c00;
+    color: white;
+    padding: 15px 30px;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: bold;
+    border: 2px solid #a52a2a;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    display: inline-block;
+}
+
+.btn-ver-precos-bottom:hover {
+    background-color: #ffa500;
+    transform: translateY(-5px);
+}
+
+/* Estilo do botão personalizado para o Nordeste */
+.btn-nordeste {
+    background: linear-gradient(to right, #8B4513, #FFD700);
+    color: #FFFFFF;
+    font-family: 'Luckiest Guy', cursive;
+    font-size: 24px;
+    padding: 15px 30px;
+    text-decoration: none;
+    border-radius: 10px;
+    border: 3px dashed #DAA520;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
+    position: relative;
+    overflow: hidden;
+    display: inline-block;
+    transition: transform 0.3s ease;
+    margin-top: 40px;
+}
+
+.btn-nordeste:hover {
+    transform: scale(1.05);
+}
+
+.btn-nordeste .emoji-corner {
+    position: absolute;
+    font-size: 40px;
+    color: rgba(255, 255, 255, 0.3);
+}
+
+.btn-nordeste .emoji-corner.top {
+    top: -10px;
+    left: -10px;
+    transform: rotate(-20deg);
+}
+
+.btn-nordeste .emoji-corner.bottom {
+    bottom: -10px;
+    right: -10px;
+    transform: rotate(30deg);
+}
+
+/* Seção do FAQ */
+.faq-container {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.faq-item {
+    background-color: #fffaf0;
+    border: 2px solid #a52a2a;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    padding: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.faq-item:hover {
+    background-color: #fff4e1;
+}
+
+.faq-question {
+    font-family: 'Balsamiq Sans', cursive;
+    font-size: 1.2em;
+    color: #4b0082;
+    margin: 0;
+    position: relative;
+    padding-right: 30px;
+}
+
+.faq-question::after {
+    content: '+';
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #a52a2a;
+}
+
+.faq-item.active .faq-question::after {
+    content: '-';
+}
+
+.faq-answer {
+    display: none;
+    margin-top: 15px;
+    border-top: 1px dashed #a52a2a;
+    padding-top: 15px;
+}
+
+.faq-answer.active {
+    display: block;
+}
+
+/* Seção do Formulário (Confirmação de Presença) */
+#confirmacao-presenca {
+    background-color: #f7e6c4;
+    padding: 40px;
+    border-radius: 15px;
+    border: 5px dashed #a52a2a;
+    max-width: 500px;
+    margin: 40px auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+#form-presenca {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#form-presenca label {
+    font-size: 1.2em;
+    color: #4b0082;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+input[type="text"] {
+    width: 80%;
+    padding: 12px;
+    margin-bottom: 20px;
+    border: 2px solid #a52a2a;
+    border-radius: 8px;
+    font-size: 1em;
+    background-color: #fffaf0;
+    transition: border-color 0.3s ease;
+}
+
+input[type="text"]:focus {
+    border-color: #ffd700;
+    outline: none;
+}
+
+.btn-submit {
+    background-color: #ff8c00;
+    color: white;
+    font-size: 1.2em;
+    padding: 15px 30px;
+    border: 3px solid #a52a2a;
+    border-radius: 10px;
+    cursor: pointer;
+    margin-top: 20px;
+    font-weight: bold;
+    text-transform: uppercase;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.btn-submit:hover {
+    background-color: #ffa500;
+    transform: scale(1.05);
+}
+
+
+/* Rodapé */
+footer {
+    background-color: #4b0082; /* Roxo escuro */
+    color: #fffaf0;
+    padding: 40px 20px;
+    text-align: center;
+    border-top: 5px dashed #ff8c00;
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.footer-info, .footer-contact {
+    text-align: center;
+}
+
+.footer-info p, .footer-contact p {
+    margin: 5px 0;
+}
+
+.footer-contact h3 {
+    font-family: 'Luckiest Guy', cursive;
+    color: #ffcc00;
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.footer-contact a {
+    color: #ffcc00;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.footer-contact a:hover {
+    color: #ffd700;
+}
+
+.social-links a {
+    font-size: 2em;
+    color: #ffcc00;
+    margin: 0 10px;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.social-links a:hover {
+    color: #ffa500;
+    transform: scale(1.2);
+}
+
+.copyright {
+    margin-top: 20px;
+    font-size: 0.9em;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+/* Estilos para responsividade */
+@media (max-width: 768px) {
+    .section-title {
+        font-size: 2em;
+    }
+
+    .footer-content {
+        flex-direction: column;
+    }
+
+    .countdown-timer {
+        gap: 10px;
+    }
+
+    .timer-box {
+        min-width: 80px;
+        padding: 15px;
+    }
+
+    .timer-box span {
+        font-size: 2em;
+    }
+
+    .btn-nordeste {
+        font-size: 18px;
+    }
 }
