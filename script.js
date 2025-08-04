@@ -1,7 +1,7 @@
 <script>
     // Defina a data do evento (Ano, mês-1, dia, hora, minuto, segundo)
     // O mês é baseado em 0 (Janeiro = 0, Fevereiro = 1, etc.)
-    const eventDate = new Date("2025-08-20T18:00:00").getTime(); // Exemplo: 20 de agosto de 2025 às 18:00
+    const eventDate = new Date("2025-08-20T18:07:00").getTime(); // Exemplo: 20 de agosto de 2025 às 18:00
 
     const countdownFunction = setInterval(function() {
         const now = new Date().getTime();
