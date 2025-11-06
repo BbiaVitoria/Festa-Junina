@@ -1,29 +1,17 @@
-/* Importação de Fontes do Google Fonts */
-@import url('https://fonts.googleapis.com/css2?family=Luckiest+Guy&family=Open+Sans:wght@400;700&display=swap');
+/* Importação das fontes - Mais modernas e expressivas */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Jost:wght@300;400;600&display=swap');
 
-/* Variáveis de Cores (para facilitar a manutenção) */
+/* Variáveis de Cores Atualizadas (Caatinga e Argila) */
 :root {
-    --color-primary: #f4aa65; /* Laranja vibrante (Milho/Fogueira) */
-    --color-secondary: #f9e579; /* Amarelo ouro (Milho/Sol) */
-    --color-accent: #5e8b5e; /* Verde bandeira (Natureza/Roça) */
-    --color-red: #af3a3a; /* Vermelho escuro (Fogueira/Paixão) */
-    --color-dark: #403a25; /* Texto escuro */
-    --color-light: #faf1d1; /* Creme claro / Cor de palha */
-    --color-white: #FFFFFF;
-    --color-fogueira: #a24d40; 
-    --color-xadrez: #d8a179; /* Marrom para detalhes (madeira/xadrez) */
-    --color-chita-bg: #f7d6ab; /* Caqui claro para fundos sutis */
-    /* Variável para o hover do FAQ, para maior consistência */
-    --color-secondary-hover: #ffd194;
-    /* Novas variáveis para mais cores e detalhes juninos */
-    --color-milho: #b89034; /* Amarelo milho */
-    --color-balao: #a8564f; /* Roxo para balões */
-    --color-verde-claro: #98fb98; /* Verde mais vibrante */
-    --color-rosa: #e76f8e; /* Rosa junino */
-    --color-azul: #6a8eab; /* Azul para detalhes */
+    --cor-fundo: #FBF8F3; /* Creme/Argila muito claro */
+    --cor-primaria: #8C2A14; /* Marrom-avermelhado (Terra/Argila) - Forte */
+    --cor-secundaria: #BF9460; /* Ocre Suave (Areia/Sertão) */
+    --cor-terciaria: #4CAF50; /* Verde Catinga (Toque de vida) */
+    --cor-texto: #333333;
+    --cor-detalhe: #1565C0; /* Azul Marinho (Mar e Profundidade) */
 }
 
-/* Reset Básico e Estilos Gerais */
+/* Reset e Configurações Gerais */
 * {
     margin: 0;
     padding: 0;
@@ -31,1595 +19,379 @@
 }
 
 body {
-    font-family: 'Open Sans', sans-serif;
-    line-height: 1.7; /* Mais espaço entre linhas */
-    color: var(--color-dark);
-    background-color: var(--color-light);
-    /* Fundo com textura de chita ou palha - COLOQUE A SUA IMAGEM AQUI */
-    /* ATENÇÃO: Verifique o caminho da imagem. Se a imagem estiver na mesma pasta que o CSS, não precisa do '../'. */
-    background-image: url('360_F_125388578_5qyVgSLTQb1EYa2kI4aeX5v714WP6eA1.jpg');
-    background-size: 200px;
-    background-attachment: fixed;
+    font-family: 'Jost', sans-serif;
+    background-color: var(--cor-fundo);
+    color: var(--cor-texto);
+    line-height: 1.7;
+    padding-top: 60px; 
 }
 
-a {
-    color: var(--color-red);
-    text-decoration: none;
-    transition: color 0.3s ease;
-}
-
-a:hover {
-    color: var(--color-primary);
-    text-decoration: underline;
-}
-
-
-
-
-/* Cabeçalho (Hero Section) */
-.hero {
-    /* Fundo com degradê suave e pequenas decorações juninas */
-    /* Substituindo o gradiente anterior por um mais suave e adicionando decorações */
-    background: linear-gradient(to bottom, var(--color-light-yellow), var(--color-chita-bg)); /* Degradê suave de amarelo claro para um tom de chita */
-    background-size: cover;
-    background-position: center;
-    color: var(--color-white); /* Mantém a cor do texto branca para contraste */
-    text-align: center;
-    padding: 120px 20px; /* Mais padding para espaçamento */
-    position: relative;
-    overflow: hidden;
-    border-bottom: 10px solid var(--color-accent); /* Borda decorativa */
-
-    /* Adição das decorações juninas com pseudo-elementos */
-    &::before, &::after {
-        content: '';
-        position: absolute;
-        width: 100px; /* Tamanho das decorações */
-        height: 100px; /* Tamanho das decorações */
-        background-repeat: no-repeat;
-        background-size: contain;
-        opacity: 0.2; /* Suave para não roubar a atenção */
-        z-index: 0; /* Fica abaixo do conteúdo do hero */
-    }
-
-    &::before {
-        /* Exemplo: Espiga de milho no canto superior esquerdo */
-        /* ATENÇÃO: Você precisará de uma imagem de espiga de milho (milho.png) no seu projeto */
-        background-image: url('26f2a3986c5778e6046c478f26775e32-icone-de-desenho-animado-de-milho.png'); /* Caminho da sua imagem de milho */
-        top: 20px;
-        left: 20px;
-        transform: rotate(-15deg);
-    }
-
-    &::after {
-        /* Exemplo: Balão de festa junina no canto inferior direito */
-        /* ATENÇÃO: Você precisará de uma imagem de balão (balao.png) no seu projeto */
-        background-image: url('OIP.webp'); /* Caminho da sua imagem de balão */
-        bottom: 20px;
-        right: 20px;
-        transform: rotate(10deg);
-    }
-}
-
-
-
-
-.hero::before {
-    content: '';
-    position: absolute;
+/* --- Loader/Splash Screen --- */
+.splash-screen {
+    position: fixed;
     top: 0;
     left: 0;
-    right: 0;
-    height: 100%; /* Cobrir a altura do hero */
-    /* IMAGEM DE BANDEIRINHAS REPETINDO NO TOPO DO HERO */
-    /* ATENÇÃO: Verifique o caminho da imagem. */
-    background-image: url('—Pngtree—party\ bunting\ color\ paper\ triangular_5569246.png');
-    background-size: 150px;
-    background-repeat: repeat-x;
-    animation: slideBandeirinhas 30s linear infinite; /* Animação mais lenta */
-    opacity: 0.8;
-    z-index: 0; /* Abaixo do conteúdo */
+    width: 100%;
+    height: 100%;
+    background-color: var(--cor-secundaria); 
+    z-index: 99999; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 1;
+    visibility: visible;
+    transition: opacity 1s ease-out, visibility 1s ease-out;
 }
 
-@keyframes slideBandeirinhas {
-    from {
-        background-position: 0 0;
-    }
-    to {
-        background-position: 100% 0;
-    }
+.splash-screen.loaded {
+    opacity: 0;
+    visibility: hidden;
 }
 
-.hero-content {
-    position: relative;
-    z-index: 1; /* Garante que o conteúdo fique acima das bandeirinhas */
-    padding: 20px;
-    background-color: rgba(192, 64, 64, 0.7); /* Fundo semi-transparente */
-    border-radius: 15px;
-    display: inline-block; /* Para o background-color se ajustar ao conteúdo */
-}
-
-.hero h1 {
-    font-family: 'Luckiest Guy', cursive;
-    font-size: 4em; /* Aumentei o tamanho para destaque */
-    margin-bottom: 15px;
-    color: var(--color-secondary);
-    letter-spacing: 3px; /* Mais espaçamento para o título */
-    text-shadow: 4px 4px 6px rgba(0, 0, 0, 0.6); /* Sombra mais pronunciada */
-}
-
-.hero h2 {
-    font-family: 'Luckiest Guy', cursive;
-    font-size: 2.5em; /* Aumentei o tamanho */
-    margin-bottom: 30px;
-    color: var(--color-primary);
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-}
-
-.info-data p {
-    font-size: 1.5em;
-    margin: 8px 0;
-    font-weight: 700;
-    background-color: rgba(255, 255, 255, 0.2); /* Fundo um pouco mais visível */
-    padding: 5px 15px; /* Mais padding */
-    border-radius: 10px; /* Bordas mais arredondadas */
-    display: inline-block;
-    color: var(--color-white); /* Texto branco para contraste */
-}
-
-.info-data strong {
-    color: var(--color-secondary);
-}
-
-.info-data i {
-    margin-right: 10px;
-    color: var(--color-accent);
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
-}
-
-.btn-scroll {
-    display: inline-block;
-    background-color: var(--color-red);
-    color: var(--color-white);
-    padding: 18px 35px;
-    margin-top: 40px;
-    text-decoration: none;
-    border-radius: 50px;
-    font-size: 1.4em;
-    font-weight: bold;
-    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
-    border: 4px solid var(--color-secondary);
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
-    text-transform: uppercase;
-    letter-spacing: 1px;
-}
-
-.btn-scroll:hover {
-    background-color: var(--color-primary);
-    transform: translateY(-8px) scale(1.05);
-    box-shadow: 0 12px 30px rgba(101, 56, 56, 0.5);
-}
-
-/* --- Seções Gerais --- */
-
-.section-padded {
-    padding: 100px 20px;
+.loader-container {
     text-align: center;
-    max-width: 1300px;
+}
+
+.splash-screen h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 3em;
+    color: var(--cor-primaria);
+    margin-bottom: 20px;
+}
+
+.splash-screen p {
+    color: var(--cor-primaria);
+    margin-top: 20px;
+    font-size: 1.1em;
+}
+
+.loader {
+    border: 8px solid rgba(0, 0, 0, 0.1);
+    border-top-color: var(--cor-primaria); 
+    border-radius: 50%;
+    width: 70px;
+    height: 70px;
+    animation: spin 1s linear infinite;
     margin: 0 auto;
 }
 
-.section-title {
-    font-family: 'Luckiest Guy', cursive;
-    font-size: 3.8em;
-    color: var(--color-primary);
-    margin-bottom: 60px;
-    text-shadow: 3px 3px 5px rgba(95, 88, 88, 0.2);
-    position: relative;
-    display: inline-block;
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* --- Menu de Navegação Fixo e Estilizado --- */
+#navbar {
+    background-color: var(--cor-primaria); 
+    padding: 15px 0;
+    position: fixed; 
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+#navbar ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+#navbar li {
+    margin: 0 20px;
+}
+
+#navbar a {
+    color: var(--cor-fundo); 
+    text-decoration: none;
+    font-weight: 600;
+    padding: 5px 10px;
+    transition: all 0.3s ease;
+    border-radius: 4px;
+}
+
+#navbar a:hover {
+    color: var(--cor-primaria);
+    background-color: var(--cor-secundaria); 
+}
+
+/* --- Cabeçalho Destaque (Header) --- */
+header {
+    background-color: var(--cor-secundaria); 
+    color: var(--cor-primaria);
+    padding: 60px 20px;
+    text-align: center;
+    margin-bottom: 40px;
+    background-image: repeating-linear-gradient(-45deg, rgba(255,255,255,0.08) 0px, rgba(255,255,255,0.08) 1px, transparent 1px, transparent 6px);
+}
+
+header h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 4.5em;
+    margin-bottom: 0px;
+    text-shadow: 2px 2px 0 var(--cor-fundo);
+}
+
+header p {
+    font-style: italic;
+    font-weight: 300;
+    font-size: 1.4em;
+    color: var(--cor-texto);
+}
+
+/* --- Estrutura Principal --- */
+main {
+    max-width: 1200px;
+    margin: 0 auto 50px auto;
     padding: 0 20px;
 }
 
-.section-title::after {
-    content: '';
-    display: block;
-    width: 120px;
-    height: 10px;
-    background-color: var(--color-red);
-    margin: 15px auto 0;
+section {
+    padding: 40px 30px;
+    margin-bottom: 50px;
+    border-radius: 12px;
+    background-color: white;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+}
+
+h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.8em;
+    color: var(--cor-primaria);
+    border-bottom: 4px solid var(--cor-terciaria);
+    padding-bottom: 15px;
+    margin-bottom: 30px;
+}
+
+h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.8em;
+    color: var(--cor-detalhe);
+    margin-bottom: 15px;
+}
+
+/* --- Containers com Grid Dinâmico (Lendas e Culinária) --- */
+.lendas .card-container, .culinaria .card-container, .musica-tradicao .musica-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.lenda-card, .prato-card, .instrumento-card {
+    padding: 25px;
     border-radius: 8px;
-}
-
-.section-description {
-    font-size: 1.2em;
-    margin-bottom: 40px;
-    max-width: 800px;
-    margin-left: auto;
-    margin-right: auto;
-    color: var(--color-dark);
-}
-
-/* Estilo para seções de fundo claro */
-.bg-light-yellow {
-    background-color: var(--color-chita-bg);
-    /* Padrão de chita sutil - COLOQUE A SUA IMAGEM AQUI */
-    /* ATENÇÃO: Verifique o caminho da imagem. */
-    background-image: url('festa-junina-brazil-sao-joao_10354738.png');
-    background-size: 200px;
-    background-repeat: repeat;
-    border-top: 8px solid var(--color-xadrez);
-    border-bottom: 8px solid var(--color-xadrez);
-}
-
-/* Grid para Atrações */
-.grid-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 40px;
-    margin-top: 50px;
-}
-
-.grid-item {
-    background-color: var(--color-white);
-    border-radius: 20px;
-    padding: 35px;
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
-    transition: transform 0.4s ease, box-shadow 0.4s ease;
-    border: 4px dashed var(--color-xadrez);
-    text-align: left;
-}
-
-.grid-item:hover {
-    transform: translateY(-15px) scale(1.02);
-    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.25);
-}
-
-.grid-item h3 {
-    font-family: 'Luckiest Guy', cursive;
-    color: var(--color-accent);
-    font-size: 2.0em;
-    margin-bottom: 20px;
-    border-bottom: 2px solid var(--color-primary);
-    padding-bottom: 10px;
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
-}
-
-.grid-item h3 i {
-    margin-right: 15px;
-    color: var(--color-red);
-}
-
-.grid-item ul {
-    list-style: none;
-    padding: 0;
-}
-
-.grid-item ul li {
-    margin-bottom: 12px;
-    font-size: 1.15em;
-    color: var(--color-dark);
-    position: relative;
-    padding-left: 30px;
-}
-
-.grid-item ul li i {
-    position: absolute;
-    left: 0;
-    color: var(--color-primary);
-    font-size: 1.2em;
-    top: 5px;
-}
-
-/* Estilo para o Menu de Comidas */
-.menu-categories {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 40px;
-    margin-top: 50px;
-    text-align: left;
-}
-
-.category-item {
-    background-color: var(--color-white);
-    border-radius: 20px;
-    padding: 30px;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
-    border: 3px solid var(--color-primary);
-    position: relative;
-    overflow: hidden;
-}
-
-.category-item::before {
-    /* Decoração com triângulo/chita */
-    content: '';
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 0;
-    height: 0;
-    border-top: 80px solid var(--color-red);
-    border-left: 80px solid transparent;
-    border-bottom-left-radius: 20px;
-}
-
-.category-item h3 {
-    font-family: 'Luckiest Guy', cursive;
-    color: var(--color-red);
-    font-size: 1.9em;
-    margin-bottom: 18px;
-    border-bottom: 2px dotted var(--color-xadrez);
-    padding-bottom: 12px;
-}
-
-.category-item h3 i {
-    margin-right: 10px;
-    color: var(--color-accent);
-}
-
-.category-item ul {
-    list-style: none;
-    padding: 0;
-}
-
-.category-item ul li {
-    margin-bottom: 10px;
-    font-size: 1.1em;
-    position: relative;
-    padding-left: 30px;
-}
-
-.category-item ul li i {
-    position: absolute;
-    left: 0;
-    color: var(--color-red);
-    font-size: 1em;
-    top: 6px;
-}
-
-/* Seção de Trajes */
-.trajes-info {
-    max-width: 1000px;
-    margin: 0 auto;
-}
-
-.trajes-info p {
-    font-size: 1.3em;
-    margin-bottom: 40px;
-    color: var(--color-dark);
-}
-
-.traje-grid {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 40px;
-}
-
-.traje-item {
-    background-color: var(--color-white);
-    border-radius: 20px;
-    padding: 35px;
-    box-shadow: 0 10px 25px rgba(65, 62, 62, 0.15);
-    border: 4px solid var(--color-accent);
-    text-align: left;
-}
-
-.traje-item h3 {
-    font-family: 'Luckiest Guy', cursive;
-    color: var(--color-primary);
-    font-size: 2.2em;
-    margin-bottom: 20px;
-    border-bottom: 2px dashed var(--color-xadrez);
-    padding-bottom: 10px;
-}
-
-.traje-item h3 i {
-    margin-right: 15px;
-    color: var(--color-red);
-}
-
-.traje-item ul {
-    list-style: none;
-    padding: 0;
-}
-
-.traje-item ul li {
-    margin-bottom: 10px;
-    font-size: 1.15em;
-    color: var(--color-dark);
-}
-
-.nota-traje {
-    margin-top: 40px;
-    font-style: italic;
-    font-size: 1.1em;
-    color: var(--color-xadrez);
-    background-color: var(--color-secondary); /* Fundo para a nota */
-    padding: 15px;
-    border-radius: 10px;
-    border: 2px dashed var(--color-red);
-}
-
-/* Galeria de Fotos (Geral, para eventos passados e trajes) */
-.gallery-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 25px;
-    margin-top: 50px;
-}
-
-.gallery-img {
-    width: 100%;
-    height: 250px;
-    object-fit: cover;
-    border-radius: 15px;
-    border: 5px solid var(--color-secondary);
-    box-shadow: 0 8px 20px rgba(58, 0, 0, 0.1);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.gallery-img:hover {
-    transform: scale(1.05);
-    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
+.lenda-card {
+    background-color: #FEF3E4; 
+    border-left: 6px solid var(--cor-terciaria); 
 }
 
-/* Seção Como Chegar */
-:root {
-  --color-dark: #333333; /* Exemplo de cor escura */
-  --color-primary: #ba3a3a; /* Exemplo de cor primária (roxo) */
-  --color-red: #d41717;   /* Exemplo de cor vermelha */
+.prato-card {
+    background-color: #FFF8E1; 
+    border-top: 6px solid var(--cor-primaria); 
 }
 
-/* Seu código CSS existente abaixo */
-.location-info {
-    max-width: 900px;
-    margin: 0 auto;
-    text-align: left;
+.instrumento-card {
+    background-color: #E3F2FD; 
+    border-right: 6px solid var(--cor-detalhe); 
 }
 
-.location-info p {
-    font-size: 1.2em;
-    margin-bottom: 20px;
-    display: flex;
-    align-items: center;
-    color: var(--color-dark);
+.lenda-card:hover, .prato-card:hover, .instrumento-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
 }
 
-.location-info p i {
-    margin-right: 15px;
-    font-size: 1.5em;
-    color: var(--color-primary);
+/* --- Manifestações e Artesanato (Layout em Grid) --- */
+.manifestacoes, .artesanato {
+    background-color: var(--cor-secundaria);
 }
 
-.map-container {
-    border: 5px solid var(--color-red);
-    border-radius: 15px;
-    overflow: hidden;
-    margin: 40px 0;
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
-}
-
-.map-container iframe {
-    display: block;
-}
-
-/* Informações sobre arrecadação */
-.info-arrecadacao {
-    font-size: 1.3em;
-    font-weight: bold;
-    color: var(--color-accent);
-    margin-top: 30px;
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
-    background-color: var(--color-milho); /* Cor de milho para o destaque */
-    padding: 15px;
-    border-radius: 10px;
-    border: 2px solid var(--color-primary);
-}
-
-/* Chamada para Ação Final */
-.call-to-action {
-    font-size: 1.8em;
-    font-weight: bold;
-    color: var(--color-red);
-    margin-top: 60px;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+.manifestacoes .info-bloco, .artesanato .info-bloco {
+    background-color: var(--cor-fundo);
     padding: 20px;
-    background-color: var(--color-secondary);
-    border-radius: 15px;
-    border: 3px solid var(--color-red);
-    display: inline-block;
-    animation: pulse 1.5s infinite alternate; /* Animação de pulso */
-}
-
-@keyframes pulse {
-    from {
-        transform: scale(1);
-        box-shadow: 0 0 0 rgba(0, 0, 0, 0);
-    }
-    to {
-        transform: scale(1.05);
-        box-shadow: 0 0 20px var(--color-red);
-    }
-}
-
-/* --- Seção de Perguntas Frequentes (FAQ) --- */
-
-.faq-container {
-    max-width: 900px;
-    margin: 50px auto 0;
-    text-align: left;
-}
-
-.faq-item {
-    background-color: var(--color-white);
-    border: 2px solid var(--color-primary);
-    border-radius: 10px;
     margin-bottom: 20px;
-    overflow: hidden;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
-    transition: all 0.3s ease;
+    border-radius: 6px;
+    border-right: 4px solid var(--cor-primaria);
+    transition: background-color 0.3s;
 }
 
-.faq-item.active {
-    border-color: var(--color-red);
+.manifestacoes h3 { color: var(--cor-terciaria); }
+.artesanato h3 { color: var(--cor-primaria); }
+
+/* --- Seção Música e Tradição Específica --- */
+#musica-tradicao h2 {
+    color: var(--cor-detalhe); 
+    border-bottom: 4px solid var(--cor-secundaria);
 }
 
-.faq-question {
-    font-family: 'Open Sans', sans-serif;
-    font-size: 1.3em;
-    font-weight: bold;
-    color: var(--color-dark);
-    padding: 20px;
-    background-color: var(--color-secondary);
-    cursor: pointer;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    transition: background-color 0.3s ease;
+.musica-tradicao .info-bloco {
+    background-color: var(--cor-secundaria); 
+    color: var(--cor-texto);
+    padding: 25px;
+    border-radius: 8px;
+    border-left: 6px solid var(--cor-primaria); 
+    margin-top: 40px;
 }
 
-.faq-question:hover {
-    background-color: var(--color-secondary-hover);
+.musica-tradicao .info-bloco h3 {
+    color: var(--cor-primaria);
 }
 
-.faq-question::after {
-    content: '+';
-    font-size: 1.5em;
-    color: var(--color-dark);
-    transition: transform 0.3s ease;
-}
-
-.faq-item.active .faq-question::after {
-    content: '-';
-    transform: rotate(0deg);
-}
-
-.faq-answer {
-    font-size: 1.1em;
-    color: var(--color-dark);
-    padding: 0 20px;
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.4s ease-out, padding 0.4s ease-out;
-}
-
-.faq-answer.active {
-    max-height: 150px;
-    padding-bottom: 20px;
-}
-
-/* --- Rodapé --- */
-
-footer {
-    background-color: var(--color-xadrez);
-    color: var(--color-white);
+/* Detalhe Xilogravura na Introdução */
+.imagem-destaque {
     text-align: center;
-    padding: 50px 20px;
+    margin: 30px 0;
+    padding: 20px;
+    background-color: #333333; 
+    color: white;
+    border-radius: 8px;
+    border: 4px dashed var(--cor-secundaria);
+}
+
+.imagem-destaque small {
+    color: var(--cor-secundaria);
+}
+
+/* --- Linha Divisória --- */
+hr {
+    border: none;
+    border-top: 6px double var(--cor-primaria);
+    opacity: 0.5;
+    margin: 60px 0;
+}
+
+/* --- Animação Fade-in on Scroll --- */
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px); 
+    transition: opacity 1s ease-out, transform 0.8s ease-out;
+}
+
+.fade-in.apareceu {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Garante que o cabeçalho apareça imediatamente */
+header {
+    opacity: 1 !important;
+    transform: translateY(0) !important;
+}
+
+/* --- Botão Voltar ao Topo --- */
+#back-to-top {
+    display: none; 
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: var(--cor-primaria); 
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 15px;
     font-size: 1em;
-    border-top: 10px solid var(--color-fogueira);
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 30px;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    opacity: 0; 
+    transition: opacity 0.3s, background-color 0.3s, transform 0.2s;
+    z-index: 10000;
+}
+
+#back-to-top:hover {
+    background-color: #A33A24; 
+    transform: scale(1.05);
+}
+
+#back-to-top.show {
+    display: block;
+    opacity: 1;
+}
+
+/* --- Rodapé (Footer) com Créditos e Referências --- */
+footer {
+    background-color: var(--cor-texto); 
+    color: white;
+    padding: 40px 20px;
+    font-size: 0.9em;
+    border-top: 5px solid var(--cor-primaria); 
 }
 
 .footer-content {
     max-width: 1200px;
     margin: 0 auto;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    grid-template-columns: 1fr 1fr 1fr; 
     gap: 30px;
-    align-items: center;
-    justify-content: center;
+    align-items: start;
+    text-align: left;
 }
 
-.footer-info p,
-.footer-contact p {
-    margin-bottom: 10px;
+.footer-content > p {
+    grid-column: 1 / -1; 
+    text-align: center;
+    margin-bottom: 20px;
     font-size: 1.1em;
 }
 
-.footer-contact h3 {
-    font-family: 'Luckiest Guy', cursive;
-    color: var(--color-secondary);
-    font-size: 1.8em;
-    margin-bottom: 20px;
+.creditos h3, .referencias h3 {
+    color: var(--cor-secundaria); 
+    font-size: 1.2em;
+    border-bottom: 2px solid var(--cor-primaria);
+    padding-bottom: 5px;
+    margin-bottom: 10px;
 }
 
-.footer-contact h3 i {
-    margin-right: 10px;
-    color: var(--color-primary);
+.creditos ul {
+    list-style: none;
+    padding: 0;
 }
 
-.social-links {
-    margin-top: 20px;
+.creditos li {
+    margin-bottom: 5px;
 }
 
-.social-links a {
-    color: var(--color-white);
-    font-size: 2.5em;
-    margin: 0 15px;
-    transition: color 0.3s ease, transform 0.3s ease;
-}
-
-.social-links a:hover {
-    color: var(--color-secondary);
-    transform: scale(1.2);
-}
-
-.copyright {
-    margin-top: 30px;
-    font-size: 0.9em;
-    opacity: 0.8;
-    grid-column: 1 / -1;
+.referencias {
+    grid-column: 2 / span 2; 
 }
 
 /* --- Responsividade --- */
-
-@media (max-width: 992px) {
-    .hero h1 {
-        font-size: 3.5em; /* Ajuste para telas menores */
-    }
-    .hero h2 {
-        font-size: 2em; /* Ajuste para telas menores */
-    }
-    .section-title {
-        font-size: 3em;
-    }
-    .grid-container,
-    .menu-categories,
-    .traje-grid,
-    .gallery-grid,
-    .footer-content {
-        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    }
-}
-
 @media (max-width: 768px) {
-    .hero {
-        padding: 80px 15px;
-    }
-    .hero h1 {
+    header h1 {
         font-size: 3em;
     }
-    .hero h2 {
-        font-size: 1.5em;
+    
+    body {
+        padding-top: 80px; 
     }
-    .info-data p {
-        font-size: 1.1em;
+    
+    #navbar ul {
+        flex-wrap: wrap;
     }
-    .btn-scroll {
-        padding: 15px 30px;
-        font-size: 1.2em;
+    
+    #navbar li {
+        margin: 5px 10px;
     }
-    .section-title {
-        font-size: 2.5em;
-    }
-    .section-padded {
-        padding: 60px 15px;
-    }
-    .grid-item,
-    .category-item,
-    .traje-item,
-    .gallery-img,
-    .faq-item {
-        padding: 25px;
-    }
-    .faq-question {
-        font-size: 1.1em;
-    }
+
     .footer-content {
-        grid-template-columns: 1fr;
+        grid-template-columns: 1fr; 
         text-align: center;
     }
-}
-
-@media (max-width: 480px) {
-    .hero h1 {
-        font-size: 2.2em;
-    }
-    .hero h2 {
-        font-size: 1.2em;
-    }
-    .section-title {
-        font-size: 1.8em;
-    }
-    .btn-scroll {
-        padding: 10px 20px;
-        font-size: 0.9em;
-    }
-    .grid-item h3,
-    .category-item h3,
-    .traje-item h3 {
-        font-size: 1.6em;
-    }
-    .gallery-img {
-        height: 180px;
-    }
-}
-
-/* --- Banner Principal Section --- */
-.banner-principal {
-    width: 100%;
-    height: 400px;
-    /* ATENÇÃO: Verifique o caminho da imagem. */
-    background-image: url('Ingresso\ para\ festa\ junina\ alegre\ ilustrado\ colorido\ \(2\).jpg');
-    background-size: cover;
-    background-position: center center;
-    background-repeat: no-repeat;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-    overflow: hidden;
-    margin-bottom: 50px; /* Espaço para as bandeirinhas ficarem abaixo */
-    border-bottom: 10px solid var(--color-xadrez); /* Borda decorativa abaixo do banner */
-}
-
-/* --- Banner Principal Section --- */
-.banner-principal {
-    width: 100%;
-    height: 400px;
-    /* ATENÇÃO: Verifique o caminho da imagem. */
-    background-image: url('Ingresso\ para\ festa\ junina\ alegre\ ilustrado\ colorido\ \(2\).jpg');
-    background-size: cover;
-    background-position: center center;
-    background-repeat: no-repeat;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-    overflow: hidden;
-    margin-bottom: 0; /* Remove a margem inferior para as bandeirinhas se "encaixarem" */
-    border-bottom: 10px solid var(--color-xadrez); /* Borda decorativa abaixo do banner */
-}
-
-/* Nova seção para as bandeirinhas abaixo do banner */
-.bandeirinhas-abaixo-banner {
-    position: relative;
-    width: 100%; /* Ocupa 100% da largura do contêiner pai */
-    height: 80px; /* Altura um pouco menor e mais proporcional */
-    /* ATENÇÃO: Verifique o caminho da imagem. */
-    background-image: url('—Pngtree—party\ bunting\ color\ paper\ triangular_5569246.png');
-    background-size: 130px; /* Tamanho das bandeirinhas ajustado para mais detalhes */
-    background-repeat: repeat-x;
-    animation: slideBandeirinhas 30s linear infinite; /* Animação para dar movimento */
-    border-top: 5px dashed var(--color-primary); /* Decoração extra */
-    border-bottom: 5px dashed var(--color-primary);
-    margin-top: 0; /* Remove a margem negativa, o banner já não tem margin-bottom */
-    z-index: 1; /* Garante que fique sobre outros elementos se houver sobreposição */
-    overflow: hidden;
-    /* Adiciona um gradiente sutil no topo para misturar com o banner */
-    mask-image: linear-gradient(to bottom, transparent, black 20px);
-    -webkit-mask-image: linear-gradient(to bottom, transparent, black 20px);
-}
-
-/* Decoração extra: Balão junino flutuante sobre as bandeirinhas */
-.bandeirinhas-abaixo-banner::before {
-    content: '🎈'; /* Emoji de balão */
-    font-size: 3.5em; /* Balão um pouco maior */
-    position: absolute;
-    top: -20px; /* Ajuste para flutuar mais acima das bandeirinhas */
-    left: 15%; /* Posição à esquerda */
-    animation: floatBalao 15s ease-in-out infinite alternate; /* Animação mais suave */
-    z-index: 2;
-    text-shadow: 2px 2px 5px rgba(0,0,0,0.3); /* Sombra para o emoji */
-}
-
-.bandeirinhas-abaixo-banner::after {
-    content: '🌽'; /* Emoji de milho */
-    font-size: 3em; /* Milho um pouco maior */
-    position: absolute;
-    bottom: -10px; /* Ajuste para aparecer sobre as bandeirinhas, mas na parte de baixo */
-    right: 15%; /* Posição à direita */
-    animation: bounceMilho 8s ease-out infinite alternate; /* Animação um pouco mais lenta */
-    z-index: 2;
-    text-shadow: 2px 2px 5px rgba(0,0,0,0.3); /* Sombra para o emoji */
-}
-
-@keyframes slideBandeirinhas {
-    from {
-        background-position: 0 0;
-    }
-    to {
-        background-position: -120px 0; /* Move pela largura da bandeirinha para um loop perfeito */
-    }
-}
-
-@keyframes floatBalao {
-    0% { transform: translateY(0) rotate(0deg); }
-    50% { transform: translateY(-25px) rotate(8deg); } /* Mais movimento para cima e rotação */
-    100% { transform: translateY(0) rotate(-8deg); }
-}
-
-@keyframes bounceMilho {
-    0%, 100% { transform: translateY(0) scale(1); }
-    50% { transform: translateY(-15px) scale(1.05); } /* Salto maior com pequeno zoom */
-}
-
-/* --- Banner Content --- */
-.banner-conteudo {
-    max-width: 800px;
-    padding: 30px; /* Mais padding */
-    background-color: rgba(0, 0, 0, 0.5); /* Levemente mais escuro para melhor contraste */
-    border-radius: 20px; /* Mais arredondado */
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5); /* Sombra mais pronunciada */
-    color: var(--color-white);
-    text-align: center;
-    border: 4px solid var(--color-secondary); /* Borda decorativa mais grossa */
-    transform: perspective(1000px) rotateX(5deg); /* Efeito de perspectiva sutil */
-    transition: transform 0.5s ease;
-}
-
-.banner-conteudo:hover {
-    transform: perspective(1000px) rotateX(0deg) scale(1.02); /* Retorna e expande no hover */
-}
-
-.banner-conteudo h1 {
-    font-family: 'Luckiest Guy', cursive;
-    font-size: 4.5em; /* Maior destaque */
-    margin-bottom: 20px; /* Mais espaço */
-    color: var(--color-secondary);
-    text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.8); /* Sombra mais forte */
-    letter-spacing: 4px; /* Mais espaçamento */
-}
-
-.banner-conteudo p {
-    font-size: 1.4em; /* Levemente maior */
-    margin-bottom: 35px; /* Mais espaço */
-    line-height: 1.7;
-    color: var(--color-light);
-    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
-}
-
-.banner-conteudo .btn {
-    background-color: var(--color-red);
-    color: var(--color-white);
-    padding: 20px 40px; /* Mais padding para um botão imponente */
-    border-radius: 50px;
-    text-transform: uppercase;
-    font-weight: bold;
-    letter-spacing: 1.5px;
-    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
-    border: 5px solid var(--color-secondary); /* Borda mais grossa */
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
-}
-
-.banner-conteudo .btn:hover {
-    background-color: var(--color-primary);
-    transform: translateY(-7px) scale(1.05); /* Efeito mais sutil no hover do banner */
-    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.5);
-}
-
-/* --- Responsividade para o Banner --- */
-@media (max-width: 992px) {
-    .banner-principal {
-        height: 380px;
-    }
-    .bandeirinhas-abaixo-banner {
-        height: 70px;
-        background-size: 110px;
-    }
-    .banner-conteudo h1 {
-        font-size: 3.5em;
-    }
-    .banner-conteudo p {
-        font-size: 1.2em;
-    }
-    .banner-conteudo .btn {
-        padding: 18px 35px;
-    }
-    .bandeirinhas-abaixo-banner::before {
-        font-size: 3em;
-        top: -25px;
-    }
-    .bandeirinhas-abaixo-banner::after {
-        font-size: 2.5em;
-    }
-}
-
-@media (max-width: 768px) {
-    .banner-principal {
-        height: 300px;
-    }
-    .bandeirinhas-abaixo-banner {
-        height: 60px;
-        background-size: 100px;
-    }
-    .banner-conteudo {
-        padding: 25px;
-    }
-    .banner-conteudo h1 {
-        font-size: 2.8em;
-    }
-    .banner-conteudo p {
-        font-size: 1.05em;
-    }
-    .banner-conteudo .btn {
-        padding: 15px 30px;
-        font-size: 0.95em;
-    }
-    .bandeirinhas-abaixo-banner::before {
-        font-size: 2.5em;
-        top: -20px;
-    }
-    .bandeirinhas-abaixo-banner::after {
-        font-size: 2em;
-    }
-}
-
-@media (max-width: 480px) {
-    .banner-principal {
-        height: 250px;
-    }
-    .bandeirinhas-abaixo-banner {
-        height: 50px;
-        background-size: 80px;
-    }
-    .banner-conteudo {
-        padding: 15px;
-        border-radius: 10px;
-    }
-    .banner-conteudo h1 {
-        font-size: 2em;
-        letter-spacing: 2px;
-    }
-    .banner-conteudo p {
-        font-size: 0.9em;
-        margin-bottom: 20px;
-    }
-    .banner-conteudo .btn {
-        padding: 10px 20px;
-        font-size: 0.8em;
-    }
-    .bandeirinhas-abaixo-banner::before {
-        font-size: 2em;
-        top: -15px;
-        left: 5%;
-    }
-    .bandeirinhas-abaixo-banner::after {
-        font-size: 1.5em;
-        right: 5%;
-    }
-}
-
-
-
-
-
-/* --- Novo Estilo para o Botão "Ver Preços" na Página Principal (parte de baixo) --- */
-.section-description-precos {
-    text-align: center;
-    margin-top: 30px; /* Espaçamento após as categorias de comida */
-    margin-bottom: 20px;
-    font-size: 1.3em;
-    color: var(--color-dark);
-    font-weight: bold;
-    text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.5);
-}
-
-.btn-ver-precos-bottom {
-    display: inline-block;
-    background: linear-gradient(to right, var(--color-red), var(--color-primary)); /* Gradiente de vermelho para laranja */
-    color: var(--color-white);
-    padding: 15px 30px;
-    border-radius: 50px; /* Mais arredondado */
-    font-family: 'Luckiest Guy', cursive; /* Fonte especial */
-    font-size: 1.5em; /* Maior destaque */
-    text-decoration: none;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    border: 4px solid var(--color-secondary); /* Borda amarela */
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
-    transition: all 0.3s ease;
-    animation: bounceButton 2s infinite alternate; /* Animação para chamar atenção */
-}
-
-.btn-ver-precos-bottom:hover {
-    background: linear-gradient(to right, var(--color-primary), var(--color-red)); /* Inverte o gradiente no hover */
-    transform: translateY(-5px) scale(1.03);
-    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.5);
-    animation: none; /* Remove a animação no hover */
-}
-
-.btn-ver-precos-bottom i {
-    margin-left: 10px;
-    font-size: 1.2em;
-}
-
-@keyframes bounceButton {
-    0%, 100% { transform: translateY(0); }
-    50% { transform: translateY(-8px); }
-}
-
-/* --- NOVO DESIGN PARA A PÁGINA DE PREÇOS (precos-comidas.html) --- */
-
-.body-precos-v2 {
-    background: linear-gradient(to bottom, var(--color-light-yellow) 0%, var(--color-chita-bg) 100%);
-    min-height: 100vh; /* Garante que o gradiente preencha toda a tela */
-    display: flex;
-    flex-direction: column;
-}
-
-.header-precos-v2 {
-    background: linear-gradient(to bottom, rgba(139, 69, 19, 0.9), rgba(255, 215, 0, 0.9)), url('fogueira-junina.jpg'); /* Marrom e dourado com fogueira */
-    background-size: cover;
-    background-position: center;
-    color: var(--color-white);
-    text-align: center;
-    padding: 100px 20px 60px;
-    position: relative;
-    overflow: hidden;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
-}
-
-.header-precos-v2::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 100%;
-    /* ATENÇÃO: Verifique o caminho da imagem. */
-    background-image: url('—Pngtree—party_bunting_color_paper_triangular_5569246.png');
-    background-size: 150px;
-    background-repeat: repeat-x;
-    animation: slideBandeirinhas 25s linear infinite;
-    opacity: 0.9;
-    z-index: 0;
-}
-
-.header-content-precos-v2 {
-    position: relative;
-    z-index: 1;
-    background-color: rgba(139, 69, 19, 0.8); /* Fundo semi-transparente para o texto */
-    border-radius: 25px; /* Mais arredondado */
-    padding: 30px 40px;
-    max-width: 900px;
-    margin: 0 auto;
-    border: 5px dashed var(--color-milho); /* Borda tracejada amarela */
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
-    transform: rotateX(5deg); /* Leve inclinação */
-}
-
-.header-precos-v2 h1 {
-    font-family: 'Luckiest Guy', cursive;
-    font-size: 4em;
-    margin-bottom: 20px;
-    color: var(--color-secondary); /* Amarelo dourado */
-    text-shadow: 5px 5px 8px rgba(0, 0, 0, 0.8);
-    letter-spacing: 4px;
-}
-
-.header-precos-v2 p {
-    font-size: 1.5em;
-    margin-bottom: 30px;
-    color: var(--color-white);
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
-    line-height: 1.4;
-}
-
-.btn-voltar-v2 {
-    display: inline-block;
-    background: linear-gradient(to right, var(--color-red), var(--color-primary));
-    color: var(--color-white);
-    padding: 15px 30px;
-    border-radius: 50px;
-    font-family: 'Open Sans', sans-serif;
-    font-weight: bold;
-    font-size: 1.2em;
-    text-transform: uppercase;
-    text-decoration: none;
-    border: 3px solid var(--color-secondary);
-    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
-    transition: all 0.3s ease;
-}
-
-.btn-voltar-v2:hover {
-    background: linear-gradient(to right, var(--color-primary), var(--color-red));
-    transform: translateY(-5px) scale(1.02);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
-}
-
-.btn-voltar-v2 i {
-    margin-right: 8px;
-}
-
-.header-decoration {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 30px; /* Altura da "sanfona" */
-    background: repeating-linear-gradient(
-        45deg,
-        var(--color-red),
-        var(--color-red) 5px,
-        var(--color-white) 5px,
-        var(--color-white) 10px
-    );
-    transform: translateY(50%); /* Posiciona metade para fora do header */
-    z-index: 1;
-    border-top: 2px solid var(--color-dark);
-}
-
-.main-precos-v2 {
-    flex-grow: 1; /* Permite que o main ocupe o espaço restante */
-    padding: 50px 0;
-}
-
-.section-title-precos {
-    font-family: 'Luckiest Guy', cursive;
-    font-size: 3.5em;
-    color: var(--color-red);
-    text-align: center;
-    margin-bottom: 40px;
-    text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.3);
-    letter-spacing: 2px;
-}
-
-/* Seção de Visão Geral das Fichas */
-.precos-overview {
-    background-color: var(--color-secondary); /* Amarelo da palha/milho */
-    padding: 60px 40px;
-    text-align: center;
-    border-radius: 20px;
-    max-width: 1000px;
-    margin: 40px auto;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
-    border: 5px dashed var(--color-primary); /* Borda tracejada laranja */
-    position: relative;
-    z-index: 2; /* Para ficar acima do fundo principal */
-}
-
-.overview-box {
-    background-color: rgba(255, 255, 255, 0.9);
-    padding: 30px;
-    border-radius: 15px;
-    border: 2px solid var(--color-red);
-    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-.overview-box p {
-    font-size: 1.25em;
-    line-height: 1.6;
-    color: var(--color-dark);
-    margin-bottom: 20px;
-}
-
-.overview-box ul {
-    list-style: none;
-    padding: 0;
-    margin-bottom: 20px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 15px;
-}
-
-.overview-box ul li {
-    font-size: 1.1em;
-    color: var(--color-dark);
-    background-color: var(--color-light);
-    padding: 10px 20px;
-    border-radius: 25px;
-    border: 1px solid var(--color-primary);
-    display: flex;
-    align-items: center;
-}
-
-.overview-box ul li i {
-    margin-right: 8px;
-    color: var(--color-red);
-}
-
-.decoracao-fichas {
-    margin-top: 30px;
-}
-
-.decoracao-fichas span {
-    font-size: 3.5em;
-    margin: 0 10px;
-    opacity: 0.8;
-    animation: floatEmojis 3s infinite alternate ease-in-out;
-}
-.decoracao-fichas span:nth-child(2) { animation-delay: 0.2s; }
-.decoracao-fichas span:nth-child(3) { animation-delay: 0.4s; }
-
-@keyframes floatEmojis {
-    0% { transform: translateY(0); }
-    100% { transform: translateY(-10px); }
-}
-
-/* Seção do Cardápio de Preços */
-.precos-cardapio {
-    padding: 60px 40px;
-    background-color: var(--color-chita-bg-dark); /* Fundo de chita mais escuro */
-    border-top: 10px dashed var(--color-xadrez);
-    border-bottom: 10px dashed var(--color-xadrez);
-}
-
-.cardapio-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 30px;
-}
-
-.cardapio-categoria {
-    background-color: var(--color-white);
-    border-radius: 20px;
-    padding: 30px;
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
-    border: 4px solid var(--color-primary); /* Borda mais grossa */
-    position: relative;
-    overflow: hidden;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.cardapio-categoria:hover {
-    transform: translateY(-10px) scale(1.02);
-    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
-}
-
-.cardapio-categoria h3 {
-    font-family: 'Luckiest Guy', cursive;
-    font-size: 2.2em;
-    color: var(--color-red);
-    text-align: center;
-    margin-bottom: 25px;
-    padding-bottom: 15px;
-    border-bottom: 3px dotted var(--color-xadrez);
-    position: relative;
-}
-
-.cardapio-categoria h3 i {
-    margin-right: 10px;
-    color: var(--color-accent);
-}
-
-.cardapio-categoria h3::after {
-    content: '';
-    position: absolute;
-    bottom: -5px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 30px;
-    height: 5px;
-    background-color: var(--color-milho); /* Detalhe amarelo abaixo do título */
-    border-radius: 5px;
-}
-
-.cardapio-categoria ul {
-    list-style: none;
-    padding: 0;
-}
-
-.cardapio-categoria ul li {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 15px;
-    font-size: 1.2em;
-    color: var(--color-dark);
-    padding: 10px 0;
-    border-bottom: 1px dashed var(--color-light);
-}
-
-.cardapio-categoria ul li:last-child {
-    border-bottom: none;
-    margin-bottom: 0;
-}
-
-.preco-ficha {
-    font-family: 'Luckiest Guy', cursive;
-    font-weight: bold;
-    color: var(--color-white);
-    background-color: var(--color-red);
-    padding: 8px 15px;
-    border-radius: 20px;
-    border: 2px solid var(--color-secondary);
-    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
-    font-size: 1.1em;
-    white-space: nowrap; /* Evita que o texto quebre */
-}
-
-/* Cores específicas por categoria para um toque especial */
-.bolo-cat { border-color: #FF6347; } /* Tom de laranja para bolos */
-.bolo-cat h3 { color: #FF6347; }
-.bolo-cat h3::after { background-color: #FFD700; }
-.doce-cat { border-color: #FFD700; } /* Tom de dourado para doces */
-.doce-cat h3 { color: #FFD700; }
-.doce-cat h3::after { background-color: #88532e; }
-.salgado-cat { border-color: #6b4021; } /* Tom de marrom para salgados */
-.salgado-cat h3 { color: #8B4513; }
-.salgado-cat h3::after { background-color: #FF6347; }
-.bebida-cat { border-color: #4682B4; } /* Tom de azul para bebidas */
-.bebida-cat h3 { color: #4682B4; }
-.bebida-cat h3::after { background-color: #DAA520; }
-.brincadeira-cat { border-color: #32CD32; } /* Tom de verde para brincadeiras */
-.brincadeira-cat h3 { color: #32CD32; }
-.brincadeira-cat h3::after { background-color: #FFD700; }
-
-
-.nota-final-cardapio {
-    font-size: 1.4em;
-    font-style: italic;
-    color: var(--color-dark);
-    text-align: center;
-    margin-top: 50px;
-    padding: 20px;
-    background-color: var(--color-light);
-    border-radius: 15px;
-    border: 3px dashed var(--color-red);
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-}
-
-/* Seção de Informações Extras/Curiosidades */
-.info-extra {
-    background-color: var(--color-primary); /* Laranja */
-    color: var(--color-white);
-    padding: 70px 40px;
-    text-align: center;
-    border-top: 10px solid var(--color-secondary);
-    border-bottom: 10px solid var(--color-secondary);
-    position: relative;
-    overflow: hidden;
-}
-
-.info-extra::before, .info-extra::after {
-    content: '🎉';
-    position: absolute;
-    font-size: 8em;
-    opacity: 0.1;
-    z-index: 0;
-    color: var(--color-white);
-}
-.info-extra::before { top: 10%; left: 5%; transform: rotate(-20deg); }
-.info-extra::after { bottom: 10%; right: 5%; transform: rotate(30deg); }
-
-
-.info-content {
-    max-width: 1100px;
-    margin: 0 auto;
-    position: relative;
-    z-index: 1;
-}
-
-.info-extra h2 {
-    font-family: 'Luckiest Guy', cursive;
-    font-size: 3.8em;
-    color: var(--color-secondary);
-    margin-bottom: 40px;
-    text-shadow: 4px 4px 6px rgba(0, 0, 0, 0.6);
-}
-
-.curiosidade-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 30px;
-    margin-top: 30px;
-}
-
-.curiosidade-item {
-    background-color: rgba(255, 255, 255, 0.95);
-    border-radius: 15px;
-    padding: 25px;
-    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
-    border: 3px solid var(--color-milho); /* Borda amarela */
-    text-align: left;
-    transition: transform 0.3s ease;
-}
-
-.curiosidade-item:hover {
-    transform: translateY(-8px);
-}
-
-.curiosidade-item h3 {
-    font-family: 'Open Sans', sans-serif;
-    font-weight: bold;
-    font-size: 1.5em;
-    color: var(--color-red);
-    margin-bottom: 15px;
-    display: flex;
-    align-items: center;
-}
-
-.curiosidade-item h3 i {
-    margin-right: 10px;
-    color: var(--color-primary);
-    font-size: 1.2em;
-}
-
-.curiosidade-item p {
-    font-size: 1.1em;
-    color: var(--color-dark);
-    line-height: 1.6;
-}
-
-
-/* Footer da página de preços (V2) */
-.footer-precos-v2 {
-    background-color: var(--color-dark);
-    color: var(--color-light);
-    text-align: center;
-    padding: 30px 20px;
-    font-size: 0.9em;
-    border-top: 10px solid var(--color-accent); /* Borda verde */
-    margin-top: auto; /* Empurra o footer para baixo */
-}
-
-.footer-precos-v2 p {
-    margin-bottom: 8px;
-}
-
-
-/* --- Responsividade para a NOVA página de preços (precos-comidas.html) --- */
-
-@media (max-width: 992px) {
-    .header-precos-v2 h1 {
-        font-size: 3.5em;
-    }
-    .header-precos-v2 p {
-        font-size: 1.3em;
-    }
-    .section-title-precos {
-        font-size: 3em;
-    }
-    .precos-overview, .precos-cardapio, .info-extra {
-        padding: 50px 30px;
-    }
-    .cardapio-categoria h3 {
-        font-size: 2em;
-    }
-    .cardapio-categoria ul li {
-        font-size: 1.1em;
-    }
-    .curiosidade-item h3 {
-        font-size: 1.4em;
-    }
-    .curiosidade-item p {
-        font-size: 1em;
-    }
-}
-
-@media (max-width: 768px) {
-    .header-precos-v2 {
-        padding: 80px 15px 50px;
-    }
-    .header-precos-v2 h1 {
-        font-size: 2.8em;
-        letter-spacing: 2px;
-    }
-    .header-precos-v2 p {
-        font-size: 1.1em;
-    }
-    .btn-voltar-v2 {
-        padding: 12px 25px;
-        font-size: 1em;
-    }
-    .header-content-precos-v2 {
-        padding: 20px 25px;
-    }
-    .section-title-precos {
-        font-size: 2.5em;
-        margin-bottom: 30px;
-    }
-    .precos-overview, .precos-cardapio, .info-extra {
-        padding: 40px 25px;
-        margin: 30px auto;
-    }
-    .overview-box p, .overview-box ul li {
-        font-size: 1.1em;
-    }
-    .decoracao-fichas span {
-        font-size: 3em;
-        margin: 0 8px;
-    }
-    .cardapio-grid {
-        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-        gap: 25px;
-    }
-    .cardapio-categoria {
-        padding: 25px;
-    }
-    .cardapio-categoria h3 {
-        font-size: 1.8em;
-    }
-    .cardapio-categoria ul li {
-        font-size: 1em;
-    }
-    .preco-ficha {
-        padding: 6px 12px;
-        font-size: 1em;
-    }
-    .info-extra h2 {
-        font-size: 3em;
-    }
-    .curiosidade-item h3 {
-        font-size: 1.2em;
-    }
-    .curiosidade-item p {
-        font-size: 0.95em;
-    }
-}
-
-@media (max-width: 480px) {
-    .header-precos-v2 {
-        padding: 60px 10px 40px;
-    }
-    .header-precos-v2 h1 {
-        font-size: 2em;
-        letter-spacing: 1px;
-    }
-    .header-precos-v2 p {
-        font-size: 0.9em;
-    }
-    .header-content-precos-v2 {
-        padding: 15px 20px;
-    }
-    .section-title-precos {
-        font-size: 2em;
-        margin-bottom: 25px;
-    }
-    .precos-overview, .precos-cardapio, .info-extra {
-        padding: 30px 15px;
-        margin: 20px auto;
-    }
-    .overview-box p, .overview-box ul li {
-        font-size: 1em;
-    }
-    .decoracao-fichas span {
-        font-size: 2.5em;
-        margin: 0 5px;
-    }
-    .cardapio-grid {
-        grid-template-columns: 1fr;
-        gap: 20px;
-    }
-    .cardapio-categoria {
-        padding: 20px;
-    }
-    .cardapio-categoria h3 {
-        font-size: 1.6em;
-    }
-    .cardapio-categoria ul li {
-        font-size: 0.9em;
-    }
-    .preco-ficha {
-        padding: 5px 10px;
-        font-size: 0.9em;
-    }
-    .info-extra h2 {
-        font-size: 2.5em;
-    }
-    .curiosidade-grid {
-        grid-template-columns: 1fr;
-    }
-    .curiosidade-item {
-        padding: 20px;
-    }
-    .curiosidade-item h3 {
-        font-size: 1.1em;
-    }
-    .curiosidade-item p {
-        font-size: 0.9em;
+    
+    .referencias {
+        grid-column: 1 / -1; 
+        margin-top: 20px;
+    }
+    
+    .creditos {
+        order: -1; 
     }
 }
