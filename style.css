@@ -308,6 +308,12 @@ main {
     transform: translateY(0);
 }
 
+/* Garante que o cabeçalho e introdução apareçam imediatamente */
+.hero-header, .introducao {
+    opacity: 1 !important;
+    transform: translateY(0) !important;
+}
+
 /* --- Botão Voltar ao Topo --- */
 #back-to-top {
     display: none; 
@@ -380,6 +386,173 @@ main {
     padding: 0;
 }
 
+/* --- 1. Estilos para Linha do Tempo (Timeline) --- */
+.timeline-section {
+    background-color: var(--cor-fundo); 
+}
+
+.timeline-container {
+    position: relative;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding-top: 20px;
+}
+
+.timeline-container::after {
+    content: '';
+    position: absolute;
+    width: 3px;
+    background-color: var(--cor-secundaria); /* Linha principal Azul Marinho */
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    margin-left: -1.5px;
+    border-radius: 2px;
+}
+
+.timeline-item {
+    padding: 10px 40px;
+    position: relative;
+    width: 50%;
+}
+
+.timeline-item:nth-child(odd) {
+    left: 0;
+}
+
+.timeline-item:nth-child(even) {
+    left: 50%;
+}
+
+.timeline-content {
+    padding: 20px 30px;
+    background-color: var(--cor-clara-fundo);
+    position: relative;
+    border-radius: 6px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+    border-top: 4px solid var(--cor-primaria); /* Detalhe Terracota */
+}
+
+.timeline-content h3 {
+    color: var(--cor-secundaria);
+}
+
+.timeline-item::after {
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    right: -10px;
+    background-color: var(--cor-primaria);
+    border: 4px solid white;
+    top: 25px;
+    border-radius: 50%;
+    z-index: 1;
+}
+
+.timeline-item:nth-child(even)::after {
+    left: -10px;
+}
+
+/* --- 2. Estilos para Bloco de Citação --- */
+.citacao-destaque {
+    padding: 40px;
+    margin: 40px auto;
+    background-color: var(--cor-primaria);
+    color: white;
+    border-radius: 10px;
+    text-align: center;
+    max-width: 800px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.citacao-destaque blockquote {
+    font-family: 'Playfair Display', serif;
+    font-size: 2em;
+    font-style: italic;
+    line-height: 1.4;
+    margin-bottom: 15px;
+    position: relative;
+}
+
+.citacao-destaque cite {
+    display: block;
+    font-size: 1.2em;
+    font-weight: 600;
+    color: var(--cor-fundo);
+    margin-top: 15px;
+}
+
+/* Aspas estilosas */
+.citacao-destaque blockquote::before {
+    content: "“";
+    font-size: 5em;
+    line-height: 0.1;
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: rgba(255, 255, 255, 0.2);
+    z-index: 0;
+}
+
+/* --- 3. Estilos para o Modal (Lightbox) --- */
+.modal {
+    display: none; 
+    position: fixed; 
+    z-index: 2000; 
+    padding-top: 60px; 
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%; 
+    overflow: auto; 
+    background-color: rgba(0,0,0,0.9); 
+}
+
+.modal-content {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 900px;
+    animation-name: zoom;
+    animation-duration: 0.6s;
+}
+
+#modal-caption {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 900px;
+    text-align: center;
+    color: #ccc;
+    padding: 10px 0;
+    height: 150px;
+}
+
+.modal-close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.modal-close:hover,
+.modal-close:focus {
+    color: var(--cor-primaria);
+    text-decoration: none;
+    cursor: pointer;
+}
+
+@keyframes zoom {
+    from {transform:scale(0)} 
+    to {transform:scale(1)}
+}
+
 /* --- Responsividade --- */
 @media (max-width: 992px) {
     .introducao-grid {
@@ -400,6 +573,22 @@ main {
     }
     h2 {
         font-size: 2.5em;
+    }
+    /* Timeline Responsiva */
+    .timeline-container::after {
+        left: 31px;
+    }
+    .timeline-item {
+        width: 100%;
+        padding-left: 70px;
+        padding-right: 25px;
+    }
+    .timeline-item:nth-child(even) {
+        left: 0%;
+    }
+    .timeline-item::after, .timeline-item:nth-child(even)::after {
+        left: 20px;
+        margin-left: 0;
     }
 }
 
@@ -428,5 +617,8 @@ main {
     }
     .creditos {
         order: 2;
+    }
+    .citacao-destaque blockquote {
+        font-size: 1.5em;
     }
 }

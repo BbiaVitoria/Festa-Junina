@@ -24,7 +24,6 @@ document.addEventListener('DOMContentLoaded', function() {
     // 2. Animação Fade-in on Scroll (Intersection Observer)
     // -----------------------------------------------------------------
     
-    // Usa a classe 'fade-in'
     const fadeElements = document.querySelectorAll('.fade-in');
 
     const observerOptions = {
@@ -35,7 +34,6 @@ document.addEventListener('DOMContentLoaded', function() {
 
     const observerCallback = (entries, observer) => {
         entries.forEach(entry => {
-            // Adiciona a classe 'apareceu' para aplicar a animação definida no CSS
             if (entry.isIntersecting) {
                 entry.target.classList.add('apareceu');
                 observer.unobserve(entry.target); 
@@ -46,7 +44,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const observer = new IntersectionObserver(observerCallback, observerOptions);
 
     fadeElements.forEach(element => {
-        // O cabeçalho (hero-header) e o primeiro elemento já devem aparecer imediatamente
+        // O cabeçalho (hero-header) e o primeiro elemento (introducao) aparecem imediatamente
         if (element.classList.contains('hero-header') || element.id === 'introducao') {
             element.classList.add('apareceu');
         } else {
@@ -100,6 +98,39 @@ document.addEventListener('DOMContentLoaded', function() {
         }, delay);
     }
     
-    // Oculta a tela assim que o DOM e os recursos são carregados
     window.addEventListener('load', hideSplashScreen);
+
+
+    // -----------------------------------------------------------------
+    // 5. Galeria de Imagens (Modal / Lightbox)
+    // -----------------------------------------------------------------
+    const modal = document.getElementById("image-modal");
+    const modalImg = document.getElementById("modal-image");
+    const captionText = document.getElementById("modal-caption");
+    const galleryItems = document.querySelectorAll(".gallery-item");
+    const closeModal = document.querySelector(".modal-close");
+
+    galleryItems.forEach(item => {
+        item.style.cursor = 'pointer'; 
+        
+        item.addEventListener('click', function() {
+            modal.style.display = "block";
+            modalImg.src = this.src;
+            captionText.innerHTML = this.getAttribute('data-caption');
+        });
+    });
+
+    // Fecha o modal ao clicar no 'X'
+    closeModal.onclick = function() { 
+        modal.style.display = "none";
+    }
+
+    // Fecha o modal ao clicar fora da imagem
+    window.onclick = function(event) {
+        if (event.target == modal) {
+            modal.style.display = "none";
+        }
+    }
+    
+    console.log("Projeto Folclore Nordestino inicializado com sucesso. Modal, Citação, Linha do Tempo e animações ativados.");
 });
