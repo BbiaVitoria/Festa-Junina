@@ -24,6 +24,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // 2. Animação Fade-in on Scroll (Intersection Observer)
     // -----------------------------------------------------------------
     
+    // Usa a classe 'fade-in'
     const fadeElements = document.querySelectorAll('.fade-in');
 
     const observerOptions = {
@@ -34,6 +35,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     const observerCallback = (entries, observer) => {
         entries.forEach(entry => {
+            // Adiciona a classe 'apareceu' para aplicar a animação definida no CSS
             if (entry.isIntersecting) {
                 entry.target.classList.add('apareceu');
                 observer.unobserve(entry.target); 
@@ -44,11 +46,11 @@ document.addEventListener('DOMContentLoaded', function() {
     const observer = new IntersectionObserver(observerCallback, observerOptions);
 
     fadeElements.forEach(element => {
-        // A introdução aparece imediatamente (não precisa de observer)
-        if (element.id !== 'introducao') {
-            observer.observe(element);
-        } else {
+        // O cabeçalho (hero-header) e o primeiro elemento já devem aparecer imediatamente
+        if (element.classList.contains('hero-header') || element.id === 'introducao') {
             element.classList.add('apareceu');
+        } else {
+            observer.observe(element);
         }
     });
 
@@ -57,7 +59,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // 3. Botão Voltar ao Topo
     // -----------------------------------------------------------------
     const backToTopButton = document.getElementById('back-to-top');
-    const scrollTrigger = 400; 
+    const scrollTrigger = 400; // Ponto de rolagem em pixels
 
     // Função para mostrar ou esconder o botão
     window.addEventListener('scroll', () => {
@@ -81,7 +83,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // 4. Splash Screen / Loader
     // -----------------------------------------------------------------
     const splashScreen = document.getElementById('splash-screen');
-    const minimumLoadTime = 1500; // 1.5s
+    const minimumLoadTime = 1500; // Tempo mínimo de 1.5s de exibição
 
     const startTime = Date.now(); 
 
@@ -90,15 +92,14 @@ document.addEventListener('DOMContentLoaded', function() {
         const delay = Math.max(0, minimumLoadTime - elapsedTime);
 
         setTimeout(() => {
-            splashScreen.classList.add('loaded'); 
+            splashScreen.classList.add('loaded'); // Inicia o fade-out
             setTimeout(() => {
-                splashScreen.style.display = 'none';
+                splashScreen.style.display = 'none'; // Remove após o fade-out terminar
             }, 1000); 
             
         }, delay);
     }
     
+    // Oculta a tela assim que o DOM e os recursos são carregados
     window.addEventListener('load', hideSplashScreen);
-
-    console.log("Projeto Folclore Nordestino inicializado com sucesso.");
 });

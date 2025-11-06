@@ -1,14 +1,15 @@
-/* Importação das fontes - Mais modernas e expressivas */
+/* Importação das fontes */
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Jost:wght@300;400;600&display=swap');
 
-/* Variáveis de Cores Atualizadas (Caatinga e Argila) */
+/* Variáveis de Cores (Paleta Neo-Nordeste) */
 :root {
-    --cor-fundo: #FBF8F3; /* Creme/Argila muito claro */
-    --cor-primaria: #8C2A14; /* Marrom-avermelhado (Terra/Argila) - Forte */
-    --cor-secundaria: #BF9460; /* Ocre Suave (Areia/Sertão) */
-    --cor-terciaria: #4CAF50; /* Verde Catinga (Toque de vida) */
-    --cor-texto: #333333;
-    --cor-detalhe: #1565C0; /* Azul Marinho (Mar e Profundidade) */
+    --cor-fundo: #F9F7F4;       /* Creme Suave - Fundo principal */
+    --cor-primaria: #B85C38;    /* Terracota/Cobre - Destaque Principal/Detalhes de argila */
+    --cor-secundaria: #1D2E42;  /* Azul Marinho Profundo - Destaque Secundário/Texto de impacto */
+    --cor-terciaria: #5D884C;   /* Verde Catinga/Musgo - Toque de Natureza/Detalhe */
+    --cor-clara-fundo: #FFFFFF; /* Branco Puro para Cards */
+    --cor-texto: #444444;       /* Cinza Escuro para Corpo */
+    --cor-shadow: rgba(29, 46, 66, 0.15); /* Sombra do Azul Marinho */
 }
 
 /* Reset e Configurações Gerais */
@@ -22,11 +23,91 @@ body {
     font-family: 'Jost', sans-serif;
     background-color: var(--cor-fundo);
     color: var(--cor-texto);
-    line-height: 1.7;
-    padding-top: 60px; 
+    line-height: 1.6;
+    padding-top: 80px; /* Espaço para o menu fixo */
 }
 
-/* --- Loader/Splash Screen --- */
+/* --- Typografia e Títulos --- */
+h1, h2, h3 {
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+}
+
+h2 {
+    font-size: 3em;
+    color: var(--cor-secundaria);
+    margin-bottom: 25px;
+    position: relative;
+    padding-bottom: 10px;
+}
+
+h2::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 80px;
+    height: 4px;
+    background-color: var(--cor-primaria);
+    border-radius: 2px;
+}
+
+h3 {
+    font-size: 1.5em;
+    color: var(--cor-primaria);
+    margin-bottom: 15px;
+}
+
+/* --- Layout Principal --- */
+main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.section-padded {
+    padding: 70px 40px;
+    margin-bottom: 40px;
+    border-radius: 10px;
+}
+
+.bg-detalhe {
+    background-color: var(--cor-clara-fundo);
+    box-shadow: 0 10px 30px var(--cor-shadow);
+}
+
+.grid-2 {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 40px;
+}
+
+.grid-3 {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+/* --- Cards e Componentes --- */
+.card-elevated {
+    background-color: var(--cor-clara-fundo);
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-bottom: 3px solid var(--cor-terciaria);
+}
+
+.card-elevated:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 25px var(--cor-shadow);
+}
+
+.bg-white {
+    background-color: var(--cor-clara-fundo);
+}
+
+/* --- Splash Screen --- */
 .splash-screen {
     position: fixed;
     top: 0;
@@ -48,10 +129,6 @@ body {
     visibility: hidden;
 }
 
-.loader-container {
-    text-align: center;
-}
-
 .splash-screen h1 {
     font-family: 'Playfair Display', serif;
     font-size: 3em;
@@ -60,13 +137,13 @@ body {
 }
 
 .splash-screen p {
-    color: var(--cor-primaria);
+    color: var(--cor-fundo);
     margin-top: 20px;
     font-size: 1.1em;
 }
 
 .loader {
-    border: 8px solid rgba(0, 0, 0, 0.1);
+    border: 8px solid rgba(255, 255, 255, 0.2);
     border-top-color: var(--cor-primaria); 
     border-radius: 50%;
     width: 70px;
@@ -81,16 +158,16 @@ body {
     }
 }
 
-/* --- Menu de Navegação Fixo e Estilizado --- */
+/* --- Navbar --- */
 #navbar {
-    background-color: var(--cor-primaria); 
-    padding: 15px 0;
+    background-color: var(--cor-secundaria); 
+    padding: 20px 0;
     position: fixed; 
     top: 0;
     left: 0;
     width: 100%;
     z-index: 1000;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
 }
 
 #navbar ul {
@@ -99,180 +176,131 @@ body {
     justify-content: center;
     max-width: 1200px;
     margin: 0 auto;
-    padding: 0 15px;
-}
-
-#navbar li {
-    margin: 0 20px;
 }
 
 #navbar a {
     color: var(--cor-fundo); 
     text-decoration: none;
-    font-weight: 600;
-    padding: 5px 10px;
+    font-weight: 400;
+    padding: 5px 15px;
     transition: all 0.3s ease;
+    position: relative;
+}
+
+#navbar a:hover, #navbar a.active {
+    color: var(--cor-primaria);
+    background-color: rgba(255, 255, 255, 0.1);
     border-radius: 4px;
 }
 
-#navbar a:hover {
-    color: var(--cor-primaria);
-    background-color: var(--cor-secundaria); 
-}
-
-/* --- Cabeçalho Destaque (Header) --- */
-header {
-    background-color: var(--cor-secundaria); 
-    color: var(--cor-primaria);
-    padding: 60px 20px;
+/* --- Header Hero --- */
+.hero-header {
+    background-color: var(--cor-primaria);
+    padding: 100px 20px;
     text-align: center;
-    margin-bottom: 40px;
-    background-image: repeating-linear-gradient(-45deg, rgba(255,255,255,0.08) 0px, rgba(255,255,255,0.08) 1px, transparent 1px, transparent 6px);
+    background-image: linear-gradient(135deg, rgba(255, 255, 255, 0.1) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.1) 50%, rgba(255, 255, 255, 0.1) 75%, transparent 75%, transparent);
+    background-size: 14.14px 14.14px;
 }
 
-header h1 {
-    font-family: 'Playfair Display', serif;
-    font-size: 4.5em;
-    margin-bottom: 0px;
-    text-shadow: 2px 2px 0 var(--cor-fundo);
+.hero-content h1 {
+    font-size: 5em;
+    color: var(--cor-fundo);
+    text-shadow: 3px 3px 0 var(--cor-secundaria);
 }
 
-header p {
+.hero-content .subtitle {
     font-style: italic;
     font-weight: 300;
-    font-size: 1.4em;
-    color: var(--cor-texto);
+    font-size: 1.5em;
+    color: var(--cor-fundo);
+    margin-top: 10px;
 }
 
-/* --- Estrutura Principal --- */
-main {
-    max-width: 1200px;
-    margin: 0 auto 50px auto;
-    padding: 0 20px;
-}
-
-section {
-    padding: 40px 30px;
-    margin-bottom: 50px;
-    border-radius: 12px;
-    background-color: white;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
-}
-
-h2 {
-    font-family: 'Playfair Display', serif;
-    font-size: 2.8em;
-    color: var(--cor-primaria);
-    border-bottom: 4px solid var(--cor-terciaria);
-    padding-bottom: 15px;
-    margin-bottom: 30px;
-}
-
-h3 {
-    font-family: 'Playfair Display', serif;
-    font-size: 1.8em;
-    color: var(--cor-detalhe);
-    margin-bottom: 15px;
-}
-
-/* --- Containers com Grid Dinâmico (Lendas e Culinária) --- */
-.lendas .card-container, .culinaria .card-container, .musica-tradicao .musica-container {
+/* --- Introdução Específica --- */
+.introducao-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 30px;
+    grid-template-columns: 2fr 1fr;
+    gap: 40px;
+    align-items: center;
 }
 
-.lenda-card, .prato-card, .instrumento-card {
-    padding: 25px;
-    border-radius: 8px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.lenda-card {
-    background-color: #FEF3E4; 
-    border-left: 6px solid var(--cor-terciaria); 
-}
-
-.prato-card {
-    background-color: #FFF8E1; 
-    border-top: 6px solid var(--cor-primaria); 
-}
-
-.instrumento-card {
-    background-color: #E3F2FD; 
-    border-right: 6px solid var(--cor-detalhe); 
-}
-
-.lenda-card:hover, .prato-card:hover, .instrumento-card:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
-}
-
-/* --- Manifestações e Artesanato (Layout em Grid) --- */
-.manifestacoes, .artesanato {
+.destaque-cordel {
+    text-align: center;
+    border: 3px solid var(--cor-secundaria);
+    padding: 10px;
+    border-radius: 5px;
     background-color: var(--cor-secundaria);
 }
 
-.manifestacoes .info-bloco, .artesanato .info-bloco {
-    background-color: var(--cor-fundo);
-    padding: 20px;
-    margin-bottom: 20px;
-    border-radius: 6px;
-    border-right: 4px solid var(--cor-primaria);
-    transition: background-color 0.3s;
+.destaque-cordel img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    border: 1px solid white;
 }
 
-.manifestacoes h3 { color: var(--cor-terciaria); }
-.artesanato h3 { color: var(--cor-primaria); }
-
-/* --- Seção Música e Tradição Específica --- */
-#musica-tradicao h2 {
-    color: var(--cor-detalhe); 
-    border-bottom: 4px solid var(--cor-secundaria);
+.destaque-cordel small {
+    color: var(--cor-fundo);
+    display: block;
+    margin-top: 5px;
+    font-style: italic;
 }
 
-.musica-tradicao .info-bloco {
-    background-color: var(--cor-secundaria); 
-    color: var(--cor-texto);
-    padding: 25px;
+/* --- Música e Tradição Específica --- */
+.musica-grid {
+    border: 2px solid var(--cor-terciaria);
+    padding: 30px;
     border-radius: 8px;
-    border-left: 6px solid var(--cor-primaria); 
-    margin-top: 40px;
+    background-color: #F3FFF0; /* Fundo mais claro para contraste */
 }
 
-.musica-tradicao .info-bloco h3 {
-    color: var(--cor-primaria);
+.musica-conteudo img {
+    max-width: 100%;
+    height: auto;
+    margin-top: 20px;
+    border-radius: 4px;
 }
 
-/* Detalhe Xilogravura na Introdução */
-.imagem-destaque {
-    text-align: center;
-    margin: 30px 0;
-    padding: 20px;
-    background-color: #333333; 
+.manifestacoes-lista ul {
+    list-style: none;
+    padding-left: 20px;
+    margin-top: 15px;
+}
+
+.manifestacoes-lista li {
+    background-color: var(--cor-primaria);
     color: white;
+    padding: 8px 15px;
+    margin-bottom: 8px;
+    border-radius: 4px;
+    font-weight: 600;
+}
+
+/* --- Culinária Imagens --- */
+.prato-card img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 4px;
+    margin-top: 15px;
+    border: 2px solid var(--cor-primaria);
+}
+
+/* --- Artesanato Específico --- */
+.arte-item {
+    background-color: var(--cor-clara-fundo);
+    padding: 20px;
     border-radius: 8px;
-    border: 4px dashed var(--cor-secundaria);
+    border-left: 5px solid var(--cor-terciaria);
 }
-
-.imagem-destaque small {
+.arte-item h3 {
     color: var(--cor-secundaria);
-}
-
-/* --- Linha Divisória --- */
-hr {
-    border: none;
-    border-top: 6px double var(--cor-primaria);
-    opacity: 0.5;
-    margin: 60px 0;
 }
 
 /* --- Animação Fade-in on Scroll --- */
 .fade-in {
     opacity: 0;
-    transform: translateY(20px); 
-    transition: opacity 1s ease-out, transform 0.8s ease-out;
+    transform: translateY(30px); 
+    transition: opacity 1s cubic-bezier(0.25, 0.46, 0.45, 0.94), transform 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 
 .fade-in.apareceu {
@@ -280,72 +308,69 @@ hr {
     transform: translateY(0);
 }
 
-/* Garante que o cabeçalho apareça imediatamente */
-header {
-    opacity: 1 !important;
-    transform: translateY(0) !important;
-}
-
 /* --- Botão Voltar ao Topo --- */
 #back-to-top {
     display: none; 
     position: fixed;
-    bottom: 20px;
-    right: 20px;
+    bottom: 30px;
+    right: 30px;
     background-color: var(--cor-primaria); 
     color: white;
     border: none;
-    border-radius: 5px;
-    padding: 10px 15px;
-    font-size: 1em;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    font-size: 1.2em;
     font-weight: bold;
     cursor: pointer;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 4px 10px var(--cor-shadow);
     opacity: 0; 
     transition: opacity 0.3s, background-color 0.3s, transform 0.2s;
     z-index: 10000;
 }
 
 #back-to-top:hover {
-    background-color: #A33A24; 
-    transform: scale(1.05);
+    background-color: var(--cor-secundaria); 
+    transform: scale(1.1);
 }
 
 #back-to-top.show {
-    display: block;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     opacity: 1;
 }
 
-/* --- Rodapé (Footer) com Créditos e Referências --- */
-footer {
-    background-color: var(--cor-texto); 
-    color: white;
-    padding: 40px 20px;
+/* --- Rodapé (Footer) --- */
+.footer-custom {
+    background-color: var(--cor-secundaria); 
+    color: var(--cor-fundo);
+    padding: 50px 20px;
     font-size: 0.9em;
-    border-top: 5px solid var(--cor-primaria); 
+    border-top: 8px solid var(--cor-primaria); 
 }
 
 .footer-content {
     max-width: 1200px;
     margin: 0 auto;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr; 
-    gap: 30px;
-    align-items: start;
+    grid-template-columns: 2fr 1fr 1fr; 
+    gap: 40px;
     text-align: left;
 }
 
 .footer-content > p {
+    font-size: 1.1em;
+    font-style: italic;
     grid-column: 1 / -1; 
     text-align: center;
     margin-bottom: 20px;
-    font-size: 1.1em;
 }
 
 .creditos h3, .referencias h3 {
-    color: var(--cor-secundaria); 
-    font-size: 1.2em;
-    border-bottom: 2px solid var(--cor-primaria);
+    color: var(--cor-primaria); 
+    font-size: 1.3em;
+    border-bottom: 2px dashed var(--cor-primaria);
     padding-bottom: 5px;
     margin-bottom: 10px;
 }
@@ -355,43 +380,53 @@ footer {
     padding: 0;
 }
 
-.creditos li {
-    margin-bottom: 5px;
-}
-
-.referencias {
-    grid-column: 2 / span 2; 
-}
-
 /* --- Responsividade --- */
-@media (max-width: 768px) {
-    header h1 {
-        font-size: 3em;
+@media (max-width: 992px) {
+    .introducao-grid {
+        grid-template-columns: 1fr;
     }
-    
-    body {
-        padding-top: 80px; 
+    .hero-content h1 {
+        font-size: 4em;
     }
-    
-    #navbar ul {
-        flex-wrap: wrap;
-    }
-    
-    #navbar li {
-        margin: 5px 10px;
-    }
-
     .footer-content {
-        grid-template-columns: 1fr; 
-        text-align: center;
+        grid-template-columns: 1fr 1fr;
     }
-    
+    .footer-content > p {
+        grid-column: 1 / -1;
+    }
     .referencias {
-        grid-column: 1 / -1; 
+        grid-column: 1 / -1;
         margin-top: 20px;
     }
-    
+    h2 {
+        font-size: 2.5em;
+    }
+}
+
+@media (max-width: 576px) {
+    body {
+        padding-top: 60px;
+    }
+    #navbar ul {
+        flex-wrap: wrap;
+        padding: 5px;
+    }
+    #navbar li {
+        margin: 5px;
+    }
+    .hero-content h1 {
+        font-size: 3em;
+    }
+    .section-padded {
+        padding: 40px 20px;
+    }
+    .footer-content {
+        grid-template-columns: 1fr;
+    }
+    .creditos, .referencias {
+        grid-column: 1 / -1;
+    }
     .creditos {
-        order: -1; 
+        order: 2;
     }
 }

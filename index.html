@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Folclore do Nordeste Brasileiro</title>
+    <title>Neo-Nordeste | Folclore e Cultura</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Jost:wght@300;400;600&display=swap" rel="stylesheet">
 </head>
@@ -11,7 +11,7 @@
 
     <div id="splash-screen" class="splash-screen">
         <div class="loader-container">
-            <h1>Folclore Nordestino</h1>
+            <h1>Alma Nordestina</h1>
             <div class="loader"></div> 
             <p>Carregando a poesia do sertão...</p>
         </div>
@@ -21,170 +21,129 @@
         <ul>
             <li><a href="#introducao">Início</a></li>
             <li><a href="#lendas">Lendas</a></li>
-            <li><a href="#manifestacoes">Festas</a></li>
+            <li><a href="#musica-tradicao">Música</a></li>
+            <li><a href="#personalidades">Nomes</a></li>
             <li><a href="#culinaria">Culinária</a></li>
             <li><a href="#artesanato">Artesanato</a></li>
-            <li><a href="#musica-tradicao">Música</a></li>
         </ul>
     </nav>
 
-    <header class="fade-in">
-        <h1>🌵 Folclore do Nordeste 🇧🇷</h1>
-        <p>A alma vibrante de uma cultura milenar</p>
+    <header class="hero-header fade-in">
+        <div class="hero-content">
+            <h1>Terracota e Verso 🌵</h1>
+            <p class="subtitle">O Folclore do Nordeste Brasileiro em sua forma mais refinada.</p>
+        </div>
     </header>
 
     <main>
-        <section class="introducao fade-in" id="introducao">
-            <h2>O que é o Folclore Nordestino?</h2>
-            <p>O folclore da Região Nordeste do Brasil é uma fascinante mistura das culturas **indígena, africana e europeia**, refletindo a história e o sincretismo da região. É expresso em lendas, danças, festas populares, culinária, artesanato e literatura. É a identidade do povo nordestino!</p>
-            <div class="imagem-destaque fade-in">
-                [Imagem de Xilogravura de Cordel, com cores fortes]
-                <small>Literatura de Cordel: Uma das maiores expressões.</small>
+        <section class="introducao section-padded fade-in" id="introducao">
+            <h2>Identidade Cultural</h2>
+            <div class="introducao-grid">
+                <p class="intro-texto">O folclore da Região Nordeste é o resultado da fascinante **miscelânea** das culturas indígena, africana e europeia, refletindo a resiliência e a riqueza de seu povo. É um patrimônio vivo, manifesto em tudo: da arquitetura colonial à Literatura de Cordel, que é o seu principal ícone visual.</p>
+                <div class="destaque-cordel">
+                    <img src="https://br.pinterest.com/nelsonfonseca23/xilogravuras-de-cordel/" alt="Xilogravura com traços fortes">
+                    <small>A xilogravura é a alma visual da nossa poesia em verso.</small>
+                </div>
             </div>
         </section>
         
-        <hr>
-
-        <section class="lendas fade-in" id="lendas">
-            <h2>👻 Lendas e Mitos Populares</h2>
-            <p>Histórias que assustam e ensinam, passadas de geração em geração.</p>
-            
-            <div class="card-container fade-in">
-                <article class="lenda-card">
-                    <h3>Comadre Fulozinha (Mãe da Mata)</h3>
-                    <p>Uma protetora das matas e dos animais, frequentemente vista como uma jovem cabocla de longos cabelos. Ela assobia para guiar os viajantes de bom coração e punir caçadores e desmatadores. É a <em>Protetora da Mata</em>!</p>
-                    [Imagem de Comadre Fulozinha (Mãe da Mata)]
+        <section class="lendas section-padded bg-detalhe" id="lendas">
+            <h2>👻 Lendas do Sertão e da Mata</h2>
+            <div class="card-container grid-3 fade-in">
+                <article class="lenda-card card-elevated">
+                    <h3>Comadre Fulozinha</h3>
+                    <p>A protetora das matas e dos animais, frequentemente associada a uma jovem de longos cabelos. Guia os viajantes de bom coração e pune caçadores e exploradores da floresta.</p>
                 </article>
-
-                <article class="lenda-card">
-                    <h3>Quibungo</h3>
-                    <p>Monstro com uma boca gigante nas costas (principalmente na Bahia), que persegue e devora crianças desobedientes. Possui uma aparência horripilante, peluda como um urso.</p>
-                    [Imagem do Quibungo]
+                <article class="lenda-card card-elevated">
+                    <h3>Papa-Figo</h3>
+                    <p>Figura temida, o "Homem do Saco" que perambula à noite, supostamente capturando crianças para usar seus fígados em rituais ou para curar uma doença misteriosa.</p>
                 </article>
+                <article class="lenda-card card-elevated">
+                    <h3>Bumba Meu Boi</h3>
+                    <p>Um dos maiores ciclos festivos, contando a história da morte e ressurreição do boi amado, misturando teatro, música e danças típicas. Forte no Maranhão.</p>
+                </article>
+            </div>
+        </section>
+        
+        <section class="musica-tradicao section-padded" id="musica-tradicao">
+            <h2>🎶 Ritmos e Versos</h2>
+            <div class="musica-grid grid-2">
+                <div class="musica-conteudo fade-in">
+                    <h3>O Trio Essencial de Forró</h3>
+                    <p>O coração da festa: o **Zabumba** dita a batida, a **Sanfona** (ou Acordeão) carrega a melodia, e o **Triângulo** adiciona o brilho da percussão. Juntos, formam o autêntico Forró Pé de Serra.</p>
+                    <img src="https://www.instagram.com/trioforromaiseu/?hl=en" alt="Trio tocando forró">
+                </div>
+                <div class="musica-conteudo fade-in">
+                    <h3>Repente e a Viola</h3>
+                    <p>A **Cantoria de Repente** é a arte da improvisação poética. Dois repentistas (cantadores) duelam em versos desafiadores, acompanhados pela **Viola de 10 Cordas**, mantendo viva a tradição oral dos trovadores.</p>
+                    <div class="manifestacoes-lista">
+                        <h4>Manifestações Chave:</h4>
+                        <ul>
+                            <li>**São João/Festas Juninas:** O maior evento festivo do ano (Campina Grande e Caruaru).</li>
+                            <li>**Frevo:** Dança acrobática e ritmo frenético, símbolo do Carnaval de Pernambuco.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-                <article class="lenda-card">
-                    <h3>Papa-Figo (Homem do Saco)</h3>
-                    <p>Um homem velho e maltrapilho que carrega um saco e captura crianças para comer seus fígados, supostamente para curar uma doença. Uma figura usada para alertar crianças sobre estranhos.</p>
-                    [Imagem do Papa-Figo]
+        <section class="personalidades section-padded bg-detalhe" id="personalidades">
+            <h2>⭐ Grandes Nomes do Nordeste</h2>
+            <p class="section-description">Os mestres que moldaram e eternizaram a cultura popular.</p>
+
+            <div class="card-container grid-3 fade-in">
+                <article class="nome-card card-elevated bg-white">
+                    <h3>Luiz Gonzaga (Rei do Baião)</h3>
+                    <p>Músico e compositor, levou os ritmos do sertão (forró, baião, xote) para todo o Brasil. Sua sanfona é o símbolo máximo da música nordestina.</p>
+                </article>
+                <article class="nome-card card-elevated bg-white">
+                    <h3>Ariano Suassuna</h3>
+                    <p>Escritor, dramaturgo e poeta. Criador do Movimento Armorial, que buscou uma arte erudita a partir das raízes populares do Cordel e da Xilogravura.</p>
+                </article>
+                <article class="nome-card card-elevated bg-white">
+                    <h3>Mestre Vitalino</h3>
+                    <p>Um dos maiores artistas populares, imortalizou o cotidiano e os personagens do agreste em suas famosas esculturas de cerâmica (barro).</p>
                 </article>
             </div>
         </section>
 
-        <hr>
-
-        <section class="manifestacoes fade-in" id="manifestacoes">
-            <h2>🎉 Festas e Manifestações Culturais</h2>
-            
-            <div class="info-bloco fade-in">
-                <h3>Bumba Meu Boi</h3>
-                <p>Uma das festas mais ricas do folclore nordestino (principalmente no Maranhão), que mistura teatro, música e dança, contando a história da morte e ressurreição de um boi amado.</p>
-                [Imagem da Festa do Bumba Meu Boi]
-            </div>
-
-            <div class="info-bloco fade-in">
-                <h3>Frevo</h3>
-                <p>Dança e ritmo musical acelerado, símbolo do Carnaval de Pernambuco (Recife e Olinda). Caracteriza-se pelos passos acrobáticos e uso das pequenas sombrinhas coloridas.</p>
-                [Imagem de Passista de Frevo com sombrinha]
-            </div>
-            
-            <div class="info-bloco fade-in">
-                <h3>Literatura de Cordel</h3>
-                <p>Gênero literário popular, impresso em folhetos e exposto em cordas (cordéis). Apresenta histórias em versos, com temas que variam de lendas a críticas sociais, e é ilustrado por **xilogravuras**.</p>
-                [Imagem de Folhetos de Cordel pendurados]
-            </div>
-
-            <div class="info-bloco fade-in">
-                <h3>São João</h3>
-                <p>As Festas Juninas no Nordeste são as maiores do país (Campina Grande-PB e Caruaru-PE), celebradas com quadrilhas, fogueiras, forró e comidas típicas como pamonha e canjica.</p>
-                [Imagem de Festa de São João / Quadrilha]
-            </div>
-        </section>
-
-        <hr>
-
-        <section class="culinaria fade-in" id="culinaria">
-            <h2>🥘 Sabores do Folclore: A Culinária Nordestina</h2>
-            <p>A comida conta histórias de miscigenação, do milho indígena ao coco africano.</p>
-            
-            <div class="card-container fade-in">
-                <article class="prato-card">
-                    <h3>Acarajé (Bahia)</h3>
-                    <p>Bolinho de feijão-fradinho frito no azeite de dendê, recheado com vatapá, camarão seco e salada. Uma herança direta da culinária africana.</p>
-                    [Imagem de Acarajé pronto]
+        <section class="culinaria section-padded" id="culinaria">
+            <h2>🥘 Sabores da Terra</h2>
+            <div class="culinaria-grid grid-3 fade-in">
+                <article class="prato-card card-elevated">
+                    <h3>Acarajé</h3>
+                    <p>Bolinho de feijão-fradinho frito no azeite de dendê, recheado com vatapá, camarão seco e salada. Uma herança direta da culinária africana (Bahia).</p>
+                    <img src="https://www.istockphoto.com/br/fotos/acaraje" alt="Acarajé recheado">
                 </article>
-
-                <article class="prato-card">
-                    <h3>Cuscuz</h3>
-                    <p>Preparado com flocos de milho cozidos no vapor. É a base da alimentação, servido doce ou salgado, acompanhado de ovo, carne seca ou queijo coalho. Um <em>alimento base</em>.</p>
-                    [Imagem de Cuscuz com ovo e carne]
+                <article class="prato-card card-elevated">
+                    <h3>Cuscuz Nordestino</h3>
+                    <p>Base da alimentação regional, feito com flocos de milho cozidos no vapor. Serve como acompanhamento para tudo: do café da manhã à janta (com ovo e carne de sol).</p>
+                    <img src="https://www.shutterstock.com/pt/search/cuscuz" alt="Cuscuz com acompanhamentos">
                 </article>
-
-                <article class="prato-card">
-                    <h3>Carne de Sol com Macaxeira</h3>
-                    <p>A carne salgada e seca ao sol, típica do sertão, dessalgada e cozida, servida com mandioca (aipim ou macaxeira) frita ou cozida. Um clássico regional.</p>
-                    [Imagem de Carne de Sol com Macaxeira]
+                <article class="prato-card card-elevated">
+                    <h3>Carne de Sol</h3>
+                    <p>Típica do sertão, é a carne bovina salgada e seca ao sol. É dessalgada e cozida, sendo servida classicamente com macaxeira (mandioca/aipim) e queijo coalho.</p>
+                    <img src="https://www.shutterstock.com/pt/search/carne-de-sol" alt="Carne de Sol com Macaxeira">
                 </article>
             </div>
         </section>
 
-        <hr>
-
-        <section class="artesanato fade-in" id="artesanato">
-            <h2>🏺 Artesanato e Expressão</h2>
-            <p>A criatividade e a história do Nordeste materializadas em arte popular.</p>
-
-            <div class="info-bloco arte-bloco fade-in">
-                <h3>Xilogravura</h3>
-                <p>Técnica de gravura em madeira usada para ilustrar os folhetos de Cordel. Suas imagens de traços fortes e expressivos são um ícone visual do Nordeste.</p>
-                [Imagem de xilogravura de Lampião]
-            </div>
-
-            <div class="info-bloco arte-bloco fade-in">
-                <h3>Cerâmica (Mestre Vitalino)</h3>
-                <p>As figuras de barro que retratam o cotidiano, as festas e os personagens do agreste (principalmente de Caruaru, PE). O mestre Vitalino é o maior nome dessa arte.</p>
-                [Imagem de figuras de barro, como noivos ou retirantes]
-            </div>
-            
-            <div class="info-bloco arte-bloco fade-in">
-                <h3>Renda de Bilro e Labirinto</h3>
-                <p>Arte têxtil de extrema delicadeza, produzida principalmente no litoral. A Renda de Bilro usa almofadas e "bilros" (pequenos fusos), enquanto o Labirinto é bordado a mão.</p>
-                [Imagem de renda de bilro]
-            </div>
-        </section>
-
-        <hr>
-
-        <section class="musica-tradicao fade-in" id="musica-tradicao">
-            <h2>🎶 Música e Tradição Oral</h2>
-            <p>O som que dita o ritmo das festas e a poesia que conta as histórias do sertão.</p>
-
-            <div class="card-container musica-container fade-in">
-                
-                <article class="instrumento-card">
-                    <h3>O Trio de Forró (Zabumba, Triângulo e Sanfona)</h3>
-                    <p>O coração do Forró. A **Sanfona** (ou Acordeão) é a melodia, o **Zabumba** (tambor grave) é a base rítmica, e o **Triângulo** (percussão metálica) é o tempero vibrante.</p>
-                    [Imagem do Trio de Forró]
+        <section class="artesanato section-padded bg-detalhe" id="artesanato">
+            <h2>🏺 Artesanato e Técnicas</h2>
+            <div class="artesanato-grid grid-3 fade-in">
+                <article class="arte-item">
+                    <h3>Xilogravura</h3>
+                    <p>Técnica de gravação em madeira (matriz) que, ao ser impressa no papel, gera a imagem em preto e branco com traços fortes. Essencial na ilustração do Cordel.</p>
                 </article>
-
-                <article class="instrumento-card">
-                    <h3>Pandeiro e Ganzá</h3>
-                    <p>Elementos essenciais no Coco, no Frevo e no Samba de Roda. O Pandeiro marca o ritmo com versatilidade, e o Ganzá é o chocalho cilíndrico que adiciona o som contínuo.</p>
-                    [Imagem de Pandeiro e Ganzá]
+                <article class="arte-item">
+                    <h3>Renda de Bilro</h3>
+                    <p>Trabalho têxtil de extrema delicadeza, onde fios são trançados sobre uma almofada usando pequenos fusos de madeira ("bilros"). Forte no litoral.</p>
                 </article>
-                
-                <article class="instrumento-card">
-                    <h3>Viola de Dez Cordas</h3>
-                    <p>A companheira inseparável dos repentistas. É usada na **Cantoria de Repente**, onde dois artistas improvisam versos em desafios poéticos, mantendo viva a tradição oral.</p>
-                    [Imagem de Repentistas com viola]
+                <article class="arte-item">
+                    <h3>Cerâmica Figurativa</h3>
+                    <p>Arte do barro que retrata o cotidiano, os mitos e os personagens do povo nordestino, popularizada por artesãos como Mestre Vitalino.</p>
                 </article>
-
             </div>
-
-            <div class="info-bloco fade-in" style="margin-top: 40px;">
-                <h3>Personagens Famosos do Cordel</h3>
-                <p>A literatura de cordel deu vida a figuras icônicas que entraram para o imaginário popular. Entre eles, destacam-se **Lampião e Maria Bonita** (muitas vezes romantizados ou criticados) e heróis lendários como **João Grilo**, famoso por sua esperteza, e o **Cancão de Fogo**.</p>
-            </div>
-            
         </section>
 
     </main>
@@ -193,7 +152,7 @@
         ⬆️ Topo
     </button>
     
-    <footer class="fade-in">
+    <footer class="footer-custom fade-in">
         <div class="footer-content">
             <p>Página desenvolvida com carinho e inspiração na cultura nordestina.</p>
             
@@ -208,7 +167,7 @@
             
             <div class="referencias">
                 <h3>Referências Culturais</h3>
-                <p>O conteúdo desta página é baseado na rica tradição do Folclore Nordestino, que mescla as culturas Indígena, Africana e Europeia em suas lendas, festas e manifestações artísticas.</p>
+                <p>O conteúdo é baseado na rica tradição do Folclore Nordestino, que mescla as culturas Indígena, Africana e Europeia em suas lendas, festas e manifestações. O design buscou inspiração na estética da terracota e da xilogravura.</p>
             </div>
         </div>
     </footer>
